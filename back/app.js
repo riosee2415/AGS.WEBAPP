@@ -23,7 +23,7 @@ const questionRouter = require("./routers/questionRouter");
 const seoRouter = require("./routers/seoRouter");
 const editRouter = require("./routers/editRouter");
 const faqRouter = require("./routers/faqRouter");
-const productRouter = require("./routers/productRouetr");
+const productRouter = require("./routers/productRouter");
 
 // Config Settings
 db.sequelize
