@@ -127,7 +127,7 @@ router.delete("/delete/:productId", isAdminCheck, async (req, res, next) => {
     }
   } catch (error) {
     console.error(error);
-    return res.status(401).send("게시글을 삭제할 수 없습니다. [CODE 097]");
+    return res.status(401).send("게시글을 삭제할 수 없습니다.");
   }
 });
 router.post("/list/:productId", async (req, res, next) => {

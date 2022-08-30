@@ -13,6 +13,7 @@ const seo = require("./seo");
 const faq = require("./faq");
 const faqType = require("./faqType");
 const product = require("./product");
+const agency = require("./agency");
 
 const env = process.env.NODE_ENV || "development";
 const config = require("../config/config")[env];
@@ -39,6 +40,7 @@ db.Seo = seo;
 db.Faq = faq;
 db.FaqType = faqType;
 db.Product = product;
+db.Agency = agency;
 
 Object.keys(db).forEach((modelName) => {
   db[modelName].init(sequelize);
