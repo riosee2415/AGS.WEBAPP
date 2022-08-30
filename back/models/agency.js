@@ -34,7 +34,7 @@ module.exports = class Agency extends Model {
       },
       {
         modelName: "Agency",
-        tableName: "Agencys",
+        tableName: "agencys",
         charset: "utf8mb4",
         collate: "utf8mb4_general_ci", // 한글 저장
         sequelize,
