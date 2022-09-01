@@ -53,7 +53,11 @@ router.post(
 
 router.get("/list", async (req, res, next) => {
   try {
-    const agencys = await Agency.findAll();
+    const agencys = await Agency.findAll({
+      where: {
+        isDelete: false,
+      },
+    });
 
     return res.status(200).json(agencys);
   } catch (error) {
