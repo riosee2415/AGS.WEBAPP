@@ -13,7 +13,7 @@ import Theme from "../../../components/Theme";
 
 import { END } from "redux-saga";
 import axios from "axios";
-import { useRouter } from "next/router";
+import router, { useRouter } from "next/router";
 
 import { PlusOutlined } from "@ant-design/icons";
 import { Button, Form, Input, message, Modal, Popconfirm, Table } from "antd";
@@ -33,6 +33,9 @@ const LOGO_HEIGHT = `150`;
 
 const AgencyGuide = () => {
   ////// GLOBAL STATE //////
+
+  const { me } = useSelector((state) => state.user);
+
   const {
     agencyList,
     agencyImage,
@@ -65,7 +68,15 @@ const AgencyGuide = () => {
   const [cuData, setCuData] = useState(null);
 
   ////// USEEFFECT //////
+  // 기본
+  useEffect(() => {
+    if (!me) {
+      router.push("/admin");
+      return message.error("로그인 후 이용해주세요.");
+    }
+  }, [me]);
 
+  // 리스트
   useEffect(() => {
     if (st_agencyListError) {
       return message.error(st_agencyListError);
