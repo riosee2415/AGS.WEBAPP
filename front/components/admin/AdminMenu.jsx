@@ -162,6 +162,16 @@ const AdminMenu = () => {
             <MenuName>문의 리스트</MenuName>
           </Menu.Item>
         </SubMenu>
+        <SubMenu
+          key="sub7"
+          icon={<AppstoreOutlined />}
+          title="대리점 관리"
+          onTitleClick={titleClickHandler("sub7")}
+        >
+          <Menu.Item key="/admin/agency/agencyGuide">
+            <MenuName>대리점 안내 관리</MenuName>
+          </Menu.Item>
+        </SubMenu>
       </Menu>
     </>
   );
