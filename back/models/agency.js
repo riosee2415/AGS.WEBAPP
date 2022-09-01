@@ -6,7 +6,7 @@ module.exports = class Agency extends Model {
     return super.init(
       {
         imagePath: {
-          type: DataTypes.STRING(30),
+          type: DataTypes.STRING(400),
           allowNull: false, // 필수
           unique: true, // 고유한 값
         },
