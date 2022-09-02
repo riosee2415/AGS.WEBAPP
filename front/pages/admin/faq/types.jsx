@@ -3,17 +3,7 @@ import AdminLayout from "../../../components/AdminLayout";
 import PageHeader from "../../../components/admin/PageHeader";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  Table,
-  Button,
-  Modal,
-  Select,
-  notification,
-  message,
-  Popconfirm,
-  Form,
-  Input,
-} from "antd";
+import { Table, Button, Modal, message, Popconfirm, Form, Input } from "antd";
 import { useRouter, withRouter } from "next/router";
 import wrapper from "../../../store/configureStore";
 import { END } from "redux-saga";
@@ -63,6 +53,7 @@ const Types = ({}) => {
     st_faqTypeDeleteError,
     currentFaqList,
   } = useSelector((state) => state.faq);
+  console.log(faqTypes);
 
   const [cModal, setCModal] = useState(false);
   const [uModal, setUModal] = useState(false);
@@ -132,16 +123,13 @@ const Types = ({}) => {
     if (st_faqTypeUpdateDone) {
       dispatch({
         type: FAQ_TYPE_LIST_REQUEST,
-        data: {
-          searchTab,
-        },
       });
 
       updateModalToggle();
 
       return message.success("유형정보가 수정되었습니다.");
     }
-  }, [st_faqTypeUpdateDone, searchTab]);
+  }, [st_faqTypeUpdateDone]);
 
   // FAQ 유형 삭제 에러
   useEffect(() => {
@@ -154,14 +142,11 @@ const Types = ({}) => {
     if (st_faqTypeDeleteDone) {
       dispatch({
         type: FAQ_TYPE_LIST_REQUEST,
-        data: {
-          searchTab,
-        },
       });
 
       return message.success("유형이 삭제되었습니다.");
     }
-  }, [st_faqTypeDeleteDone, searchTab]);
+  }, [st_faqTypeDeleteDone]);
 
   useEffect(() => {
     dispatch({
@@ -296,7 +281,7 @@ const Types = ({}) => {
     },
     {
       title: "최근 수정일",
-      dataIndex: "viewUpdatedAt",
+      dataIndex: "updatedAt",
     },
     {
       title: "등록된 질문",
@@ -379,7 +364,7 @@ const Types = ({}) => {
         <Table
           rowKey="num"
           columns={columns}
-          //   dataSource={faqTypes}
+          dataSource={faqTypes ? faqTypes.list : []}
           size="small"
         />
       </AdminContent>
