@@ -156,11 +156,11 @@ const AdminMenu = () => {
           title="문의 관리"
           onTitleClick={titleClickHandler("sub6")}
         >
-          <Menu.Item key="/admin/question/type">
-            <MenuName>문의 유형 리스트</MenuName>
+          <Menu.Item key="/admin/faq/types">
+            <MenuName>자주묻는 유형 리스트</MenuName>
           </Menu.Item>
-          <Menu.Item key="/admin/question/list">
-            <MenuName>문의 리스트</MenuName>
+          <Menu.Item key="/admin/faq">
+            <MenuName>자주묻는 질문 리스트</MenuName>
           </Menu.Item>
         </SubMenu>
         <SubMenu

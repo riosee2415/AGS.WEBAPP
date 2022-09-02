@@ -288,19 +288,27 @@ const AgencyGuide = () => {
       dataIndex: "number",
     },
     {
+      width: `15%`,
+      title: "생성일",
+      render: (data) => {
+        const date = data.createdAt.split("T")[0].split("-");
+        return `${date[0]}년 ${date[1]}월 ${date[2]}일`;
+      },
+    },
+    {
       width: `10%`,
       align: `center`,
-      title: "수정하기",
+      title: "수정",
       render: (data) => (
         <Button size="small" type="primary" onClick={() => cuModalToggle(data)}>
-          수정하기
+          수정
         </Button>
       ),
     },
     {
       width: `10%`,
       align: `center`,
-      title: "삭제하기",
+      title: "삭제",
       render: (data) => (
         <Popconfirm
           title={`삭제하시겠습니까?`}
@@ -309,18 +317,10 @@ const AgencyGuide = () => {
           onConfirm={() => cuDeleteHandler(data)}
         >
           <Button size="small" type="danger">
-            삭제하기
+            삭제
           </Button>
         </Popconfirm>
       ),
-    },
-    {
-      width: `15%`,
-      title: "생성일",
-      render: (data) => {
-        const date = data.createdAt.split("T")[0].split("-");
-        return `${date[0]}년 ${date[1]}월 ${date[2]}일`;
-      },
     },
   ];
 

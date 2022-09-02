@@ -5,8 +5,8 @@ const isAdminCheck = require("../middlewares/isAdminCheck");
 
 const router = express.Router();
 
-router.get("/list", async (req, res, next) => {
-  const { page, search } = req.query;
+router.post("/list", async (req, res, next) => {
+  const { page, search } = req.body;
 
   const LIMIT = 10;
 
