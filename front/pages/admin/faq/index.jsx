@@ -320,7 +320,7 @@ const Faq = ({}) => {
               전체
             </Button>
 
-            {/* {faqTypes.map((data, idx) => {
+            {faqTypes.map((data, idx) => {
               return (
                 <Button
                   key={data.id}
@@ -332,7 +332,7 @@ const Faq = ({}) => {
                   {data.value}
                 </Button>
               );
-            })} */}
+            })}
           </Wrapper>
 
           <Wrapper width="50%" dr="row" ju="flex-end">
@@ -428,11 +428,11 @@ const Faq = ({}) => {
               ]}
             >
               <Select size="small">
-                {/* {faqTypes.map((data) => {
+                {faqTypes.map((data) => {
                   return (
                     <Select.Option value={data.id}>{data.value}</Select.Option>
                   );
-                })} */}
+                })}
               </Select>
             </Form.Item>
 
@@ -515,11 +515,11 @@ const Faq = ({}) => {
               ]}
             >
               <Select size="small">
-                {/* {faqTypes.map((data) => {
+                {faqTypes.map((data) => {
                   return (
                     <Select.Option value={data.id}>{data.value}</Select.Option>
                   );
-                })} */}
+                })}
               </Select>
             </Form.Item>
 
