@@ -11,6 +11,7 @@ import accept from "./accept";
 import seo from "./seo";
 import editor from "./editor";
 import agency from "./agency";
+import faq from "./faq";
 
 const rootReducer = (state, action) => {
   switch (action.type) {
@@ -30,6 +31,7 @@ const rootReducer = (state, action) => {
         seo,
         editor,
         agency,
+        faq,
       });
       return combinedReducer(state, action);
     }
