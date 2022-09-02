@@ -13,6 +13,7 @@ import {
   AdminContent,
   GuideDiv,
   Text,
+  ATag,
 } from "../../../components/commonComponents";
 import { LOAD_MY_INFO_REQUEST } from "../../../reducers/user";
 import Theme from "../../../components/Theme";
@@ -25,6 +26,16 @@ import {
 } from "../../../reducers/product";
 import useInput from "../../../hooks/useInput";
 import { SearchOutlined } from "@ant-design/icons";
+import styled from "styled-components";
+
+const TextStyle = styled(Text)`
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: ${(props) => props.theme.subTheme3_C};
+  }
+`;
 
 const NoticeArea = ({}) => {
   const { st_loadMyInfoDone, me } = useSelector((state) => state.user);
@@ -90,6 +101,7 @@ const NoticeArea = ({}) => {
     if (st_productCreateDone) {
       message.success(`생성되었습니다.`);
       setCreateModal(false);
+      createForm.resetFields();
     }
   }, [st_productCreateDone]);
 
@@ -220,27 +232,43 @@ const NoticeArea = ({}) => {
       title: "번호",
       dataIndex: "id",
       align: "center",
+      width: "6%",
     },
 
     {
       title: "제목",
       dataIndex: "title",
+      width: "12%",
+      ellipsis: true,
     },
     {
       title: "소제목",
       dataIndex: "subTitle",
+      width: "21%",
+      ellipsis: true,
     },
     {
       title: "유투브 링크",
-      dataIndex: "youtubeLink",
+      render: (data) => (
+        <TextStyle
+          width={`100%`}
+          isEllipsis={true}
+          onClick={() => window.open(data.youtubeLink)}
+        >
+          {data.youtubeLink}
+        </TextStyle>
+      ),
+      width: "17%",
     },
     {
       title: "생성일",
       render: (data) => <Text>{stringHandler(data.createdAt)}</Text>,
+      width: "12%",
     },
     {
       title: "최근 수정일",
       render: (data) => <Text>{stringHandler(data.updatedAt)}</Text>,
+      width: "12%",
     },
     {
       title: "데이터 수정",
@@ -250,6 +278,7 @@ const NoticeArea = ({}) => {
         </Button>
       ),
       align: "center",
+      width: "10%",
     },
     {
       title: "데이터 삭제",
@@ -266,6 +295,7 @@ const NoticeArea = ({}) => {
         </Popconfirm>
       ),
       align: "center",
+      width: "10%",
     },
   ];
 
@@ -322,6 +352,9 @@ const NoticeArea = ({}) => {
           <GuideDiv isImpo={true}>
             제품 관련 영상을 생성, 수정, 삭제할 수 있습니다.
           </GuideDiv>
+          <GuideDiv isImpo={true}>
+            데이터 수정을 클릭 시, 보다 자세한 내용을 보실 수 있습니다.
+          </GuideDiv>
           <GuideDiv isImpo={true}>삭제된 데이터는 복구할 수 없습니다.</GuideDiv>
         </Wrapper>
 
@@ -341,7 +374,7 @@ const NoticeArea = ({}) => {
 
       {/* UPDATE MODAL */}
       <Modal
-        width="500px"
+        width="700px"
         title={`제품 관련 영상 수정하기`}
         footer={null}
         visible={updateModal}
@@ -427,7 +460,7 @@ const NoticeArea = ({}) => {
 
       {/* CREATE MODAL */}
       <Modal
-        width="500px"
+        width="700px"
         title={`제품 관련 영상 생성하기`}
         footer={null}
         visible={createModal}
