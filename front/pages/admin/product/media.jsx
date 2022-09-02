@@ -24,6 +24,7 @@ import {
   PRODUCT_UPDATE_REQUEST,
 } from "../../../reducers/product";
 import useInput from "../../../hooks/useInput";
+import { SearchOutlined } from "@ant-design/icons";
 
 const NoticeArea = ({}) => {
   const { st_loadMyInfoDone, me } = useSelector((state) => state.user);
@@ -59,9 +60,7 @@ const NoticeArea = ({}) => {
 
   const [updateModal, setUpdateModal] = useState(false);
   const [updateData, setUpdateData] = useState(null);
-  const [detailData, setDetailData] = useState(null);
   const [createModal, setCreateModal] = useState(false);
-  const [detailModal, setDetailModal] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
   const [updateForm] = useForm();
@@ -74,13 +73,23 @@ const NoticeArea = ({}) => {
   useEffect(() => {
     dispatch({
       type: PRODUCT_LIST_REQUEST,
+      data: {
+        page: currentPage,
+        search: searchValue.value,
+      },
     });
-  }, [st_productCreateDone, st_productUpdateDone, st_productDeleteDone]);
+  }, [
+    st_productCreateDone,
+    st_productUpdateDone,
+    st_productDeleteDone,
+    currentPage,
+  ]);
 
   // 생성 후처리
   useEffect(() => {
     if (st_productCreateDone) {
       message.success(`생성되었습니다.`);
+      setCreateModal(false);
     }
   }, [st_productCreateDone]);
 
@@ -93,7 +102,8 @@ const NoticeArea = ({}) => {
   // 수정 후처리
   useEffect(() => {
     if (st_productUpdateDone) {
-      message.success(`생성되었습니다.`);
+      message.success(`수정되었습니다.`);
+      setUpdateModal(false);
     }
   }, [st_productUpdateDone]);
 
@@ -141,23 +151,6 @@ const NoticeArea = ({}) => {
     [updateModal, updateData]
   );
 
-  const detailHandler = useCallback(
-    (data = null) => {
-      if (data) {
-        setDetailData(data);
-        dispatch({
-          type: NOTICE_AREA_DETAIL_LIST_REQUEST,
-          data: {
-            noticeAreaId: data.id,
-          },
-        });
-      }
-
-      setDetailModal((prev) => !prev);
-    },
-    [detailModal, detailData]
-  );
-
   const updateSubmitHandler = useCallback(
     ({ title, subTitle, link }) => {
       dispatch({
@@ -198,6 +191,26 @@ const NoticeArea = ({}) => {
     [currentPage]
   );
 
+  const searchHandler = useCallback(() => {
+    setCurrentPage(1);
+    dispatch({
+      type: PRODUCT_LIST_REQUEST,
+      data: {
+        page: 1,
+        search: searchValue.value,
+      },
+    });
+  }, [currentPage, searchValue.value]);
+
+  const keyPressHandler = useCallback(
+    (e) => {
+      if (e.key === "Enter") {
+        searchHandler();
+      }
+    },
+    [currentPage, searchValue.value]
+  );
+
   ////// DATAVIEW //////
 
   ////// DATA COLUMNS //////
@@ -208,10 +221,7 @@ const NoticeArea = ({}) => {
       dataIndex: "id",
       align: "center",
     },
-    {
-      title: "유투브 링크",
-      dataIndex: "youtubeLink",
-    },
+
     {
       title: "제목",
       dataIndex: "title",
@@ -219,6 +229,10 @@ const NoticeArea = ({}) => {
     {
       title: "소제목",
       dataIndex: "subTitle",
+    },
+    {
+      title: "유투브 링크",
+      dataIndex: "youtubeLink",
     },
     {
       title: "생성일",
@@ -266,11 +280,27 @@ const NoticeArea = ({}) => {
       <AdminContent>
         <Wrapper
           dr="row"
-          ju="flex-end"
+          ju="space-between"
           margin="0px 0px 10px 0px"
           borderBottom={`1px dashed ${Theme.adminLightGrey_C}`}
           padding="5px 0px"
         >
+          <Wrapper width={`auto`} dr={`row`}>
+            <Input
+              {...searchValue}
+              size={`small`}
+              placeholder="제목을 입력해주세요."
+              style={{ width: "300px" }}
+              onKeyPress={keyPressHandler}
+            />
+            <Button
+              size="small"
+              onClick={searchHandler}
+              icon={<SearchOutlined />}
+            >
+              검색
+            </Button>
+          </Wrapper>
           <Button
             size="small"
             type="primary"
@@ -303,7 +333,6 @@ const NoticeArea = ({}) => {
           pagination={{
             defaultCurrent: 1,
             current: parseInt(currentPage),
-
             total: lastPage * 10,
             onChange: (page) => otherPageCall(page),
           }}

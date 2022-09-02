@@ -21,7 +21,7 @@ import {
 // SAGA AREA ********************************************************************************************************
 // ******************************************************************************************************************
 async function productListAPI(data) {
-  return await axios.get(`/api/product/list`, data);
+  return await axios.post(`/api/product/list`, data);
 }
 
 function* productList(action) {
