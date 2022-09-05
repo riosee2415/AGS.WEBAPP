@@ -8,8 +8,11 @@ import { AlignRightOutlined } from "@ant-design/icons";
 import AppHeader from "./AppHeader";
 import AppFooter from "./AppFooter";
 import { WholeWrapper } from "./commonComponents";
+import { useRouter } from "next/router";
 
 const ClientLayout = ({ children, width }) => {
+  const router = useRouter();
+
   return (
     <section>
       {/* HEADER */}
@@ -32,7 +35,9 @@ const ClientLayout = ({ children, width }) => {
       */}
 
       {/* content */}
-      <WholeWrapper margin={`100px 0 0`}>{children}</WholeWrapper>
+      <WholeWrapper margin={router.pathname === "/" ? `0` : `80px 0 0`}>
+        {children}
+      </WholeWrapper>
 
       {/* Footer */}
 
