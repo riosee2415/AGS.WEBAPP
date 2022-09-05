@@ -60,40 +60,6 @@ const Faq = () => {
 
   ////// DATAVIEW //////
 
-  const DummiyData = [
-    {
-      id: 1,
-      title: "자주묻는질문1",
-      content:
-        "고객님들이 고압세척기를 사용하면서 느낀 불편함은 고압건 레버를 잡을 때 많은 힘이 들어간다는 것이었습니다. 이러한 고객님들의 피드백을 바탕으로 Zero-Force 방아쇠를 개발하여 레버를 최대 90%의 적은 힘으로 손가락 하나로 작동이 가능하며 손이 피로해지는 것을 방지했습니다.",
-    },
-    {
-      id: 2,
-      title: "자주묻는질문2",
-      content: "내용2",
-    },
-    {
-      id: 3,
-      title: "자주묻는질문3",
-      content: "내용3",
-    },
-    {
-      id: 4,
-      title: "자주묻는질문4",
-      content: "내용4",
-    },
-    {
-      id: 5,
-      title: "자주묻는질문5",
-      content: "내용5",
-    },
-    {
-      id: 6,
-      title: "자주묻는질문6",
-      content: "내용6",
-    },
-  ];
-
   return (
     <>
       <Head>
@@ -103,7 +69,7 @@ const Faq = () => {
       <ClientLayout>
         <WholeWrapper>
           <RsWrapper>
-            <Wrapper>
+            <Wrapper margin={`70px 0 0`}>
               <Wrapper>
                 <Text
                   fontSize={`50px`}
@@ -127,7 +93,7 @@ const Faq = () => {
                     return (
                       <Wrapper
                         height={data.id === tab ? `140px` : `70px`}
-                        bgColor={`#1A1A1A`}
+                        bgColor={Theme.black3_C}
                         radius={`10px`}
                         margin={`0 0 25px`}
                         padding={`20px`}
@@ -176,7 +142,7 @@ const Faq = () => {
                               al={`flex-start`}
                               padding={`20px 50px 0`}
                               fontSize={`16px`}
-                              color={`#CAD2CB`}
+                              color={Theme.lightGrey2_C}
                             >
                               <Text>{data.answer}</Text>
                             </Wrapper>
