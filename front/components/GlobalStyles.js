@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from "styled-components";
 
 const fontStyle = css`
-  @font-face {
+  /* @font-face {
     font-family: "NanumBarunGothic";
     font-style: normal;
     font-weight: 400;
@@ -12,6 +12,13 @@ const fontStyle = css`
         format("woff"),
       url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf")
         format("truetype");
+  } */
+  @font-face {
+    font-family: "GongGothicMedium";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
   }
 `;
 
@@ -19,7 +26,8 @@ const GlobalStyles = createGlobalStyle`
   ${fontStyle}
 
   body {
-    font-family: "NanumBarunGothic", sans-serif;
+    font-family: "Pretendard", sans-serif;
+    color: ${(props) => props.theme.black2_C};
   }
 
   a {
