@@ -31,9 +31,10 @@ import styled from "styled-components";
 const TextStyle = styled(Text)`
   cursor: pointer;
   transition: 0.3s;
+  color: ${Theme.grey_C};
 
   &:hover {
-    color: ${(props) => props.theme.subTheme3_C};
+    color: ${(props) => props.theme.basicTheme_C};
   }
 `;
 
@@ -351,6 +352,9 @@ const NoticeArea = ({}) => {
         >
           <GuideDiv isImpo={true}>
             제품 관련 영상을 생성, 수정, 삭제할 수 있습니다.
+          </GuideDiv>
+          <GuideDiv isImpo={true}>
+            유투브 링크를 클릭 시, 해당 페이지로 이동합니다.
           </GuideDiv>
           <GuideDiv isImpo={true}>
             데이터 수정을 클릭 시, 보다 자세한 내용을 보실 수 있습니다.
