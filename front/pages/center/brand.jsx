@@ -17,12 +17,9 @@ import Head from "next/head";
 import {
   RsWrapper,
   Text,
+  Title,
   WholeWrapper,
 } from "../../components/commonComponents";
-
-const Title = styled(Text)`
-  font-size: 50px;
-`;
 
 const Brand = () => {
   ////// GLOBAL STATE //////
@@ -43,7 +40,7 @@ const Brand = () => {
       <ClientLayout>
         <WholeWrapper>
           <RsWrapper padding={`100px 0 50px`}>
-            <Text isEng={true}>dsfsd</Text>
+            <Title>dsfsd</Title>
           </RsWrapper>
         </WholeWrapper>
       </ClientLayout>
