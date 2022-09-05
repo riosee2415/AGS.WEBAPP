@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import ClientLayout from "../../components/ClientLayout";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,12 +14,18 @@ import { LOAD_MY_INFO_REQUEST } from "../../reducers/user";
 import { SEO_LIST_REQUEST } from "../../reducers/seo";
 
 import Head from "next/head";
+import {
+  RsWrapper,
+  Text,
+  WholeWrapper,
+} from "../../components/commonComponents";
+
+const Title = styled(Text)`
+  font-size: 50px;
+`;
 
 const Brand = () => {
   ////// GLOBAL STATE //////
-  const { seo_keywords, seo_desc, seo_ogImage, seo_title } = useSelector(
-    (state) => state.seo
-  );
 
   ////// HOOKS //////
   ////// REDUX //////
@@ -31,52 +36,14 @@ const Brand = () => {
 
   return (
     <>
-    <Head>
-      <title>{seo_title.length < 1 ? "ALAL" : seo_title[0].content}</title>
-
-      <meta
-        name="subject"
-        content={seo_title.length < 1 ? "ALAL" : seo_title[0].content}
-      />
-      <meta
-        name="title"
-        content={seo_title.length < 1 ? "ALAL" : seo_title[0].content}
-      />
-      <meta name="keywords" content={seo_keywords} />
-      <meta
-        name="description"
-        content={
-          seo_desc.length < 1 ? "undefined description" : seo_desc[0].content
-        }
-      />
-      {/* <!-- OG tag  --> */}
-      <meta
-        property="og:title"
-        content={seo_title.length < 1 ? "ALAL" : seo_title[0].content}
-      />
-      <meta
-        property="og:site_name"
-        content={seo_title.length < 1 ? "ALAL" : seo_title[0].content}
-      />
-      <meta
-        property="og:description"
-        content={
-          seo_desc.length < 1 ? "undefined description" : seo_desc[0].content
-        }
-      />
-      <meta property="og:keywords" content={seo_keywords} />
-      <meta
-        property="og:image"
-        content={seo_ogImage.length < 1 ? "" : seo_ogImage[0].content}
-      />
-    </Head>
+      <Head>
+        <title>AGS | 브랜드 소개</title>
+      </Head>
 
       <ClientLayout>
-        <h4>4LEAF SOFTWARE NEW NEXT.JS PAGE</h4>
-        <h4>Have A Good Development.</h4>
-
-        <h5>개발환경 문의) 개발본부 CTO 윤상호</h5>
-        <h5>개발환경 문의) 개발2팀 팀장 서재완</h5>
+        <WholeWrapper>
+          <RsWrapper padding={`100px 0 50px`}></RsWrapper>
+        </WholeWrapper>
       </ClientLayout>
     </>
   );
@@ -97,8 +64,6 @@ export const getServerSideProps = wrapper.getServerSideProps(
       type: LOAD_MY_INFO_REQUEST,
     });
 
-   
-
     // 구현부 종료
     context.store.dispatch(END);
     console.log("🍀 SERVER SIDE PROPS END");
@@ -107,5 +72,3 @@ export const getServerSideProps = wrapper.getServerSideProps(
 );
 
 export default Brand;
-
-  
