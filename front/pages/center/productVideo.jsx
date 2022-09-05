@@ -16,20 +16,68 @@ import {
 } from "../../components/commonComponents";
 import { withRouter } from "next/router";
 import Theme from "../../components/Theme";
-import { PRODUCT_LIST_REQUEST } from "../../reducers/product";
-import { useSelector } from "react-redux";
-import { Empty } from "antd";
+import {
+  PRODUCT_FRONT_LIST_REQUEST,
+  PRODUCT_LIST_REQUEST,
+} from "../../reducers/product";
+import { useDispatch, useSelector } from "react-redux";
+import { Empty, Pagination } from "antd";
+import styled from "styled-components";
+import { useState, useCallback } from "react";
+
+const PaginationStyle = styled(Pagination)`
+  margin: 80px 0 50px;
+  .ant-pagination-item-link {
+    border: none;
+  }
+
+  .ant-pagination-item-active a {
+    color: ${Theme.basicTheme_C};
+  }
+
+  .ant-pagination-item {
+    color: ${Theme.black2_C};
+  }
+
+  .anticon-left {
+    display: ${(props) => props.displayLeft};
+  }
+
+  .anticon-right {
+    display: ${(props) => props.displayRight};
+  }
+
+  .ant-pagination-item {
+    border: none;
+  }
+`;
 
 const ProductVideo = () => {
   ////// GLOBAL STATE //////
   const width = useWidth();
+  const dispatch = useDispatch();
 
-  const { products } = useSelector((state) => state.product);
+  const { mainProducts, mainLastPage } = useSelector((state) => state.product);
 
-  console.log(products);
   ////// HOOKS //////
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const otherPageHandler = useCallback(
+    (page) => {
+      setCurrentPage(page);
+
+      dispatch({
+        type: PRODUCT_FRONT_LIST_REQUEST,
+        data: {
+          page,
+        },
+      });
+    },
+    [currentPage]
+  );
   ////// REDUX //////
   ////// USEEFFECT //////
+
   ////// TOGGLE //////
   ////// HANDLER //////
   ////// DATAVIEW //////
@@ -46,9 +94,9 @@ const ProductVideo = () => {
               제품
               <SpanText color={Theme.basicTheme_C}>{` 관련영상`}</SpanText>
             </Title>
-            <Wrapper dr={!products ? `column` : `row`} ju={`space-between`}>
-              {products ? (
-                products.map((data) => (
+            <Wrapper dr={!mainProducts ? `column` : `row`} ju={`space-between`}>
+              {mainProducts ? (
+                mainProducts.map((data) => (
                   <Wrapper
                     width={width < 700 ? `100%` : `48.6%`}
                     margin={`60px 0 0`}
@@ -82,6 +130,15 @@ const ProductVideo = () => {
                 />
               )}
             </Wrapper>
+
+            <PaginationStyle
+              displayLeft={currentPage === 1 ? `none` : `flex`}
+              displayRight={currentPage === mainLastPage ? `none` : `flex`}
+              size={8}
+              current={currentPage}
+              onChange={otherPageHandler}
+              total={mainLastPage * 8}
+            />
           </RsWrapper>
         </WholeWrapper>
       </ClientLayout>
@@ -105,7 +162,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     });
 
     context.store.dispatch({
-      type: PRODUCT_LIST_REQUEST,
+      type: PRODUCT_FRONT_LIST_REQUEST,
     });
 
     // 구현부 종료

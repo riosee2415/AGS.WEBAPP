@@ -1,12 +1,18 @@
 import produce from "../util/produce";
 
 export const initailState = {
-  products: [],
-  lastPage: 1,
+  products: [], // 관리자 제품영상
+  lastPage: 1, // 관리자 마지막페이지
+  mainProducts: [], // 프론트 제품영상
+  mainLastPage: 1, // 프론트 마지막 페이지
   //
-  st_productListLoading: false, //  제품관련영상 가져오기
+  st_productListLoading: false, // 관리자 제품관련영상 가져오기
   st_productListDone: false,
   st_productListError: null,
+  //
+  st_productFrontListLoading: false, // 프론트 제품관련영상 가져오기
+  st_productFrontListDone: false,
+  st_productFrontListError: null,
   //
   st_productCreateLoading: false, //  제품관련영상 생성
   st_productCreateDone: false,
@@ -25,6 +31,10 @@ export const initailState = {
 export const PRODUCT_LIST_REQUEST = "PRODUCT_LIST_REQUEST";
 export const PRODUCT_LIST_SUCCESS = "PRODUCT_LIST_SUCCESS";
 export const PRODUCT_LIST_FAILURE = "PRODUCT_LIST_FAILURE";
+
+export const PRODUCT_FRONT_LIST_REQUEST = "PRODUCT_FRONT_LIST_REQUEST";
+export const PRODUCT_FRONT_LIST_SUCCESS = "PRODUCT_FRONT_LIST_SUCCESS";
+export const PRODUCT_FRONT_LIST_FAILURE = "PRODUCT_FRONT_LIST_FAILURE";
 
 export const PRODUCT_CREATE_REQUEST = "PRODUCT_CREATE_REQUEST";
 export const PRODUCT_CREATE_SUCCESS = "PRODUCT_CREATE_SUCCESS";
@@ -57,6 +67,25 @@ const reducer = (state = initailState, action) =>
         draft.st_productListLoading = false;
         draft.st_productListDone = false;
         draft.st_productListError = null;
+        break;
+      ///////////////////////////////////////////////////////
+
+      case PRODUCT_FRONT_LIST_REQUEST:
+        draft.st_productFrontListLoading = true;
+        draft.st_productFrontListDone = false;
+        draft.st_productFrontListError = null;
+        break;
+      case PRODUCT_FRONT_LIST_SUCCESS:
+        draft.st_productFrontListLoading = false;
+        draft.st_productFrontListDone = true;
+        draft.st_productFrontListError = null;
+        draft.mainProducts = action.data.products;
+        draft.mainLastPage = action.data.lastPage;
+        break;
+      case PRODUCT_FRONT_LIST_FAILURE:
+        draft.st_productFrontListLoading = false;
+        draft.st_productFrontListDone = false;
+        draft.st_productFrontListError = null;
         break;
       ///////////////////////////////////////////////////////
 

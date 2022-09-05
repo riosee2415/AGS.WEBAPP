@@ -16,6 +16,10 @@ import {
   PRODUCT_DELETE_REQUEST,
   PRODUCT_DELETE_SUCCESS,
   PRODUCT_DELETE_FAILURE,
+  //
+  PRODUCT_FRONT_LIST_REQUEST,
+  PRODUCT_FRONT_LIST_SUCCESS,
+  PRODUCT_FRONT_LIST_FAILURE,
 } from "../reducers/product";
 
 // SAGA AREA ********************************************************************************************************
@@ -36,6 +40,33 @@ function* productList(action) {
     console.error(err);
     yield put({
       type: PRODUCT_LIST_FAILURE,
+      error: err.response.data,
+    });
+  }
+}
+
+// ******************************************************************************************************************
+// ******************************************************************************************************************
+// ******************************************************************************************************************
+
+// SAGA AREA ********************************************************************************************************
+// ******************************************************************************************************************
+async function productFrontListAPI(data) {
+  return await axios.post(`/api/product/mainList`, data);
+}
+
+function* productFrontList(action) {
+  try {
+    const result = yield call(productFrontListAPI, action.data);
+
+    yield put({
+      type: PRODUCT_FRONT_LIST_SUCCESS,
+      data: result.data,
+    });
+  } catch (err) {
+    console.error(err);
+    yield put({
+      type: PRODUCT_FRONT_LIST_FAILURE,
       error: err.response.data,
     });
   }
@@ -130,6 +161,9 @@ function* productDelete(action) {
 function* watchProductList() {
   yield takeLatest(PRODUCT_LIST_REQUEST, productList);
 }
+function* watchProductFrontList() {
+  yield takeLatest(PRODUCT_FRONT_LIST_REQUEST, productFrontList);
+}
 function* watchProductCreate() {
   yield takeLatest(PRODUCT_CREATE_REQUEST, productCreate);
 }
@@ -144,6 +178,8 @@ function* watchProductDelete() {
 export default function* productSaga() {
   yield all([
     fork(watchProductList),
+    fork(watchProductFrontList),
+
     fork(watchProductCreate),
     fork(watchProductUpdate),
     fork(watchProductDelete),
