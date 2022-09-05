@@ -53,6 +53,8 @@ const AppHeader = () => {
       <Wrapper
         // bgColor={router.pathname === "/" ? `transparent` : `Theme.white_C`}
         bgColor={Theme.black2_C}
+        position={`fixed`}
+        zIndex={`1000`}
       >
         <RsWrapper
           width={`auto`}

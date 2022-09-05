@@ -7,8 +7,14 @@ import { withResizeDetector } from "react-resize-detector";
 import { AlignRightOutlined } from "@ant-design/icons";
 import AppHeader from "./AppHeader";
 import AppFooter from "./AppFooter";
-import { WholeWrapper } from "./commonComponents";
+import { Image, WholeWrapper, Wrapper } from "./commonComponents";
 import { useRouter } from "next/router";
+
+const SnsBox = styled(Wrapper)`
+  &:hover {
+    transform: rotateY(180deg);
+  }
+`;
 
 const ClientLayout = ({ children, width }) => {
   const router = useRouter();
@@ -35,7 +41,25 @@ const ClientLayout = ({ children, width }) => {
       */}
 
       {/* content */}
-      <WholeWrapper margin={router.pathname === "/" ? `0` : `80px 0 0`}>
+      <WholeWrapper
+        margin={router.pathname === "/" ? `0` : `80px 0 0`}
+        position={`relative`}
+      >
+        <SnsBox
+          height={width < 700 ? `50px` : `75px`}
+          width={width < 700 ? `50px` : `75px`}
+          position={`fixed`}
+          bottom={`30px`}
+          right={`30px`}
+          zIndex={`100`}
+          cursor={`pointer`}
+        >
+          <Image
+            src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_kakao.png"
+            alt="kakaoIcon"
+            width={`100%`}
+          />
+        </SnsBox>
         {children}
       </WholeWrapper>
 
