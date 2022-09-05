@@ -25,11 +25,11 @@ import {
 } from "../../components/commonComponents";
 
 import { LOAD_MY_INFO_REQUEST } from "../../reducers/user";
-import { FAQ_TYPE_LIST_REQUEST, FAQ_LIST_REQUEST } from "../../reducers/faq";
+import { FAQ_LIST_REQUEST } from "../../reducers/faq";
 
 const Faq = () => {
   ////// GLOBAL STATE //////
-  const { faqTypes, faqs } = useSelector((state) => state.faq);
+  const { faqs } = useSelector((state) => state.faq);
   const [tab, setTab] = useState("");
   ////// HOOKS //////
   const width = useWidth();
@@ -44,7 +44,6 @@ const Faq = () => {
     });
   }, []);
 
-  console.log(faqs);
   ////// TOGGLE //////
   const tabHandler = useCallback(
     (data) => {
