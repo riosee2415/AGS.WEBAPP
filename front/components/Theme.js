@@ -10,6 +10,7 @@ export default {
   // black
   black_C: "#000000",
   black2_C: "#131313",
+  black3_C: "#1A1A1A",
   // red
   red_C: "#e74c3c",
   // grey
