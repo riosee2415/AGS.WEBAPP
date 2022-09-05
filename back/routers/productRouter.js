@@ -5,6 +5,51 @@ const isAdminCheck = require("../middlewares/isAdminCheck");
 
 const router = express.Router();
 
+router.post("/adminList", async (req, res, next) => {
+  const { page, search } = req.body;
+
+  const LIMIT = 8;
+
+  const _page = page ? page : 1;
+  const _search = search ? search : "";
+
+  const __page = _page - 1;
+  const OFFSET = __page * 8;
+
+  try {
+    const totalProducts = await Product.findAll({
+      where: {
+        title: {
+          [Op.like]: `%${_search}%`,
+        },
+        isDelete: false,
+      },
+    });
+
+    const productLen = totalProducts.length;
+
+    const lastPage =
+      productLen % LIMIT > 0 ? productLen / LIMIT + 1 : productLen / LIMIT;
+
+    const products = await Product.findAll({
+      offset: OFFSET,
+      limit: LIMIT,
+      where: {
+        title: {
+          [Op.like]: `%${_search}%`,
+        },
+        isDelete: false,
+      },
+      order: [["createdAt", "DESC"]],
+    });
+
+    return res.status(200).json({ products, lastPage: parseInt(lastPage) });
+  } catch (error) {
+    console.error(error);
+    return res.status(401).send("제품영상 목록을 불러올 수 업습니다.");
+  }
+});
+
 router.post("/list", async (req, res, next) => {
   const { page, search } = req.body;
 
