@@ -301,7 +301,9 @@ export const Text = styled.p`
   border-bottom: ${(props) => props.borderBottom};
   opacity: ${(props) => props.opacity};
   letter-spacing: ${(props) => props.letterSpacing};
-
+  font-family: ${(props) =>
+    props.isGong && "GongGothicMedium" ? "GongGothicMedium" : ""};
+  font-family: ${(props) => (props.isEng && "open-sans" ? "open-sans" : "")};
   ${(props) =>
     props.isEllipsis
       ? `
@@ -310,7 +312,7 @@ export const Text = styled.p`
     overflow: hidden;
     text-overflow: ellipsis;
   `
-      : ``}
+      : ``};
 `;
 
 export const PagenationWrapper = styled.div`

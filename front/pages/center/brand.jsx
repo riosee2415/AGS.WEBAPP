@@ -42,7 +42,9 @@ const Brand = () => {
 
       <ClientLayout>
         <WholeWrapper>
-          <RsWrapper padding={`100px 0 50px`}></RsWrapper>
+          <RsWrapper padding={`100px 0 50px`}>
+            <Text isEng={true}>dsfsd</Text>
+          </RsWrapper>
         </WholeWrapper>
       </ClientLayout>
     </>

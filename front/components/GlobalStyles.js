@@ -1,13 +1,13 @@
 import { createGlobalStyle, css } from "styled-components";
 
 const fontStyle = css`
-<<<<<<< HEAD
   @font-face {
     font-family: "GongGothicMedium";
     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff")
       format("woff");
     font-weight: normal;
     font-style: normal;
+  }
 `;
 
 const GlobalStyles = createGlobalStyle`
