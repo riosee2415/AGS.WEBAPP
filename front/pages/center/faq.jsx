@@ -25,9 +25,11 @@ import {
 } from "../../components/commonComponents";
 
 import { LOAD_MY_INFO_REQUEST } from "../../reducers/user";
+import { FAQ_TYPE_LIST_REQUEST, FAQ_LIST_REQUEST } from "../../reducers/faq";
 
 const Faq = () => {
   ////// GLOBAL STATE //////
+  const { faqTypes, faqs } = useSelector((state) => state.faq);
   const [tab, setTab] = useState("");
   ////// HOOKS //////
   const width = useWidth();
@@ -36,7 +38,13 @@ const Faq = () => {
   const router = useRouter();
 
   ////// USEEFFECT //////
+  useEffect(() => {
+    dispatch({
+      type: FAQ_LIST_REQUEST,
+    });
+  }, []);
 
+  console.log(faqs);
   ////// TOGGLE //////
   const tabHandler = useCallback(
     (data) => {
@@ -114,79 +122,80 @@ const Faq = () => {
 
             <Wrapper>
               <>
-                {DummiyData.map((data, idx) => {
-                  return (
-                    <Wrapper
-                      height={data.id === tab ? `140px` : `70px`}
-                      bgColor={`#1A1A1A`}
-                      radius={`10px`}
-                      margin={`0 0 25px`}
-                      padding={`20px`}
-                      isActive={data.id === tab ? true : false}
-                      onClick={() => tabHandler(data.id)}
-                      key={idx}
-                    >
-                      <Wrapper dr={`row`}>
-                        <Image
-                          src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon_faq-question.png`}
-                          width={`24px`}
-                          height={`24px`}
-                        />
-                        <Wrapper
-                          dr={`row`}
-                          ju={`flex-start`}
-                          width={`calc(100% - 55px)`}
-                        >
-                          <Text
-                            fontSize={`20px`}
-                            fontWeight={`700`}
-                            color={
-                              data.id === tab
-                                ? Theme.basicTheme_C
-                                : Theme.white_C
-                            }
-                            margin={`0 0 0 20px`}
-                          >
-                            {data.title}
-                          </Text>
-                        </Wrapper>
-                        {data.id === tab ? (
+                {faqs &&
+                  faqs.map((data, idx) => {
+                    return (
+                      <Wrapper
+                        height={data.id === tab ? `140px` : `70px`}
+                        bgColor={`#1A1A1A`}
+                        radius={`10px`}
+                        margin={`0 0 25px`}
+                        padding={`20px`}
+                        isActive={data.id === tab ? true : false}
+                        onClick={() => tabHandler(data.id)}
+                        key={idx}
+                      >
+                        <Wrapper dr={`row`}>
+                          <Image
+                            src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon_faq-question.png`}
+                            width={`24px`}
+                            height={`24px`}
+                          />
                           <Wrapper
-                            width={`20px`}
-                            fontSize={`18px`}
-                            al={`flex-end`}
+                            dr={`row`}
                             ju={`flex-start`}
-                            color={Theme.white_C}
+                            width={`calc(100% - 55px)`}
                           >
-                            <UpOutlined />
+                            <Text
+                              fontSize={`20px`}
+                              fontWeight={`700`}
+                              color={
+                                data.id === tab
+                                  ? Theme.basicTheme_C
+                                  : Theme.white_C
+                              }
+                              margin={`0 0 0 20px`}
+                            >
+                              {data.question}
+                            </Text>
                           </Wrapper>
-                        ) : null}
+                          {data.id === tab ? (
+                            <Wrapper
+                              width={`20px`}
+                              fontSize={`18px`}
+                              al={`flex-end`}
+                              ju={`flex-start`}
+                              color={Theme.white_C}
+                            >
+                              <UpOutlined />
+                            </Wrapper>
+                          ) : null}
 
-                        {data.id === tab ? (
-                          <Wrapper
-                            al={`flex-start`}
-                            padding={`20px 50px 0`}
-                            fontSize={`16px`}
-                            color={`#CAD2CB`}
-                          >
-                            <Text>{data.content}</Text>
-                          </Wrapper>
-                        ) : null}
+                          {data.id === tab ? (
+                            <Wrapper
+                              al={`flex-start`}
+                              padding={`20px 50px 0`}
+                              fontSize={`16px`}
+                              color={`#CAD2CB`}
+                            >
+                              <Text>{data.answer}</Text>
+                            </Wrapper>
+                          ) : null}
 
-                        {data.id === tab ? null : (
-                          <Wrapper
-                            al={`flex-end`}
-                            width={`20px`}
-                            fontSize={`18px`}
-                            color={Theme.white_C}
-                          >
-                            <DownOutlined />
-                          </Wrapper>
-                        )}
+                          {data.id === tab ? null : (
+                            <Wrapper
+                              al={`flex-end`}
+                              width={`20px`}
+                              fontSize={`18px`}
+                              color={Theme.white_C}
+                            >
+                              <DownOutlined />
+                            </Wrapper>
+                          )}
+                        </Wrapper>
                       </Wrapper>
-                    </Wrapper>
-                  );
-                })}
+                    );
+                  })}
               </>
             </Wrapper>
           </RsWrapper>
