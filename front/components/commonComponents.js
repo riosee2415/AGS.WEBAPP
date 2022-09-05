@@ -521,6 +521,10 @@ export const Title = styled(Text)`
     width: 100%;
     background: ${(props) => props.theme.basicTheme_C};
   }
+
+  @media (max-width: 700px) {
+    font-size: 30px;
+  }
 `;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
