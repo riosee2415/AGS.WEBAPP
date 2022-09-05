@@ -238,10 +238,12 @@ export const CommonButton = styled(Button)`
 
 
 &:hover {
+    /* 기본 */
     background: ${(props) => props.theme.white_C};
     color: ${(props) => props.theme.basicTheme_C};
     ${(props) =>
       !props.kindOf && `border :1px solid ${props.theme.basicTheme_C};`}
+
     ${(props) =>
       props.kindOf === `white` && `background ${props.theme.basicTheme_C};`}
     ${(props) => props.kindOf === `white` && `color ${props.theme.white_C};`}
