@@ -52,6 +52,7 @@ const Faq = ({}) => {
     st_faqDeleteDone,
     st_faqDeleteError,
   } = useSelector((state) => state.faq);
+  console.log(adminFaqs);
 
   const [gData, setGData] = useState(null);
   const [aModal, setAModal] = useState(false);
@@ -86,11 +87,7 @@ const Faq = ({}) => {
     if (st_faqUpdateDone) {
       aModalToggleHandler(null);
 
-      message.success(
-        `${
-          currentData && currentData.id
-        }번 데이터의 정보가 정상적으로 변경되었습니다.`
-      );
+      message.success("데이터가 정상적으로 변경되었습니다.");
       dispatch({
         type: FAQ_ADMIN_LIST_REQUEST,
         data: {
@@ -197,7 +194,7 @@ const Faq = ({}) => {
           id: currentData.id,
           question: data.question,
           answer: data.answer,
-          faqTypeId: data.FaqTypeId,
+          typeId: data.FaqTypeId,
         },
       });
     },
@@ -216,7 +213,7 @@ const Faq = ({}) => {
       if (data) {
         answerForm.setFieldsValue({
           question: data.question,
-          FaqTypeId: data.FaqTypeId,
+          typeId: data.FaqTypeId,
           answer: data.answer,
           createdAt: data.viewCreatedAt,
           updatedAt: data.viewUpdatedAt,
@@ -232,10 +229,10 @@ const Faq = ({}) => {
       data: {
         question: data.question,
         answer: data.answer,
-        faqTypeId: data.FaqTypeId,
+        typeId: data.FaqTypeId,
       },
     });
-    console.log(data);
+    console.log(data.FaqTypeId, "sdfadsfadlsjkf;dslkfja;klewdjf;");
   }, []);
 
   ////// DATAVIEW //////
@@ -249,7 +246,7 @@ const Faq = ({}) => {
     },
     {
       title: "유형 이름",
-      dataIndex: "typeValue",
+      dataIndex: "value",
     },
     {
       title: "질문",
@@ -320,7 +317,7 @@ const Faq = ({}) => {
               전체
             </Button>
 
-            {/* {faqTypes.map((data, idx) => {
+            {faqTypes.list.map((data, idx) => {
               return (
                 <Button
                   key={data.id}
@@ -332,7 +329,7 @@ const Faq = ({}) => {
                   {data.value}
                 </Button>
               );
-            })} */}
+            })}
           </Wrapper>
 
           <Wrapper width="50%" dr="row" ju="flex-end">
@@ -388,7 +385,7 @@ const Faq = ({}) => {
           <Wrapper
             margin={`0px 0px 10px 0px`}
             radius="5px"
-            bgColor={Theme.lightGrey5_C}
+            bgColor={Theme.adminLightGrey_C}
             padding="5px"
             fontSize="13px"
             al="flex-start"
@@ -428,11 +425,11 @@ const Faq = ({}) => {
               ]}
             >
               <Select size="small">
-                {/* {faqTypes.map((data) => {
+                {faqTypes.list.map((data) => {
                   return (
                     <Select.Option value={data.id}>{data.value}</Select.Option>
                   );
-                })} */}
+                })}
               </Select>
             </Form.Item>
 
@@ -475,7 +472,7 @@ const Faq = ({}) => {
           <Wrapper
             margin={`0px 0px 10px 0px`}
             radius="5px"
-            bgColor={Theme.lightGrey5_C}
+            bgColor={Theme.adminLightGrey_C}
             padding="5px"
             fontSize="13px"
             al="flex-start"
@@ -515,11 +512,11 @@ const Faq = ({}) => {
               ]}
             >
               <Select size="small">
-                {/* {faqTypes.map((data) => {
+                {faqTypes.list.map((data) => {
                   return (
                     <Select.Option value={data.id}>{data.value}</Select.Option>
                   );
-                })} */}
+                })}
               </Select>
             </Form.Item>
 
@@ -552,14 +549,17 @@ const Faq = ({}) => {
         <MenuUnfoldOutlined style={{ fontSize: "22px", marginRight: "5px" }} />
         종합 통계 데이터
       </Wrapper>
-      <Wrapper shadow={`2px 2px 5px ${Theme.lightGrey5_C}`} padding="5px 20px">
+      <Wrapper
+        shadow={`2px 2px 5px ${Theme.adminLightGrey_C}`}
+        padding="5px 20px"
+      >
         {graph &&
           graph.map((v) => {
             return (
               <Wrapper dr="row" ju="flex-start">
                 <Text
                   width="200px"
-                  bgColor={Theme.grey2_C}
+                  bgColor={Theme.lightGrey_C}
                   color={Theme.white_C}
                   padding="0px 7px"
                   margin="0px 15px 0px 0px"
@@ -567,7 +567,7 @@ const Faq = ({}) => {
                   {v.value}
                 </Text>
                 <Wrapper
-                  borderBottom={`1px solid ${Theme.lightGrey5_C}`}
+                  borderBottom={`1px solid ${Theme.adminLightGrey_C}`}
                   width={`calc(100% - 220px)`}
                   al="flex-start"
                 >

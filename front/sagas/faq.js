@@ -107,7 +107,7 @@ function* faqTypeCreate(action) {
 // SAGA AREA ********************************************************************************************************
 // ******************************************************************************************************************
 async function faqTypeUpdateAPI(data) {
-  return await axios.post(`/api/faq/type/update`, data);
+  return await axios.patch(`/api/faq/type/update`, data);
 }
 
 function* faqTypeUpdate(action) {
@@ -135,7 +135,7 @@ function* faqTypeUpdate(action) {
 // SAGA AREA ********************************************************************************************************
 // ******************************************************************************************************************
 async function faqTypeDeleteAPI(data) {
-  return await axios.post(`/api/faq/type/delete`, data);
+  return await axios.patch(`/api/faq/type/delete`, data);
 }
 
 function* faqTypeDelete(action) {
@@ -219,7 +219,7 @@ function* faqTypeGetData(action) {
 // SAGA AREA ********************************************************************************************************
 // ******************************************************************************************************************
 async function faqUpdateAPI(data) {
-  return await axios.post(`/api/faq/update`, data);
+  return await axios.patch(`/api/faq/update`, data);
 }
 
 function* faqUpdate(action) {
@@ -275,7 +275,7 @@ function* faqCreate(action) {
 // SAGA AREA ********************************************************************************************************
 // ******************************************************************************************************************
 async function faqDeleteAPI(data) {
-  return await axios.post(`/api/faq/delete`, data);
+  return await axios.patch(`/api/faq/delete`, data);
 }
 
 function* faqDelete(action) {

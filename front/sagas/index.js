@@ -10,6 +10,7 @@ import acceptSaga from "./accept";
 import seoSaga from "./seo";
 import editSaga from "./editor";
 import agencySaga from "./agency";
+import productSaga from "./product";
 import faqSaga from "./faq";
 //
 import axios from "axios";
@@ -31,6 +32,7 @@ export default function* rootSaga() {
     fork(seoSaga),
     fork(editSaga),
     fork(agencySaga),
+    fork(productSaga),
     fork(faqSaga),
   ]);
 }

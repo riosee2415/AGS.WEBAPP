@@ -49,13 +49,13 @@ const Fourleaf = ({ Component }) => {
     <ThemeProvider theme={Theme}>
       <GlobalStyles />
       <Head>
-        <title>[[**4LEAF GEAR SAMPLE**]] | administrator</title>
+        <title>AGS | administrator</title>
 
         <meta name="author" content="4LEAF SOFTWARE <4leaf.ysh@gmail.com>" />
         {/* <!-- OG tag  --> */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="[[**4LEAF GEAR SAMPLE**]]" />
-        <meta property="og:site_name" content="[[**4LEAF GEAR SAMPLE**]]" />
+        <meta property="og:title" content="AGS" />
+        <meta property="og:site_name" content="AGS" />
         <meta property="og:url" content="https://www.sample.com/" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="400" />
@@ -63,11 +63,19 @@ const Fourleaf = ({ Component }) => {
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="canonical" href="https://www.sample.com" />
 
-        <meta name="keywords" content="[[**4LEAF GEAR SAMPLE**]]" />
-        <meta property="og:keywords" content="[[**4LEAF GEAR SAMPLE**]]" />
+        <meta name="keywords" content="AGS" />
+        <meta property="og:keywords" content="AGS" />
 
-        <meta name="description" content={"[[**4LEAF GEAR SAMPLE**]]"} />
-        <meta property="og:description" content={"[[**4LEAF GEAR SAMPLE**]]"} />
+        <meta name="description" content={"AGS"} />
+        <meta property="og:description" content={"AGS"} />
+
+        {/* 프리텐다드 폰트 */}
+        <link
+          href="https://webfontworld.github.io/pretendard/Pretendard.css"
+          rel="stylesheet"
+        />
+        {/* 오픈산스 폰트 */}
+        <link href="https://use.typekit.net/nck2djs.css" rel="stylesheet" />
       </Head>
       <Component />
     </ThemeProvider>
