@@ -1,11 +1,7 @@
 export default {
-  basicTheme_C: "#FFB940",
+  basicTheme_C: "#BAC81D",
 
-  subTheme_C: "#31A5F0",
-  subTheme2_C: "#106BDC",
-  subTheme3_C: "#2D53A3",
-  subTheme4_C: "#FFD321",
-  subTheme5_C: "#1E5AA9",
+  subTheme_C: "#EAEFB6",
 
   kakao_C: "#FAE100",
   naver_C: "#00C73C",
@@ -13,12 +9,13 @@ export default {
   white_C: "#ffffff",
   // black
   black_C: "#000000",
+  black2_C: "#131313",
   // red
   red_C: "#e74c3c",
   // grey
   grey_C: "#747474",
   lightGrey_C: "#E2E2E2",
-  darkGrey_C: "#2d3436",
+  darkGrey_C: "#18181A",
 
   //admin
   adminLightGrey_C: "#f3f3f3",

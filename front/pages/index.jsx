@@ -24,27 +24,14 @@ const Home = ({}) => {
   ////// HANDLER //////
   ////// DATAVIEW //////
 
-  const getEditContent = (contentValue) => {
-    console.log(contentValue);
-  };
-
   return (
     <>
       <Head>
-        <title>페이지 이름을 적어주세요</title>
+        <title>AGS</title>
       </Head>
 
       <ClientLayout>
-        <WholeWrapper>
-          <Mainslider />
-
-          <ToastEditorComponent
-            action={getEditContent}
-            // placeholder="placeholder"
-          />
-
-          <Popup />
-        </WholeWrapper>
+        <WholeWrapper></WholeWrapper>
       </ClientLayout>
     </>
   );

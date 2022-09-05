@@ -202,6 +202,7 @@ export const CommonButton = styled(Button)`
   color: ${(props) => props.color || props.theme.subTheme2_C};
   border-radius: ${(props) => props.radius || `7px`};
 
+  /* 기본 */
   ${(props) => !props.kindOf && `background : ${props.theme.white_C};`}
   ${(props) =>
     props.kindOf === `white` && `background : ${props.theme.basicTheme_C};`}
