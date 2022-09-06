@@ -472,7 +472,7 @@ const Type = () => {
                     }
                     alt="bgImg"
                     width={`100%`}
-                    height={`600px`}
+                    height={width < 700 ? `350px` : `600px`}
                   />
                   <Image
                     src={
@@ -480,7 +480,7 @@ const Type = () => {
                     }
                     alt="bgImg"
                     width={`100%`}
-                    height={`230px`}
+                    height={width < 700 ? `120px` : `230px`}
                   />
 
                   <Wrapper
@@ -492,7 +492,7 @@ const Type = () => {
                     <RsWrapper
                       al={`flex-start`}
                       ju={`flex-start`}
-                      padding={`200px 0 0`}
+                      padding={width < 700 ? `80px 0 0` : `200px 0 0`}
                       position={`relative`}
                     >
                       <Wrapper
@@ -504,12 +504,12 @@ const Type = () => {
                         <Image
                           src={data.thumbnail}
                           alt="thumbnail"
-                          width={`auto`}
+                          width={width < 700 ? `100%` : `auto`}
                         />
                       </Wrapper>
 
                       <Text
-                        fontSize={`20px`}
+                        fontSize={width < 700 ? `18px` : `20px`}
                         fontWeight={`700`}
                         color={Theme.white_C}
                       >
@@ -517,7 +517,7 @@ const Type = () => {
                       </Text>
 
                       <Text
-                        fontSize={`48px`}
+                        fontSize={width < 700 ? `30px` : `48px`}
                         fontWeight={`700`}
                         color={Theme.basicTheme_C}
                         margin={`15px 0 25px`}
@@ -528,7 +528,7 @@ const Type = () => {
                       {data.description.map((value, idx) => {
                         return (
                           <Text
-                            fontSize={`20px`}
+                            fontSize={width < 700 ? `12px` : `20px`}
                             color={Theme.white_C}
                             key={idx}
                           >
@@ -540,7 +540,7 @@ const Type = () => {
                   </Wrapper>
                 </Wrapper>
 
-                <Wrapper padding={`0 50px`}>
+                <Wrapper padding={width < 700 ? `0 10px` : `0 50px`}>
                   <Wrapper margin={`100px 0`}>
                     <Wrapper
                       width={width < 900 ? `100%` : `910px`}
@@ -551,16 +551,23 @@ const Type = () => {
                     </Wrapper>
                   </Wrapper>
 
-                  <Wrapper dr={`row`} ju={`space-between`} margin={`0 0 100px`}>
-                    {data.images.map((value, idx) => {
-                      return (
-                        <Image
-                          src={value.image}
-                          alt="img"
-                          width={`calc(100% / 3 - 10px)`}
-                        />
-                      );
-                    })}
+                  <Wrapper margin={`0 0 100px`} overflow={`auto`}>
+                    <Wrapper
+                      minWidth={`900px`}
+                      dr={`row`}
+                      ju={`space-between`}
+                      wrap={`nowrap`}
+                    >
+                      {data.images.map((value, idx) => {
+                        return (
+                          <Image
+                            src={value.image}
+                            alt="img"
+                            width={`calc(100% / 3 - 10px)`}
+                          />
+                        );
+                      })}
+                    </Wrapper>
                   </Wrapper>
                 </Wrapper>
 
@@ -569,51 +576,55 @@ const Type = () => {
                     <Wrapper
                       key={idx}
                       bgColor={Theme.black3_C}
-                      al={`flex-end`}
-                      ju={`flex-end`}
                       position={`relative`}
+                      padding={`100px 0`}
+                      zIndex={`2`}
                     >
-                      <Image
-                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_right-pattern.png`}
-                        alt="bgImg"
-                        width={`auto`}
-                      />
+                      <RsWrapper>
+                        <Wrapper dr={`row`}>
+                          <Image
+                            src={value.prodImg}
+                            width={width < 700 ? `100%` : `390px`}
+                            alt="prodImg"
+                          />
+                          <Wrapper
+                            width={width < 900 ? `100%` : `calc(100% - 390px)`}
+                            padding={width < 900 ? `0` : `0 0 0 80px`}
+                            al={`flex-start`}
+                          >
+                            <Text
+                              fontSize={width < 700 ? `25px` : `36px`}
+                              fontWeight={`700`}
+                              color={Theme.basicTheme_C}
+                              margin={`0 0 30px`}
+                            >
+                              {value.prodTitle}
+                            </Text>
+
+                            <Text
+                              color={Theme.white_C}
+                              fontSize={width < 700 ? `14px` : `20px`}
+                            >
+                              {value.prodDescription}
+                            </Text>
+                          </Wrapper>
+                        </Wrapper>
+                      </RsWrapper>
 
                       <Wrapper
                         position={`absolute`}
-                        padding={`100px 0`}
                         top={`0`}
-                        left={`0`}
+                        right={`0`}
+                        height={`100%`}
+                        al={`flex-end`}
+                        ju={`flex-end`}
+                        zIndex={`-1`}
                       >
-                        <RsWrapper>
-                          <Wrapper dr={`row`}>
-                            <Image
-                              src={value.prodImg}
-                              width={`390px`}
-                              alt="prodImg"
-                            />
-                            <Wrapper
-                              width={
-                                width < 900 ? `100%` : `calc(100% - 390px)`
-                              }
-                              padding={width < 900 ? `0` : `0 0 0 80px`}
-                              al={`flex-start`}
-                            >
-                              <Text
-                                fontSize={`36px`}
-                                fontWeight={`700`}
-                                color={Theme.basicTheme_C}
-                                margin={`0 0 30px`}
-                              >
-                                {value.prodTitle}
-                              </Text>
-
-                              <Text color={Theme.white_C} fontSize={`20px`}>
-                                {value.prodDescription}
-                              </Text>
-                            </Wrapper>
-                          </Wrapper>
-                        </RsWrapper>
+                        <Image
+                          src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_right-pattern.png`}
+                          alt="bgImg"
+                          width={width < 700 ? `100%` : `auto`}
+                        />
                       </Wrapper>
                     </Wrapper>
                   );
