@@ -32,7 +32,13 @@ const HoverText = styled(Text)`
   }
 `;
 
-const Product = () => {
+const MenuWrapperStyle = styled(Wrapper)`
+  visibility: ${(props) => props.hidden};
+  position: absolute;
+  top: 0;
+`;
+
+const Product = ({ hiddenProdMenu }) => {
   ////// GLOBAL STATE //////
   const [tab, setTab] = useState(0);
   ////// HOOKS //////
@@ -58,7 +64,12 @@ const Product = () => {
         <title>AGS | 제품소개</title>
       </Head>
 
-      <WholeWrapper bgColor={Theme.black2_C} padding={`0 150px`}>
+      <MenuWrapperStyle
+        hidden={`hidden`}
+        bgColor={Theme.black2_C}
+        padding={`0 150px`}
+        zIndex={100}
+      >
         <Wrapper dr={`row`} margin={`80px 0 0`}>
           <Wrapper al={`flex-start`} width={`50%`}>
             <Text fontSize={`50px`} fontWeight={`500`} color={Theme.white_C}>
@@ -250,7 +261,7 @@ const Product = () => {
             </Wrapper>
           </Wrapper>
         </Wrapper>
-      </WholeWrapper>
+      </MenuWrapperStyle>
     </>
   );
 };

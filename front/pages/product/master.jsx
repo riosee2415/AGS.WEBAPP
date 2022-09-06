@@ -16,7 +16,7 @@ import {
 import Theme from "../../components/Theme";
 import EvolutionSlider from "../../components/slide/EvolutionSlider";
 
-const Evolution = () => {
+const Master = () => {
   ////// GLOBAL STATE //////
   ////// HOOKS //////
   const width = useWidth();
@@ -29,7 +29,7 @@ const Evolution = () => {
   return (
     <>
       <Head>
-        <title>AVA | EVOLUTION SERIES</title>
+        <title>AVA | MASTER SERIES</title>
       </Head>
       <ClientLayout>
         <WholeWrapper>
@@ -66,25 +66,26 @@ const Evolution = () => {
                       color={Theme.basicTheme_C}
                       margin={`0 0 25px`}
                     >
-                      AVA EVOLUTION SERIES
+                      AVA MASTER SERIES
                     </Text>
                     {width < 700 ? (
                       <Text>
-                        EVOLUTION 시리즈 제품은 내구성과 성능을 위해 오래 지속
-                        가능한 4&#38;6기통 실린더 금속펌프로 제작되었으며 회전
-                        호스릴에 최대 20m까지 손쉽게 보관가능합니다.
+                        MASTER 시리즈는 내구성과 성능을 위해 오래 지속되는 4기통
+                        금속 펌프가 내장되어 있습니다. 확장 가능한 전면 지지대와
+                        낮은 무게 중심 그리고 회전 호스릴로 매우 안정적입니다.
                       </Text>
                     ) : (
                       <>
                         <Text>
-                          EVOLUTION 시리즈 제품은 내구성과 성능을 위해 오래 지속
-                          가능한
+                          MASTER 시리즈는 내구성과 성능을 위해 오래 지속되는
                         </Text>
                         <Text>
-                          4&#38;6기통 실린더 금속펌프로 제작되었으며 회전
-                          호스릴에
+                          4기통 금속 펌프가 내장되어 있습니다. 확장 가능한 전면
+                          지지대와
                         </Text>
-                        <Text>최대 20m까지 손쉽게 보관가능합니다.</Text>
+                        <Text>
+                          낮은 무게 중심 그리고 회전 호스릴로 매우 안정적입니다.
+                        </Text>
                       </>
                     )}
                   </Wrapper>
@@ -97,14 +98,42 @@ const Evolution = () => {
             >
               <RsWrapper al={`flex-end`} ju={`flex-end`} position={`relative`}>
                 <Image
-                  alt="evolution"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_prod-evolution.png`}
+                  alt="master"
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_prod-master.png`}
                   width={
                     width < 1000 ? (width < 700 ? `240px` : `300px`) : `380px`
                   }
                 />
               </RsWrapper>
             </Wrapper>
+          </Wrapper>
+
+          <Wrapper
+            padding={width < 900 ? `70px 10px 0` : `100px 50px 0`}
+            dr={`row`}
+            ju={`space-between`}
+            wrap={`nowrap`}
+            overflow={`auto`}
+          >
+            <Image
+              alt="master image1"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_1.png`}
+              width={`calc(100% / 3.1)`}
+              minWidth={`300px`}
+            />
+            <Image
+              alt="master image2"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_2.png`}
+              width={`calc(100% / 3.1)`}
+              minWidth={`300px`}
+              margin={width < 800 && `0 15px`}
+            />
+            <Image
+              alt="master image3"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_3.png`}
+              width={`calc(100% / 3.1)`}
+              minWidth={`300px`}
+            />
           </Wrapper>
 
           <RsWrapper padding={`100px 0`}>
@@ -114,18 +143,32 @@ const Evolution = () => {
               fontSize={width < 900 ? `30px` : `48px`}
               margin={`0 0 40px`}
             >
-              EVOLUTION SERIES
+              MASTER SERIES
             </Text>
             <Text fontSize={width < 900 ? `16px` : `22px`}>
-              AVA 팀의 철저한 경험과 함께 수년간의 고객 피드백이 고압세척기
-              시장에 변화를 가져왔습니다.
+              MASTER 시리즈는 다양한 수상경력으로 AVA에서 가장 자신있는
+              시리즈입니다.
             </Text>
+            {width < 700 ? (
+              <Text fontSize={width < 900 ? `16px` : `22px`}>
+                사용자 친화성, 효율성 및 디자인에 중점을 두었으며 내구성과
+                성능을 위해 오래 지속되는 4기통 금속 펌프가 내장되어 있습니다.
+              </Text>
+            ) : (
+              <>
+                <Text fontSize={width < 900 ? `16px` : `22px`}>
+                  사용자 친화성, 효율성 및 디자인에 중점을 두었으며 내구성과
+                  성능을 위해
+                </Text>
+                <Text fontSize={width < 900 ? `16px` : `22px`}>
+                  오래 지속되는 4기통 금속 펌프가 내장되어 있습니다.
+                </Text>
+              </>
+            )}
+
             <Text fontSize={width < 900 ? `16px` : `22px`}>
-              EVOLUTION 시리즈는 AVA V4 및 V6 올 메탈 펌프를 함께 사용할 수
-              있으며, 호스릴은 최대 20M까지 보관할 수 있습니다.
-            </Text>
-            <Text fontSize={width < 900 ? `16px` : `22px`}>
-              사용시 주의 사항은 전원 케이블을 끝까지 뺀 상태에서 사용해주세요.
+              확장 가능한 전면 지지대와 낮은 무게 중심 그리고 회전 호스릴로 매우
+              안정적입니다.
             </Text>
             <Wrapper
               height={width < 900 ? `300px` : `720px`}
@@ -135,7 +178,7 @@ const Evolution = () => {
                 width={`100%`}
                 height={`100%`}
                 frameborder="0"
-                src={`https://www.youtube.com/embed/AfyIFsKZdg0`}
+                src={`https://www.youtube.com/embed/67SPujQ4EzU`}
               />
             </Wrapper>
           </RsWrapper>
@@ -148,21 +191,21 @@ const Evolution = () => {
             overflow={`auto`}
           >
             <Image
-              alt="evolution image1"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_1.png`}
+              alt="master image1"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_4.png`}
               width={`calc(100% / 3.1)`}
               minWidth={`300px`}
             />
             <Image
-              alt="evolution image2"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_2.png`}
+              alt="master image2"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_5.png`}
               width={`calc(100% / 3.1)`}
               minWidth={`300px`}
               margin={width < 800 && `0 15px`}
             />
             <Image
-              alt="evolution image3"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_3.png`}
+              alt="master image3"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_6.png`}
               width={`calc(100% / 3.1)`}
               minWidth={`300px`}
             />
@@ -170,7 +213,7 @@ const Evolution = () => {
 
           <Wrapper
             height={`100vh`}
-            bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_bg.png")`}
+            bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_bg.png")`}
           >
             <RsWrapper al={`flex-end`}>
               <Wrapper
@@ -182,7 +225,7 @@ const Evolution = () => {
               >
                 <Image
                   alt="gragh"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_pressure-1.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_pressure-2.png`}
                   width={`175px`}
                 />
                 <Text
@@ -195,11 +238,11 @@ const Evolution = () => {
                   fontSize={width < 900 ? `25px` : `38px`}
                   fontWeight={`900`}
                 >
-                  145-160Bar
+                  145-180Bar
                 </Text>
                 <Image
                   alt="gragh"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_water-1.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_water-2.png`}
                   width={`175px`}
                   margin={`90px 0 0`}
                 />
@@ -213,7 +256,7 @@ const Evolution = () => {
                   fontSize={width < 900 ? `25px` : `38px`}
                   fontWeight={`900`}
                 >
-                  500-730L
+                  500-600L
                 </Text>
               </Wrapper>
             </RsWrapper>
@@ -231,17 +274,17 @@ const Evolution = () => {
                 fontSize={width < 900 ? `30px` : `48px`}
                 margin={`0 0 40px`}
               >
-                EVOLUTION MODELS
+                MASTER MODELS
               </Text>
               <Wrapper dr={`row`}>
                 <Image
-                  alt="evolution model"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_model-eq.png`}
+                  alt="master model"
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_model-eq.png`}
                   width={`275px`}
                 />
                 <Image
-                  alt="evolution table"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_graph.png`}
+                  alt="master table"
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_graph.png`}
                   width={width < 800 ? `100%` : `610px`}
                   margin={width < 800 ? `15px 0` : `0 0 0 40px`}
                 />
@@ -255,7 +298,7 @@ const Evolution = () => {
               >
                 구성품
               </Text>
-              <Wrapper dr={`row`} zIndex={`10`}>
+              <Wrapper dr={`row`} zIndex={`10`} ju={`flex-start`}>
                 <Wrapper
                   width={width < 900 ? `calc(100% / 2)` : `calc(100% / 4)`}
                 >
@@ -309,7 +352,7 @@ const Evolution = () => {
                 >
                   <Image
                     alt="구성품"
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_high+pressure-hose.png`}
+                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_steel-relnforced-hose.png`}
                     width={`70%`}
                     margin={`42px 0 32px`}
                   />
@@ -317,7 +360,7 @@ const Evolution = () => {
                     fontSize={width < 900 ? `16px` : `22px`}
                     fontWeight={`bold`}
                   >
-                    고압호스
+                    스틸고압호스
                   </Text>
                 </Wrapper>
                 <Wrapper
@@ -368,6 +411,33 @@ const Evolution = () => {
                     흡입필터
                   </Text>
                 </Wrapper>
+                <Wrapper
+                  width={width < 900 ? `calc(100% / 2)` : `calc(100% / 4)`}
+                >
+                  <Image
+                    alt="구성품"
+                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_15nozzle.png`}
+                    width={`70%`}
+                    margin={`42px 0 32px`}
+                  />
+                  <Text
+                    fontSize={width < 900 ? `16px` : `22px`}
+                    fontWeight={`bold`}
+                  >
+                    15˚ 노즐
+                  </Text>
+                </Wrapper>
+                <Wrapper
+                  width={width < 900 ? `calc(100% / 2)` : `calc(100% / 4)`}
+                  height={`320px`}
+                >
+                  <Text
+                    fontSize={width < 900 ? `16px` : `22px`}
+                    fontWeight={`bold`}
+                  >
+                    편사호스
+                  </Text>
+                </Wrapper>
               </Wrapper>
             </RsWrapper>
             <Image
@@ -388,8 +458,32 @@ const Evolution = () => {
             />
           </Wrapper>
 
-          <Wrapper padding={width < 900 ? `80px 25px` : `100px 50px`}>
-            <EvolutionSlider />
+          <Wrapper
+            padding={width < 900 ? `60px 10px 50px` : `100px 50px 50px`}
+            dr={`row`}
+            ju={`space-between`}
+            wrap={`nowrap`}
+            overflow={`auto`}
+          >
+            <Image
+              alt="master image1"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_7.png`}
+              width={`calc(100% / 3.1)`}
+              minWidth={`300px`}
+            />
+            <Image
+              alt="master image2"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_8.png`}
+              width={`calc(100% / 3.1)`}
+              minWidth={`300px`}
+              margin={width < 800 && `0 15px`}
+            />
+            <Image
+              alt="master image3"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_9.png`}
+              width={`calc(100% / 3.1)`}
+              minWidth={`300px`}
+            />
           </Wrapper>
         </WholeWrapper>
       </ClientLayout>
@@ -419,4 +513,4 @@ export const getServerSideProps = wrapper.getServerSideProps(
   }
 );
 
-export default Evolution;
+export default Master;
