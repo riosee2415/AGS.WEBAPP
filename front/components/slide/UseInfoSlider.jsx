@@ -39,7 +39,6 @@ const UseInfoSlider = ({ useInfoArr }) => {
         slidesToShow={width < 1100 ? (width < 700 ? 1 : 2) : 4}
         autoplay={true}
         speed={3000}
-        arrows={true}
       >
         {useInfoArr.map((data, idx) => {
           return (
