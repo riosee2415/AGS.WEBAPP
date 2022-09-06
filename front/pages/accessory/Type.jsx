@@ -641,7 +641,7 @@ const Type = () => {
                     }
                     alt="bgImg"
                     width={`100%`}
-                    height={width < 700 ? `350px` : `600px`}
+                    height={`600px`}
                   />
                   <Image
                     src={
@@ -649,7 +649,7 @@ const Type = () => {
                     }
                     alt="bgImg"
                     width={`100%`}
-                    height={width < 700 ? `120px` : `230px`}
+                    height={width < 700 ? `130px` : `230px`}
                   />
 
                   <Wrapper
@@ -697,7 +697,7 @@ const Type = () => {
                       {data.description.map((value, idx) => {
                         return (
                           <Text
-                            fontSize={width < 700 ? `12px` : `20px`}
+                            fontSize={width < 700 ? `16px` : `20px`}
                             color={Theme.white_C}
                             key={idx}
                           >
@@ -731,7 +731,7 @@ const Type = () => {
                           <Image
                             src={value.image}
                             alt="img"
-                            width={`calc(100% / 3 - 10px)`}
+                            width={`calc(100% / 3.1)`}
                           />
                         );
                       })}
