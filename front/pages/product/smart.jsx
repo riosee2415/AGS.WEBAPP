@@ -15,7 +15,7 @@ import {
 } from "../../components/commonComponents";
 import Theme from "../../components/Theme";
 
-const Master = () => {
+const Smart = () => {
   ////// GLOBAL STATE //////
   ////// HOOKS //////
   const width = useWidth();
@@ -28,7 +28,7 @@ const Master = () => {
   return (
     <>
       <Head>
-        <title>AVA | MASTER SERIES</title>
+        <title>AVA | SMART SERIES</title>
       </Head>
       <ClientLayout>
         <WholeWrapper>
@@ -65,25 +65,29 @@ const Master = () => {
                       color={Theme.basicTheme_C}
                       margin={`0 0 25px`}
                     >
-                      AVA MASTER SERIES
+                      AVA SMART SERIES
                     </Text>
                     {width < 700 ? (
                       <Text>
-                        MASTER 시리즈는 내구성과 성능을 위해 오래 지속되는 4기통
-                        금속 펌프가 내장되어 있습니다. 확장 가능한 전면 지지대와
-                        낮은 무게 중심 그리고 회전 호스릴로 매우 안정적입니다.
+                        SMART 시리즈는 상위버전인 MASTER 시리즈의 몇 가지 기능을
+                        사용합니다. 제품의 오랜 수명을 위하여 금속 펌프, 팁 방지
+                        설계 및 강철로 강화된 호스를 갖추고 있습니다. 일반적으로
+                        고가의 기계에서 볼 수 있는 모든 기능을 갖춘
+                        시리즈입니다.
                       </Text>
                     ) : (
                       <>
                         <Text>
-                          MASTER 시리즈는 내구성과 성능을 위해 오래 지속되는
+                          SMART 시리즈는 상위버전인 MASTER 시리즈의 몇 가지
+                          기능을 사용합니다.
                         </Text>
                         <Text>
-                          4기통 금속 펌프가 내장되어 있습니다. 확장 가능한 전면
-                          지지대와
+                          제품의 오랜 수명을 위하여 금속 펌프, 팁 방지 설계 및
+                          강철로 강화된 호스를 갖추고
                         </Text>
                         <Text>
-                          낮은 무게 중심 그리고 회전 호스릴로 매우 안정적입니다.
+                          있습니다. 일반적으로 고가의 기계에서 볼 수 있는 모든
+                          기능을 갖춘 시리즈입니다.
                         </Text>
                       </>
                     )}
@@ -97,8 +101,8 @@ const Master = () => {
             >
               <RsWrapper al={`flex-end`} ju={`flex-end`} position={`relative`}>
                 <Image
-                  alt="master"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_prod-master.png`}
+                  alt="smart"
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_prod-smart.png`}
                   width={
                     width < 1000 ? (width < 700 ? `240px` : `300px`) : `380px`
                   }
@@ -115,23 +119,17 @@ const Master = () => {
             overflow={`auto`}
           >
             <Image
-              alt="master image1"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_1.png`}
-              width={`calc(100% / 3.1)`}
+              alt="smart image1"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-smart/img_1.png`}
+              width={`calc(100% / 2.05)`}
               minWidth={`300px`}
             />
             <Image
-              alt="master image2"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_2.png`}
-              width={`calc(100% / 3.1)`}
+              alt="smart image2"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-smart/img_2.png`}
+              width={`calc(100% / 2.05)`}
               minWidth={`300px`}
               margin={width < 800 && `0 15px`}
-            />
-            <Image
-              alt="master image3"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_3.png`}
-              width={`calc(100% / 3.1)`}
-              minWidth={`300px`}
             />
           </Wrapper>
 
@@ -142,33 +140,29 @@ const Master = () => {
               fontSize={width < 900 ? `30px` : `48px`}
               margin={`0 0 40px`}
             >
-              MASTER SERIES
+              SMART SERIES
             </Text>
-            <Text fontSize={width < 900 ? `16px` : `22px`}>
-              MASTER 시리즈는 다양한 수상경력으로 AVA에서 가장 자신있는
-              시리즈입니다.
-            </Text>
+
             {width < 700 ? (
               <Text fontSize={width < 900 ? `16px` : `22px`}>
-                사용자 친화성, 효율성 및 디자인에 중점을 두었으며 내구성과
-                성능을 위해 오래 지속되는 4기통 금속 펌프가 내장되어 있습니다.
+                SMART 시리즈는 상위버전인 MASTER 시리즈의 몇 가지 기능을
+                사용합니다. 제품의 오랜 수명을 위하여 금속 펌프, 팁 방지 설계 및
+                강철로 강화된 호스를 갖추고 있습니다. 일반적으로 고가의 기계에서
+                볼 수 있는 모든 기능을 갖춘 시리즈입니다.
               </Text>
             ) : (
               <>
                 <Text fontSize={width < 900 ? `16px` : `22px`}>
-                  사용자 친화성, 효율성 및 디자인에 중점을 두었으며 내구성과
-                  성능을 위해
+                  SMART 시리즈는 상위버전인 MASTER 시리즈의 몇 가지 기능을
+                  사용합니다. 제품의 오랜 수명을 위하여 금속 펌프, 팁 방지
                 </Text>
                 <Text fontSize={width < 900 ? `16px` : `22px`}>
-                  오래 지속되는 4기통 금속 펌프가 내장되어 있습니다.
+                  설계 및 강철로 강화된 호스를 갖추고 있습니다. 일반적으로
+                  고가의 기계에서 볼 수 있는 모든 기능을 갖춘 시리즈입니다.
                 </Text>
               </>
             )}
 
-            <Text fontSize={width < 900 ? `16px` : `22px`}>
-              확장 가능한 전면 지지대와 낮은 무게 중심 그리고 회전 호스릴로 매우
-              안정적입니다.
-            </Text>
             <Wrapper
               height={width < 900 ? `300px` : `720px`}
               margin={`60px 0 0`}
@@ -177,7 +171,7 @@ const Master = () => {
                 width={`100%`}
                 height={`100%`}
                 frameborder="0"
-                src={`https://www.youtube.com/embed/67SPujQ4EzU`}
+                src={`https://www.youtube.com/embed/Ht7ywGUgzP0`}
               />
             </Wrapper>
           </RsWrapper>
@@ -190,21 +184,21 @@ const Master = () => {
             overflow={`auto`}
           >
             <Image
-              alt="master image1"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_4.png`}
+              alt="smart image1"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-smart/img_3.png`}
               width={`calc(100% / 3.1)`}
               minWidth={`300px`}
             />
             <Image
-              alt="master image2"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_5.png`}
+              alt="smart image2"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-smart/img_4.png`}
               width={`calc(100% / 3.1)`}
               minWidth={`300px`}
               margin={width < 800 && `0 15px`}
             />
             <Image
-              alt="master image3"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_6.png`}
+              alt="smart image3"
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-smart/img_5.png`}
               width={`calc(100% / 3.1)`}
               minWidth={`300px`}
             />
@@ -224,7 +218,7 @@ const Master = () => {
               >
                 <Image
                   alt="gragh"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_pressure-2.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_pressure-3.png`}
                   width={`175px`}
                 />
                 <Text
@@ -237,11 +231,11 @@ const Master = () => {
                   fontSize={width < 900 ? `25px` : `38px`}
                   fontWeight={`900`}
                 >
-                  145-180Bar
+                  130-150Bar
                 </Text>
                 <Image
                   alt="gragh"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_water-2.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_water-3.png`}
                   width={`175px`}
                   margin={`90px 0 0`}
                 />
@@ -255,7 +249,7 @@ const Master = () => {
                   fontSize={width < 900 ? `25px` : `38px`}
                   fontWeight={`900`}
                 >
-                  500-600L
+                  420-500L
                 </Text>
               </Wrapper>
             </RsWrapper>
@@ -273,17 +267,17 @@ const Master = () => {
                 fontSize={width < 900 ? `30px` : `48px`}
                 margin={`0 0 40px`}
               >
-                MASTER MODELS
+                SMART MODELS
               </Text>
               <Wrapper dr={`row`}>
                 <Image
-                  alt="master model"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_model-eq.png`}
+                  alt="smart model"
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-smart/img_model-eq.png`}
                   width={`275px`}
                 />
                 <Image
-                  alt="master table"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_graph.png`}
+                  alt="smart table"
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-smart/img_graph.png`}
                   width={width < 800 ? `100%` : `610px`}
                   margin={width < 800 ? `15px 0` : `0 0 0 40px`}
                 />
@@ -351,7 +345,7 @@ const Master = () => {
                 >
                   <Image
                     alt="구성품"
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_steel-relnforced-hose.png`}
+                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_high+pressure-hose.png`}
                     width={`70%`}
                     margin={`42px 0 32px`}
                   />
@@ -359,7 +353,7 @@ const Master = () => {
                     fontSize={width < 900 ? `16px` : `22px`}
                     fontWeight={`bold`}
                   >
-                    스틸고압호스
+                    고압호스
                   </Text>
                 </Wrapper>
                 <Wrapper
@@ -410,22 +404,7 @@ const Master = () => {
                     흡입필터
                   </Text>
                 </Wrapper>
-                <Wrapper
-                  width={width < 900 ? `calc(100% / 2)` : `calc(100% / 4)`}
-                >
-                  <Image
-                    alt="구성품"
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_15nozzle.png`}
-                    width={`70%`}
-                    margin={`42px 0 32px`}
-                  />
-                  <Text
-                    fontSize={width < 900 ? `16px` : `22px`}
-                    fontWeight={`bold`}
-                  >
-                    15˚ 노즐
-                  </Text>
-                </Wrapper>
+
                 <Wrapper
                   width={width < 900 ? `calc(100% / 2)` : `calc(100% / 4)`}
                   height={`320px`}
@@ -456,34 +435,6 @@ const Master = () => {
               bottom={`320px`}
             />
           </Wrapper>
-
-          <Wrapper
-            padding={width < 900 ? `60px 10px 50px` : `100px 50px 50px`}
-            dr={`row`}
-            ju={`space-between`}
-            wrap={`nowrap`}
-            overflow={`auto`}
-          >
-            <Image
-              alt="master image1"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_7.png`}
-              width={`calc(100% / 3.1)`}
-              minWidth={`300px`}
-            />
-            <Image
-              alt="master image2"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_8.png`}
-              width={`calc(100% / 3.1)`}
-              minWidth={`300px`}
-              margin={width < 800 && `0 15px`}
-            />
-            <Image
-              alt="master image3"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_9.png`}
-              width={`calc(100% / 3.1)`}
-              minWidth={`300px`}
-            />
-          </Wrapper>
         </WholeWrapper>
       </ClientLayout>
     </>
@@ -512,4 +463,4 @@ export const getServerSideProps = wrapper.getServerSideProps(
   }
 );
 
-export default Master;
+export default Smart;
