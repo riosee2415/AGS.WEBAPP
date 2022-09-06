@@ -88,7 +88,7 @@ const Index = () => {
       </Head>
       <ClientLayout>
         <WholeWrapper>
-          <RsWrapper height={width < 700 ? `70vh` : `80vh`}>
+          <RsWrapper height={width < 700 ? `70vh` : `100vh`}>
             <Title fontSize={`50px`} margin={`0 0 50px`}>
               고객지원
             </Title>

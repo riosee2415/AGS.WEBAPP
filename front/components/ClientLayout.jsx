@@ -41,10 +41,7 @@ const ClientLayout = ({ children, width }) => {
       */}
 
       {/* content */}
-      <WholeWrapper
-        margin={router.pathname === "/" ? `0` : `80px 0 0`}
-        position={`relative`}
-      >
+      <WholeWrapper>
         <SnsBox
           height={width < 700 ? `50px` : `75px`}
           width={width < 700 ? `50px` : `75px`}
