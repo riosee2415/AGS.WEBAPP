@@ -117,11 +117,26 @@ const MainTextStyle = styled(Text)`
   cursor: pointer;
   transition: 0.3s;
   color: ${Theme.white_C};
-  margin-bottom: 16px;
+  position: relative;
+
+  line-height: 26px;
 
   &:hover {
     color: ${Theme.basicTheme_C};
-    border-bottom: 2px solid ${Theme.basicTheme_C};
+
+    &::before {
+      width: 100%;
+    }
+  }
+  &::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: ${Theme.basicTheme_C};
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.5s;
   }
 `;
 
@@ -131,10 +146,21 @@ const SubTextStyle = styled(Text)`
   transition: 0.5s;
   color: ${Theme.white_C};
   margin-bottom: ${(props) => props.marginB || `10px`};
+  margin-top: ${(props) => props.marginT};
+  line-height: 21px;
 
   &:hover {
     color: ${Theme.basicTheme_C};
   }
+
+  @media (max-width: 700px) {
+    font-size: 16px;
+  }
+`;
+
+const CloseOutlinedStyle = styled(CloseOutlined)`
+  font-size: 20px;
+  font-weight: 900;
 `;
 
 const AppHeader = () => {
@@ -380,26 +406,27 @@ const AppHeader = () => {
           >
             <Text
               borderBottom={`4px solid ${Theme.basicTheme_C}`}
-              fontSize={`50px`}
+              fontSize={width < 700 ? `30px` : `50px`}
               fontWeight={`500`}
               color={Theme.white_C}
             >
               악세사리
             </Text>
             <Wrapper
-              width={`65px`}
-              height={`65px`}
+              width={width < 700 ? `39px` : `65px`}
+              height={width < 700 ? `39px` : `65px`}
               bgColor={Theme.basicTheme_C}
               radius={`50%`}
               onClick={menuAcceHandler}
               cursor={`pointer`}
             >
-              <CloseOutlined width={`13px`} fontWeight={`bold`} />
+              <CloseOutlinedStyle />
             </Wrapper>
           </Wrapper>
           <Wrapper dr={`row`} ju={`space-around`} al={`flex-start`}>
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `240px`}
+              al={width < 700 ? `flex-start` : ``}
             >
               <Wrapper
                 bgColor={Theme.basicTheme_C}
@@ -420,8 +447,10 @@ const AppHeader = () => {
               >
                 폼 캐논
               </MainTextStyle>
+
               <SubTextStyle
                 onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                marginT={`16px`}
               >
                 베이직 폼 캐논
               </SubTextStyle>
@@ -438,6 +467,7 @@ const AppHeader = () => {
               </MainTextStyle>
               <SubTextStyle
                 onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                marginT={`16px`}
               >
                 줌 랜스
               </SubTextStyle>
@@ -470,6 +500,7 @@ const AppHeader = () => {
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `240px`}
               margin={width < 700 ? `50px 0 0` : ``}
+              al={width < 700 ? `flex-start` : ``}
             >
               <Wrapper
                 bgColor={Theme.basicTheme_C}
@@ -492,6 +523,7 @@ const AppHeader = () => {
               </MainTextStyle>
               <SubTextStyle
                 onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                marginT={`16px`}
               >
                 가변 노즐
               </SubTextStyle>
@@ -533,6 +565,7 @@ const AppHeader = () => {
               </MainTextStyle>
               <SubTextStyle
                 onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                marginT={`16px`}
               >
                 베이직 파티오 클리너
               </SubTextStyle>
@@ -545,6 +578,7 @@ const AppHeader = () => {
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `240px`}
               margin={width < 1400 ? `50px 0 0` : ``}
+              al={width < 700 ? `flex-start` : ``}
             >
               <Wrapper
                 bgColor={Theme.basicTheme_C}
@@ -567,6 +601,7 @@ const AppHeader = () => {
               </MainTextStyle>
               <SubTextStyle
                 onClick={() => router.push(`/accessory/type?type=hose`)}
+                marginT={`16px`}
               >
                 스틸 고압 호스
               </SubTextStyle>
@@ -593,6 +628,7 @@ const AppHeader = () => {
               </MainTextStyle>
               <SubTextStyle
                 onClick={() => router.push(`/accessory/type?type=hose`)}
+                marginT={`16px`}
               >
                 사각 브러시
               </SubTextStyle>
@@ -610,6 +646,7 @@ const AppHeader = () => {
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `240px`}
               margin={width < 1400 ? `50px 0 0` : ``}
+              al={width < 700 ? `flex-start` : ``}
             >
               <Wrapper
                 bgColor={Theme.basicTheme_C}
@@ -633,6 +670,7 @@ const AppHeader = () => {
               <SubTextStyle
                 marginB={`40px`}
                 onClick={() => router.push(`/accessory/type?type=gun`)}
+                marginT={`16px`}
               >
                 제로포스 고압건
               </SubTextStyle>
@@ -643,6 +681,7 @@ const AppHeader = () => {
               </MainTextStyle>
               <SubTextStyle
                 onClick={() => router.push(`/accessory/type?type=gun`)}
+                marginT={`16px`}
               >
                 암/수 어댑터
               </SubTextStyle>
@@ -664,6 +703,7 @@ const AppHeader = () => {
               </MainTextStyle>
               <SubTextStyle
                 onClick={() => router.push(`/accessory/type?type=gun`)}
+                marginT={`16px`}
               >
                 수납함
               </SubTextStyle>
