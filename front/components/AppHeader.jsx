@@ -455,8 +455,8 @@ const AppHeader = () => {
               </Wrapper>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-                beforeW={width < 1400 ? `20%` : ``}
-                beforeL={width < 1400 ? `40%` : ``}
+                beforeW={width < 700 ? `22%` : width < 1400 ? `20%` : ``}
+                beforeL={width < 700 ? `39%` : width < 1400 ? `40%` : ``}
               >
                 폼 캐논
                 <SubTextStyle
@@ -475,8 +475,8 @@ const AppHeader = () => {
 
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-                beforeW={width < 1400 ? `12%` : `20%`}
-                beforeL={width < 1400 ? `44%` : `40%`}
+                beforeW={width < 700 ? `14%` : width < 1400 ? `12%` : `20%`}
+                beforeL={width < 700 ? `43%` : width < 1400 ? `44%` : `40%`}
               >
                 랜스
                 <SubTextStyle
@@ -532,8 +532,8 @@ const AppHeader = () => {
               </Wrapper>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=nozzle`)}
-                beforeW={width < 1400 ? `12%` : `20%`}
-                beforeL={width < 1400 ? `44%` : `40%`}
+                beforeW={width < 700 ? `14%` : width < 1400 ? `12%` : `20%`}
+                beforeL={width < 700 ? `43%` : width < 1400 ? `44%` : `40%`}
               >
                 노즐
                 <SubTextStyle
@@ -577,8 +577,8 @@ const AppHeader = () => {
 
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=nozzle`)}
-                beforeW={width < 1400 ? `40%` : `56%`}
-                beforeL={width < 1400 ? `30%` : `22%`}
+                beforeW={width < 700 ? `42%` : width < 1400 ? `40%` : `56%`}
+                beforeL={width < 700 ? `29%` : width < 1400 ? `30%` : `22%`}
               >
                 파티오 클리너
                 <SubTextStyle
@@ -614,8 +614,8 @@ const AppHeader = () => {
               </Wrapper>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=hose`)}
-                beforeW={width < 1400 ? `12%` : `20%`}
-                beforeL={width < 1400 ? `44%` : `40%`}
+                beforeW={width < 700 ? `14%` : width < 1400 ? `12%` : `20%`}
+                beforeL={width < 700 ? `43%` : width < 1400 ? `44%` : `40%`}
               >
                 호스
                 <SubTextStyle
@@ -726,8 +726,8 @@ const AppHeader = () => {
 
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=gun`)}
-                beforeW={width < 1400 ? `24%` : `38%`}
-                beforeL={width < 1400 ? `38%` : `31%`}
+                beforeW={width < 700 ? `26%` : width < 1400 ? `24%` : `38%`}
+                beforeL={width < 700 ? `37%` : width < 1400 ? `38%` : `31%`}
               >
                 수납도구
                 <SubTextStyle
