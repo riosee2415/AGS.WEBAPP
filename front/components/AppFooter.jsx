@@ -86,19 +86,31 @@ const AppFooter = () => {
         >
           <Wrapper width={`33.3%`} al={`flex-start`}>
             <HoverT margin={`0 0 14px`}>
-              <Link href={`/`}>
+              <Link href={`/center/brand`}>
                 <ATag>브랜드 소개</ATag>
               </Link>
             </HoverT>
-            <HoverT margin={`0 0 14px`}>제품 소개</HoverT>
-            <HoverT>악세사리</HoverT>
+            <HoverT margin={`0 0 14px`}>
+              <Link href={`/product`}>
+                <ATag>제품 소개</ATag>
+              </Link>
+            </HoverT>
+            <HoverT>
+              <Link href={`/accessory`}>
+                <ATag>악세사리</ATag>
+              </Link>
+            </HoverT>
           </Wrapper>
           <Wrapper
             width={`33.3%`}
             al={`flex-start`}
             fontSize={width < 700 ? `14px` : `18px`}
           >
-            <HoverT>고객지원</HoverT>
+            <HoverT>
+              <Link href={`/center`}>
+                <ATag>고객지원</ATag>
+              </Link>
+            </HoverT>
           </Wrapper>
           <Wrapper
             width={`33.3%`}
