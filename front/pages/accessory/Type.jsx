@@ -56,7 +56,7 @@ const Type = () => {
       ],
       thumbnail:
         "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_acc-foam-cannon.png",
-      youtube: "",
+      youtube: "https://www.youtube.com/embed/mGiNahOkreI",
       images: [
         {
           image:
@@ -120,6 +120,7 @@ const Type = () => {
             "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_lance-3.png",
         },
       ],
+      youtube: "https://www.youtube.com/embed/-MoYSp5_c0E",
       products: [
         {
           type: "1",
@@ -220,6 +221,7 @@ const Type = () => {
             "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_nozzle-6.png",
         },
       ],
+      youtube: "https://www.youtube.com/embed/ybWeyAemn3Q",
       products: [
         {
           type: "1",
@@ -306,6 +308,7 @@ const Type = () => {
             "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_patio-3.png",
         },
       ],
+      youtube: "https://www.youtube.com/embed/Ku-yA1mBJDg",
       products: [
         {
           type: "1",
@@ -709,17 +712,39 @@ const Type = () => {
                   </Wrapper>
                 </Wrapper>
                 <Wrapper padding={width < 700 ? `0 10px` : `0 50px`}>
-                  <Wrapper margin={`100px 0`}>
-                    <Wrapper
-                      width={width < 900 ? `100%` : `910px`}
-                      height={`512px`}
-                      bgColor={Theme.lightGrey_C}
-                    >
-                      유튜부
+                  {data.youtube && (
+                    <Wrapper margin={`100px 0 0`}>
+                      <Wrapper height={width < 900 ? `300px` : `720px`}>
+                        <iframe
+                          width={`100%`}
+                          height={`100%`}
+                          frameborder="0"
+                          src={data.youtube}
+                        />
+                      </Wrapper>
                     </Wrapper>
-                  </Wrapper>
+                  )}
 
-                  <Wrapper margin={`0 0 100px`} overflow={`auto`}>
+                  {data.subTitle && (
+                    <Wrapper margin={`100px 0 0`}>
+                      <Text
+                        fontSize={width < 700 ? `20px` : `36px`}
+                        isGong={true}
+                        textAlign={`center`}
+                        margin={`0 0 10px`}
+                      >
+                        {data.subTitle}
+                      </Text>
+                      <Text fontSize={width < 700 ? `12px` : `20px`}>
+                        {data.subTitle2}
+                      </Text>
+                    </Wrapper>
+                  )}
+
+                  <Wrapper
+                    margin={data.subTitle ? `45px 0 100px` : `100px 0 100px`}
+                    overflow={`auto`}
+                  >
                     <Wrapper
                       minWidth={`900px`}
                       dr={`row`}
@@ -732,6 +757,7 @@ const Type = () => {
                             src={value.image}
                             alt="img"
                             width={`calc(100% / 3.1)`}
+                            margin={`0 10px 0 0`}
                           />
                         );
                       })}
@@ -746,6 +772,7 @@ const Type = () => {
                       position={`relative`}
                       padding={`100px 0`}
                       zIndex={`2`}
+                      minHeight={width < 700 ? `auto` : `419px`}
                     >
                       <RsWrapper>
                         <Wrapper dr={`row`}>
@@ -758,6 +785,7 @@ const Type = () => {
                             width={width < 900 ? `100%` : `calc(100% - 390px)`}
                             padding={width < 900 ? `0` : `0 0 0 80px`}
                             al={`flex-start`}
+                            margin={width < 700 ? `50px 0 0` : `0`}
                           >
                             <Text
                               fontSize={width < 700 ? `25px` : `36px`}
