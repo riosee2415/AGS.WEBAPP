@@ -144,6 +144,7 @@ const HoverButton = styled(Wrapper)`
 `;
 
 const HoverArrowButton = styled(Wrapper)`
+  z-index: 2;
   width: 51px;
   height: 51px;
   background-color: ${(props) => props.theme.basicTheme_C};
