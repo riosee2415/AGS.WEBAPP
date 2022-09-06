@@ -148,7 +148,7 @@ export const Wrapper = styled.div`
 `;
 
 export const RsWrapper = styled.article`
-  width: 1350px;
+  width: 1280px;
   height: ${(props) => props.height || `100%`};
   ${(props) => props.minHeight}
   color: ${(props) => props.color};
@@ -169,9 +169,6 @@ export const RsWrapper = styled.article`
   position: ${(props) => props.position};
 
   @media (max-width: 1500px) {
-    width: 1350px;
-  }
-  @media (max-width: 1350px) {
     width: 1280px;
   }
   @media (max-width: 1280px) {

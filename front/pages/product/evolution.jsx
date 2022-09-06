@@ -6,7 +6,13 @@ import { LOAD_MY_INFO_REQUEST } from "../../reducers/user";
 import axios from "axios";
 import { END } from "redux-saga";
 import useWidth from "../../hooks/useWidth";
-import { RsWrapper, WholeWrapper } from "../../components/commonComponents";
+import {
+  RsWrapper,
+  Text,
+  WholeWrapper,
+  Wrapper,
+} from "../../components/commonComponents";
+import Theme from "../../components/Theme";
 
 const Evolution = () => {
   ////// GLOBAL STATE //////
@@ -25,7 +31,29 @@ const Evolution = () => {
       </Head>
       <ClientLayout>
         <WholeWrapper>
-          <RsWrapper>개발환경</RsWrapper>
+          <Wrapper position={`relative`}>
+            <Wrapper
+              height={`600px`}
+              bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-black.png")`}
+            ></Wrapper>
+            <Wrapper
+              height={`230px`}
+              bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-green.png")`}
+            ></Wrapper>
+            <Wrapper position={`absolute`} top={`0`} left={`0`} zIndex={`2`}>
+              <RsWrapper dr={`row`} ju={`space-between`}>
+                <Wrapper width={`auto`} al={`flex-start`}>
+                  <Text
+                    fontSize={`48px`}
+                    fontWeight={`bold`}
+                    color={Theme.basicTheme_C}
+                  >
+                    AVA EVOLUTION SERIES
+                  </Text>
+                </Wrapper>
+              </RsWrapper>
+            </Wrapper>
+          </Wrapper>
         </WholeWrapper>
       </ClientLayout>
     </>
