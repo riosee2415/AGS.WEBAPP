@@ -39,7 +39,7 @@ const CustomBtn = styled(Wrapper)`
   }
 
   @media (max-width: 900px) {
-    padding: 4px;
+    padding: 6px 10px;
     font-size: 14px;
   }
 `;
@@ -130,6 +130,7 @@ const Index = () => {
               dr={`row`}
             >
               <Text
+                width={width < 800 ? `100%` : `auto`}
                 fontWeight={`bold`}
                 fontSize={width < 800 ? `28px` : `48px`}
                 lineHeight={`1`}
@@ -204,6 +205,7 @@ const Index = () => {
               dr={`row`}
             >
               <Text
+                width={width < 800 ? `100%` : `auto`}
                 fontWeight={`bold`}
                 fontSize={width < 800 ? `28px` : `48px`}
                 lineHeight={`1`}
@@ -277,6 +279,7 @@ const Index = () => {
               dr={`row`}
             >
               <Text
+                width={width < 800 ? `100%` : `auto`}
                 fontWeight={`bold`}
                 fontSize={width < 800 ? `28px` : `48px`}
                 lineHeight={`1`}
@@ -352,6 +355,7 @@ const Index = () => {
               dr={`row`}
             >
               <Text
+                width={width < 800 ? `100%` : `auto`}
                 fontWeight={`bold`}
                 fontSize={width < 800 ? `28px` : `48px`}
                 lineHeight={`1`}
@@ -425,6 +429,7 @@ const Index = () => {
               dr={`row`}
             >
               <Text
+                width={width < 800 ? `100%` : `auto`}
                 fontWeight={`bold`}
                 fontSize={width < 800 ? `28px` : `48px`}
                 lineHeight={`1`}
@@ -499,6 +504,7 @@ const Index = () => {
               dr={`row`}
             >
               <Text
+                width={width < 800 ? `100%` : `auto`}
                 fontWeight={`bold`}
                 fontSize={width < 800 ? `28px` : `48px`}
                 lineHeight={`1`}
@@ -573,6 +579,7 @@ const Index = () => {
               dr={`row`}
             >
               <Text
+                width={width < 800 ? `100%` : `auto`}
                 fontWeight={`bold`}
                 fontSize={width < 800 ? `28px` : `48px`}
                 lineHeight={`1`}
@@ -648,6 +655,7 @@ const Index = () => {
               dr={`row`}
             >
               <Text
+                width={width < 800 ? `100%` : `auto`}
                 fontWeight={`bold`}
                 fontSize={width < 800 ? `28px` : `48px`}
                 lineHeight={`1`}
