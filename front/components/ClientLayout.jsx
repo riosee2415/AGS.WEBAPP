@@ -41,7 +41,7 @@ const ClientLayout = ({ children, width }) => {
       */}
 
       {/* content */}
-      <WholeWrapper>
+      <WholeWrapper margin={`80px 0 0`}>
         <SnsBox
           height={width < 700 ? `50px` : `75px`}
           width={width < 700 ? `50px` : `75px`}
