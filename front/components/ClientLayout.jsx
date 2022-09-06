@@ -52,7 +52,7 @@ const ClientLayout = ({ children, width }) => {
           cursor={`pointer`}
         >
           <Image
-            src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_kakao.png"
+            src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_kakao.svg"
             alt="kakaoIcon"
             width={`100%`}
           />

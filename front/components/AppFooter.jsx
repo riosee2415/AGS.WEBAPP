@@ -59,13 +59,13 @@ const AppFooter = () => {
     <WholeWrapper
       bgColor={Theme.white_C}
       color={Theme.black2_C}
-      padding={width < 700 ? `50px 0 30px` : `200px 0 80px`}
+      padding={width < 700 ? `100px 0 40px` : `200px 0 80px`}
       position={`relative`}
     >
       <Image
         position={`absolute`}
         right={`0`}
-        top={width < 700 ? `0` : `20%`}
+        top={`20%`}
         width={width < 700 ? `50%` : `30%`}
         alt={`img`}
         src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_footer-pattern.png`}
@@ -117,11 +117,31 @@ const AppFooter = () => {
             al={`flex-start`}
             fontSize={width < 700 ? `14px` : `18px`}
           >
-            <HoverT margin={`0 0 14px`}>Evolution Series</HoverT>
-            <HoverT margin={`0 0 14px`}>Master Series</HoverT>
-            <HoverT margin={`0 0 14px`}>GO Series</HoverT>
-            <HoverT margin={`0 0 14px`}>Smart Series</HoverT>
-            <HoverT>V6 Series</HoverT>
+            <HoverT margin={`0 0 14px`}>
+              <Link href={`/product/evolution`}>
+                <ATag>Evolution Series</ATag>
+              </Link>
+            </HoverT>
+            <HoverT margin={`0 0 14px`}>
+              <Link href={`/product/master`}>
+                <ATag>Master Series</ATag>
+              </Link>
+            </HoverT>
+            <HoverT margin={`0 0 14px`}>
+              <Link href={`/product/go`}>
+                <ATag>GO Series</ATag>
+              </Link>
+            </HoverT>
+            <HoverT margin={`0 0 14px`}>
+              <Link href={`/product/smart`}>
+                <ATag>Smart Series</ATag>
+              </Link>
+            </HoverT>
+            <HoverT>
+              <Link href={`/product/v6`}>
+                <ATag>V6 Series</ATag>
+              </Link>
+            </HoverT>
           </Wrapper>
         </Wrapper>
 
@@ -134,7 +154,9 @@ const AppFooter = () => {
           <HoverT margin={width < 800 ? `0 30px` : `0 100px`}>
             개인정보처리방침
           </HoverT>
-          <HoverT>example@email.com</HoverT>
+          <HoverT>
+            <ATag href={``}>example@email.com</ATag>
+          </HoverT>
         </Wrapper>
       </RsWrapper>
 

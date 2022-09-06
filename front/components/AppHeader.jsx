@@ -24,6 +24,7 @@ const CustomBtn = styled(Text)`
   width: 130px;
   padding: 10px 0;
   font-size: 16px;
+  text-align: center;
 
   ${(props) =>
     props.isActive &&
@@ -38,7 +39,6 @@ const CustomBtn = styled(Text)`
   @media (max-width: 800px) {
     width: 90px;
     padding: 6px 0;
-    font-size: 14px;
   }
 `;
 
@@ -318,6 +318,7 @@ const AppHeader = () => {
             </Wrapper>
             <Wrapper
               al={`center`}
+              padding={`0 0 300px`}
               height={`100vh`}
               bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/meat88/assets/images/store-page/img_bg.png")`}
             >
@@ -352,7 +353,12 @@ const AppHeader = () => {
                 </Link>
               </CustomBtn>
 
-              <CommonButton width={`84px`} height={`35px`}>
+              <CommonButton
+                fontSize={`16px`}
+                margin={`17px 0 0`}
+                width={`84px`}
+                height={`35px`}
+              >
                 SHOP
               </CommonButton>
             </Wrapper>
