@@ -57,7 +57,7 @@ const Index = () => {
   return (
     <>
       <Head>
-        <title>AVA | 제품소개</title>
+        <title>AVA | 악세사리</title>
       </Head>
       <ClientLayout>
         <WholeWrapper>
@@ -86,6 +86,7 @@ const Index = () => {
                     color={Theme.white_C}
                     fontSize={width < 700 ? `16px` : `20px`}
                   >
+                    <Text>AVA ACCESSORY</Text>
                     <Text
                       fontSize={
                         width < 900 ? (width < 700 ? `25px` : `30px`) : `48px`
@@ -94,37 +95,10 @@ const Index = () => {
                       color={Theme.basicTheme_C}
                       margin={`0 0 25px`}
                     >
-                      <SpanText color={Theme.white_C}>AVA</SpanText> EVOLUTION
-                      SERIES
+                      악세사리
                     </Text>
-                    {width < 700 ? (
-                      <Text>
-                        By choosing an AVA pressure washer, you choose to go
-                        against the current. You choose to be different, to
-                        think long term and to think smart. You choose a product
-                        that lasts longer, takes less time to use, and is down
-                        right more fun. You choose the new experience.
-                      </Text>
-                    ) : (
-                      <>
-                        <Text>
-                          By choosing an AVA pressure washer, you choose to go
-                        </Text>
-                        <Text>
-                          against the current. You choose to be different, to
-                          think
-                        </Text>
-                        <Text>
-                          long term and to think smart. You choose a product
-                          that
-                        </Text>
-                        <Text>
-                          lasts longer, takes less time to use, and is down
-                          right more fun.
-                        </Text>
-                        <Text>You choose the new experience.</Text>
-                      </>
-                    )}
+
+                    <Text>악세사리의 설명이 들어갈 곳입니다.</Text>
                   </Wrapper>
                 </RsWrapper>
               </Wrapper>
@@ -136,7 +110,7 @@ const Index = () => {
               <RsWrapper al={`flex-end`} ju={`flex-end`} position={`relative`}>
                 <Image
                   alt="evolution"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_prod-main.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_acc-main.png`}
                   width={
                     width < 1000 ? (width < 700 ? `100%` : `700px`) : `850px`
                   }
@@ -145,7 +119,7 @@ const Index = () => {
             </Wrapper>
           </Wrapper>
 
-          {/* EVOLUTION SERIES */}
+          {/* 폼 캐논*/}
           <Wrapper
             padding={width < 800 ? `50px 10px 0` : `100px 50px 0`}
             al={`flex-start`}
@@ -161,11 +135,11 @@ const Index = () => {
                 lineHeight={`1`}
                 margin={`0 36px 0 0`}
               >
-                EVOLUTION SERIES
+                폼 캐논
               </Text>
               <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
                 <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  Evolution series
+                  폼캐논
                 </Text>
                 <Wrapper
                   bgColor={Theme.basicTheme_C}
@@ -189,9 +163,9 @@ const Index = () => {
               fontWeight={`bold`}
               margin={width < 800 ? `0 0 30px` : `0 0 68px`}
             >
-              EVOLUTION 시리즈 제품은 내구성과 성능을 위해 오래 지속 가능한
-              4&#38;6기통 실린더 금속펌프로 제작되었으며 회전 호스릴에 최대
-              20m까지 손쉽게 보관가능합니다.
+              AVA 폼 캐논은 모든 표면에 도포 및 지속이 가능한 두꺼운 폼을
+              만들어냅니다. 고품질의 스테인리스 스틸 매쉬 필터를 사용하여 세제,
+              물, 공기를 혼합합니다. 대부분의 1리터 병으로 결합이 가능합니다.
             </Text>
 
             <Wrapper overflow={width < 700 ? `scroll` : `auto`}>
@@ -203,23 +177,23 @@ const Index = () => {
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_1.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-1.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_2.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-2.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_3.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-3.png`}
                 />
               </Wrapper>
             </Wrapper>
           </Wrapper>
 
-          {/* MASTER SERIES */}
+          {/* 랜스  */}
           <Wrapper
             padding={width < 800 ? `50px 10px 0` : `100px 50px 0`}
             al={`flex-start`}
@@ -235,11 +209,11 @@ const Index = () => {
                 lineHeight={`1`}
                 margin={`0 36px 0 0`}
               >
-                MASTER SERIES
+                랜스
               </Text>
               <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
                 <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  Master series
+                  랜스
                 </Text>
                 <Wrapper
                   bgColor={Theme.basicTheme_C}
@@ -263,9 +237,8 @@ const Index = () => {
               fontWeight={`bold`}
               margin={width < 800 ? `0 0 30px` : `0 0 68px`}
             >
-              MASTER 시리즈는 내구성과 성능을 위해 오래 지속되는 4기통 금속
-              펌프가 내장되어 있습니다. 확장 가능한 전면 지지대와 낮은 무게 중심
-              그리고 회전 호스릴로 매우 안정적입니다.
+              고객님의 니즈에 맞게 다양한 종류의 랜스를 제공합니다. 작업하려는
+              곳의 높이와 각도가 다르기 때문에 용도에 맞는 랜스를 사용해보세요!
             </Text>
 
             <Wrapper overflow={width < 700 ? `scroll` : `auto`}>
@@ -277,23 +250,23 @@ const Index = () => {
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_1.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_lance-1.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_2.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_lance-2.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_3.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_lance-3.png`}
                 />
               </Wrapper>
             </Wrapper>
           </Wrapper>
 
-          {/* GO SERIES */}
+          {/* 노즐 */}
           <Wrapper
             padding={width < 800 ? `50px 10px 0` : `100px 50px 0`}
             al={`flex-start`}
@@ -309,11 +282,11 @@ const Index = () => {
                 lineHeight={`1`}
                 margin={`0 36px 0 0`}
               >
-                GO SERIES
+                노즐
               </Text>
               <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
                 <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  Go series
+                  노즐
                 </Text>
                 <Wrapper
                   bgColor={Theme.basicTheme_C}
@@ -337,9 +310,10 @@ const Index = () => {
               fontWeight={`bold`}
               margin={width < 800 ? `0 0 30px` : `0 0 68px`}
             >
-              GO 시리즈는 작은 기계를 최대한으로 활용하기 위해 설계되었습니다.
-              초소형 및 경량형으로 어디든 손쉽게 휴대하여 사용하기 간편하며
-              협소한 공간에서도 보관이 가능합니다.
+              압력, 폭, 작업거리의 완벽한 조합을 찾기 위해 수많은 테스트를
+              진행하고 작업 상황에 맞는 노즐을 개발하였습니다. 특수 노즐은
+              펌프에서 세척하는 표면으로 적절한 양의 힘을 전달할 때 가장
+              효과적입니다.
             </Text>
 
             <Wrapper overflow={width < 700 ? `scroll` : `auto`}>
@@ -351,23 +325,23 @@ const Index = () => {
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_1.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_nozzle-4.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_2.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_nozzle-5.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_3.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_nozzle-6.png`}
                 />
               </Wrapper>
             </Wrapper>
           </Wrapper>
 
-          {/* SMART SERIES */}
+          {/* 파티오 클리너 */}
           <Wrapper
             padding={width < 800 ? `50px 10px 0` : `100px 50px 0`}
             al={`flex-start`}
@@ -383,11 +357,11 @@ const Index = () => {
                 lineHeight={`1`}
                 margin={`0 36px 0 0`}
               >
-                SMART SERIES
+                파티오 클리너
               </Text>
               <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
                 <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  Smart series
+                  파티오 클리너
                 </Text>
                 <Wrapper
                   bgColor={Theme.basicTheme_C}
@@ -411,10 +385,8 @@ const Index = () => {
               fontWeight={`bold`}
               margin={width < 800 ? `0 0 30px` : `0 0 68px`}
             >
-              SMART 시리즈는 상위버전인 MASTER 시리즈의 몇 가지 기능을
-              사용합니다. 제품의 오랜 수명을 위하여 금속 펌프, 팁 방지 설계 및
-              강철로 강화된 호스를 갖추고 있습니다. 일반적으로 고가의 기계에서
-              볼 수 있는 모든 기능을 갖춘 시리즈입니다.
+              AVA의 파티오 클리너는 나무 데크 뿐만 아니라 딱딱한 표면에 매우
+              효율적입니다.
             </Text>
 
             <Wrapper overflow={width < 700 ? `scroll` : `auto`}>
@@ -423,26 +395,14 @@ const Index = () => {
                 dr={`row`}
                 ju={`space-between`}
               >
-                <Image
-                  width={`32%`}
-                  alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_1.png`}
-                />
-                <Image
-                  width={`32%`}
-                  alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_2.png`}
-                />
-                <Image
-                  width={`32%`}
-                  alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_3.png`}
-                />
+                <Image width={`32%`} alt={`product_img`} src={``} />
+                <Image width={`32%`} alt={`product_img`} src={``} />
+                <Image width={`32%`} alt={`product_img`} src={``} />
               </Wrapper>
             </Wrapper>
           </Wrapper>
 
-          {/* V6 SERIES */}
+          {/* 호스 */}
           <Wrapper
             padding={width < 800 ? `50px 10px 0` : `100px 50px 0`}
             al={`flex-start`}
@@ -458,11 +418,11 @@ const Index = () => {
                 lineHeight={`1`}
                 margin={`0 36px 0 0`}
               >
-                V6 SERIES
+                호스
               </Text>
               <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
                 <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  V6 series
+                  호스
                 </Text>
                 <Wrapper
                   bgColor={Theme.basicTheme_C}
@@ -486,9 +446,9 @@ const Index = () => {
               fontWeight={`bold`}
               margin={width < 800 ? `0 0 30px` : `0 0 68px`}
             >
-              V6 시리즈는 자동차 매니아층과 퀄리티에 민감한분들을 위해
-              설계되었습니다. 고유량 6기통 금속 펌프는 소음과 진동이 적고 벽에
-              고정하여 사용가능합니다.
+              AVA에서 제작된 4가지의 호스는 높은 품질과 유연성 그리고 긴 수명을
+              보장합니다. 다양한 호스로 모든 고압세척기를 보다 편리하게
+              사용해보세요!
             </Text>
 
             <Wrapper overflow={width < 700 ? `scroll` : `auto`}>
@@ -497,21 +457,194 @@ const Index = () => {
                 dr={`row`}
                 ju={`space-between`}
               >
-                <Image
-                  width={`32%`}
-                  alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_1.png`}
-                />
-                <Image
-                  width={`32%`}
-                  alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_2.png`}
-                />
-                <Image
-                  width={`32%`}
-                  alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_3.png`}
-                />
+                <Image width={`32%`} alt={`product_img`} src={``} />
+                <Image width={`32%`} alt={`product_img`} src={``} />
+                <Image width={`32%`} alt={`product_img`} src={``} />
+              </Wrapper>
+            </Wrapper>
+          </Wrapper>
+
+          {/* 브러시 */}
+          <Wrapper
+            padding={width < 800 ? `50px 10px 0` : `100px 50px 0`}
+            al={`flex-start`}
+          >
+            <Wrapper
+              margin={width < 800 ? `0 0 20px` : `0 0 34px`}
+              ju={`flex-start`}
+              dr={`row`}
+            >
+              <Text
+                fontWeight={`bold`}
+                fontSize={width < 800 ? `28px` : `48px`}
+                lineHeight={`1`}
+                margin={`0 36px 0 0`}
+              >
+                브러시
+              </Text>
+              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                  브러시
+                </Text>
+                <Wrapper
+                  bgColor={Theme.basicTheme_C}
+                  width={width < 900 ? `26px` : `36px`}
+                  height={width < 900 ? `26px` : `36px`}
+                  radius={`50%`}
+                >
+                  <Text
+                    textAling={`right`}
+                    padding={`10px`}
+                    color={Theme.black2_C}
+                    fontSize={width < 900 ? `12px` : `16px`}
+                  >
+                    <ArrowRightOutlined />
+                  </Text>
+                </Wrapper>
+              </CustomBtn>
+            </Wrapper>
+            <Text
+              fontSize={width < 800 ? `14px` : `22px`}
+              fontWeight={`bold`}
+              margin={width < 800 ? `0 0 30px` : `0 0 68px`}
+            >
+              사각 브러시는 대부분의 표면에 적합하며 쉽게 사용할 수 있습니다.
+              가구 브러시는 실외의 작은 면적의 표면을 청소하는 곳에 적합합니다.
+              극세사 브러시는 창문, 유리 등깨지기 쉬운 표면에 적합합니다.
+            </Text>
+
+            <Wrapper overflow={width < 700 ? `scroll` : `auto`}>
+              <Wrapper
+                width={width < 700 ? `1000px` : `auto`}
+                dr={`row`}
+                ju={`space-between`}
+              >
+                <Image width={`32%`} alt={`product_img`} src={``} />
+                <Image width={`32%`} alt={`product_img`} src={``} />
+                <Image width={`32%`} alt={`product_img`} src={``} />
+              </Wrapper>
+            </Wrapper>
+          </Wrapper>
+
+          {/* 고압건 */}
+          <Wrapper
+            padding={width < 800 ? `50px 10px 0` : `100px 50px 0`}
+            al={`flex-start`}
+          >
+            <Wrapper
+              margin={width < 800 ? `0 0 20px` : `0 0 34px`}
+              ju={`flex-start`}
+              dr={`row`}
+            >
+              <Text
+                fontWeight={`bold`}
+                fontSize={width < 800 ? `28px` : `48px`}
+                lineHeight={`1`}
+                margin={`0 36px 0 0`}
+              >
+                고압건
+              </Text>
+              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                  고압건
+                </Text>
+                <Wrapper
+                  bgColor={Theme.basicTheme_C}
+                  width={width < 900 ? `26px` : `36px`}
+                  height={width < 900 ? `26px` : `36px`}
+                  radius={`50%`}
+                >
+                  <Text
+                    textAling={`right`}
+                    padding={`10px`}
+                    color={Theme.black2_C}
+                    fontSize={width < 900 ? `12px` : `16px`}
+                  >
+                    <ArrowRightOutlined />
+                  </Text>
+                </Wrapper>
+              </CustomBtn>
+            </Wrapper>
+            <Text
+              fontSize={width < 800 ? `14px` : `22px`}
+              fontWeight={`bold`}
+              margin={width < 800 ? `0 0 30px` : `0 0 68px`}
+            >
+              고객님들이 고압세척기를 사용하면서 느낀 불편함은 고압건 레버를
+              잡을 때 많은 힘이 들어간다는 것이었습니다. 이러한 고객님들의
+              피드백을 바탕으로 Zero-Force 방아쇠를 개발하여 레버를 잡을 때 많은
+              힘이 들어가지 않고 손이 피로해지는 것을 방지했습니다.
+            </Text>
+
+            <Wrapper overflow={width < 700 ? `scroll` : `auto`}>
+              <Wrapper
+                width={width < 700 ? `1000px` : `auto`}
+                dr={`row`}
+                ju={`space-between`}
+              >
+                <Image width={`32%`} alt={`product_img`} src={``} />
+                <Image width={`32%`} alt={`product_img`} src={``} />
+                <Image width={`32%`} alt={`product_img`} src={``} />
+              </Wrapper>
+            </Wrapper>
+          </Wrapper>
+
+          {/* 어댑터 */}
+          <Wrapper
+            padding={width < 800 ? `50px 10px 0` : `100px 50px 0`}
+            al={`flex-start`}
+          >
+            <Wrapper
+              margin={width < 800 ? `0 0 20px` : `0 0 34px`}
+              ju={`flex-start`}
+              dr={`row`}
+            >
+              <Text
+                fontWeight={`bold`}
+                fontSize={width < 800 ? `28px` : `48px`}
+                lineHeight={`1`}
+                margin={`0 36px 0 0`}
+              >
+                어댑터
+              </Text>
+              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                  어댑터
+                </Text>
+                <Wrapper
+                  bgColor={Theme.basicTheme_C}
+                  width={width < 900 ? `26px` : `36px`}
+                  height={width < 900 ? `26px` : `36px`}
+                  radius={`50%`}
+                >
+                  <Text
+                    textAling={`right`}
+                    padding={`10px`}
+                    color={Theme.black2_C}
+                    fontSize={width < 900 ? `12px` : `16px`}
+                  >
+                    <ArrowRightOutlined />
+                  </Text>
+                </Wrapper>
+              </CustomBtn>
+            </Wrapper>
+            <Text
+              fontSize={width < 800 ? `14px` : `22px`}
+              fontWeight={`bold`}
+              margin={width < 800 ? `0 0 30px` : `0 0 68px`}
+            >
+              고압건용 어댑터로 카처와 아바 부속을 사용하기 위해 필요합니다.
+            </Text>
+
+            <Wrapper overflow={width < 700 ? `scroll` : `auto`}>
+              <Wrapper
+                width={width < 700 ? `1000px` : `auto`}
+                dr={`row`}
+                ju={`space-between`}
+              >
+                <Image width={`32%`} alt={`product_img`} src={``} />
+                <Image width={`32%`} alt={`product_img`} src={``} />
+                <Image width={`32%`} alt={`product_img`} src={``} />
               </Wrapper>
             </Wrapper>
           </Wrapper>
