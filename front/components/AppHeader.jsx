@@ -220,7 +220,9 @@ const AppHeader = () => {
                 }
                 isActive={router.pathname === `/product`}
               >
-                <ATag onClick={menuProdHandler}>제품소개</ATag>
+                <Link href={`/product`}>
+                  <ATag onClick={menuProdHandler}>제품소개</ATag>
+                </Link>
               </CustomBtn>
               <CustomBtn
                 color={
@@ -230,7 +232,9 @@ const AppHeader = () => {
                 }
                 isActive={router.pathname === `/accessory`}
               >
-                <ATag onClick={menuAcceHandler}>악세사리</ATag>
+                <Link href={`/accessory`}>
+                  <ATag onClick={menuAcceHandler}>악세사리</ATag>
+                </Link>
               </CustomBtn>
               <CustomBtn
                 color={
@@ -322,33 +326,21 @@ const AppHeader = () => {
               bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/meat88/assets/images/store-page/img_bg.png")`}
             >
               <CustomBtn
-                color={
-                  headerScroll === false && router.pathname === "/"
-                    ? Theme.white_C
-                    : Theme.black2_C
-                }
-                isActive={router.pathname === "/"}
+                color={Theme.black2_C}
+                isActive={router.pathname === "/product"}
               >
-                <Link href={`/brand`}>
+                <Link href={`/product`}>
                   <a>제품소개</a>
                 </Link>
               </CustomBtn>
               <CustomBtn
-                color={
-                  headerScroll === false && router.pathname === "/"
-                    ? Theme.white_C
-                    : Theme.black2_C
-                }
-                isActive={router.pathname === "/"}
+                color={Theme.black2_C}
+                isActive={router.pathname === "/accessory"}
               >
                 <a onClick={menuAcceHandler}>악세사리</a>
               </CustomBtn>
               <CustomBtn
-                color={
-                  headerScroll === false && router.pathname === "/"
-                    ? Theme.white_C
-                    : Theme.black2_C
-                }
+                color={Theme.black2_C}
                 isActive={router.pathname === "/center"}
               >
                 <Link href={`/center`}>
@@ -356,11 +348,7 @@ const AppHeader = () => {
                 </Link>
               </CustomBtn>
               <CustomBtn
-                color={
-                  headerScroll === false && router.pathname === "/"
-                    ? Theme.white_C
-                    : Theme.black2_C
-                }
+                color={Theme.black2_C}
                 isActive={router.pathname === "/center/brand"}
               >
                 <Link href={`/center/brand`}>
