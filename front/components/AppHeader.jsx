@@ -210,6 +210,19 @@ const AppHeader = () => {
     setHiddenProdMenu((prev) => !prev);
   }, [hiddenProdMenu]);
 
+  const menuLinkHandler = useCallback(
+    (link) => {
+      if (hiddenAcceMenu) {
+        setHiddenAcceMenu(false);
+      }
+      if (hiddenProdMenu) {
+        setHiddenProdMenu(false);
+      }
+      router.push(link);
+    },
+    [hiddenAcceMenu, hiddenProdMenu]
+  );
+
   ////////////// - USE EFFECT- //////////////
   useEffect(() => {
     document.addEventListener("scroll", handleScroll);
@@ -445,7 +458,9 @@ const AppHeader = () => {
                 height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                onClick={() =>
+                  menuLinkHandler(`/accessory/type?type=foamcannon`)
+                }
               >
                 <Image
                   width={`75%`}
@@ -454,59 +469,79 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                onClick={() =>
+                  menuLinkHandler(`/accessory/type?type=foamcannon`)
+                }
                 beforeW={width < 700 ? `22%` : width < 1400 ? `20%` : ``}
                 beforeL={width < 700 ? `39%` : width < 1400 ? `40%` : ``}
               >
                 폼 캐논
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                  }
                   marginT={`16px`}
                 >
                   베이직 폼 캐논
                 </SubTextStyle>
                 <SubTextStyle
                   marginB={width < 700 ? `25px` : `40px`}
-                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                  }
                 >
                   브라스 폼 캐논
                 </SubTextStyle>
               </MainTextStyle>
 
               <MainTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                onClick={() =>
+                  menuLinkHandler(`/accessory/type?type=foamcannon`)
+                }
                 beforeW={width < 700 ? `14%` : width < 1400 ? `12%` : `20%`}
                 beforeL={width < 700 ? `43%` : width < 1400 ? `44%` : `40%`}
               >
                 랜스
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                  }
                   marginT={`16px`}
                 >
                   줌 랜스
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                  }
                 >
                   플랙스 랜스
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                  }
                 >
                   텔레스코픽 랜스
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                  }
                 >
                   90˚ 앵글 랜스
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                  }
                 >
                   135˚ 앵글 랜스
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                  }
                 >
                   고정랜스
                 </SubTextStyle>
@@ -522,7 +557,7 @@ const AppHeader = () => {
                 height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
               >
                 <Image
                   width={`75%`}
@@ -531,64 +566,64 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 beforeW={width < 700 ? `14%` : width < 1400 ? `12%` : `20%`}
                 beforeL={width < 700 ? `43%` : width < 1400 ? `44%` : `40%`}
               >
                 노즐
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                   marginT={`16px`}
                 >
                   가변 노즐
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 >
                   터보 노즐
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 >
                   0˚ 노즐
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 >
                   15˚ 노즐
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 >
                   25˚ 노즐
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 >
                   40˚ 노즐
                 </SubTextStyle>
                 <SubTextStyle
                   marginB={width < 700 ? `25px` : `40px`}
-                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 >
                   60˚ 노즐
                 </SubTextStyle>
               </MainTextStyle>
 
               <MainTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 beforeW={width < 700 ? `42%` : width < 1400 ? `40%` : `56%`}
                 beforeL={width < 700 ? `29%` : width < 1400 ? `30%` : `22%`}
               >
                 파티오 클리너
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                   marginT={`16px`}
                 >
                   베이직 파티오 클리너
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 >
                   프리미엄 파티오 클리너
                 </SubTextStyle>
@@ -604,7 +639,7 @@ const AppHeader = () => {
                 height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
-                onClick={() => router.push(`/accessory/type?type=hose`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
               >
                 <Image
                   width={`75%`}
@@ -613,54 +648,54 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                 beforeW={width < 700 ? `14%` : width < 1400 ? `12%` : `20%`}
                 beforeL={width < 700 ? `43%` : width < 1400 ? `44%` : `40%`}
               >
                 호스
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                   marginT={`16px`}
                 >
                   스틸 고압 호스
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                 >
                   고압연장 호스
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                 >
                   편사 호스
                 </SubTextStyle>
                 <SubTextStyle
                   marginB={width < 700 ? `25px` : `40px`}
-                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                 >
                   파이프 세척 호스
                 </SubTextStyle>
               </MainTextStyle>
 
               <MainTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                 beforeW={width < 1400 ? `20%` : ``}
                 beforeL={width < 1400 ? `40%` : ``}
               >
                 브러시
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                   marginT={`16px`}
                 >
                   사각 브러시
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                 >
                   가구 브러시
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                 >
                   극세사 브러시
                 </SubTextStyle>
@@ -676,7 +711,7 @@ const AppHeader = () => {
                 height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
-                onClick={() => router.push(`/accessory/type?type=gun`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
               >
                 <Image
                   width={`75%`}
@@ -685,14 +720,14 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => router.push(`/accessory/type?type=gun`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                 beforeW={width < 1400 ? `20%` : ``}
                 beforeL={width < 1400 ? `40%` : ``}
               >
                 고압건
                 <SubTextStyle
                   marginB={width < 700 ? `25px` : `40px`}
-                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                   marginT={`16px`}
                 >
                   제로포스 고압건
@@ -700,38 +735,38 @@ const AppHeader = () => {
               </MainTextStyle>
 
               <MainTextStyle
-                onClick={() => router.push(`/accessory/type?type=gun`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                 beforeW={width < 1400 ? `20%` : ``}
                 beforeL={width < 1400 ? `40%` : ``}
               >
                 어댑터
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                   marginT={`16px`}
                 >
                   암/수 어댑터
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                 >
                   노즐 회전 어댑터
                 </SubTextStyle>
                 <SubTextStyle
                   marginB={width < 700 ? `25px` : `40px`}
-                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                 >
                   AVA to 카쳐 호스 어댑터
                 </SubTextStyle>
               </MainTextStyle>
 
               <MainTextStyle
-                onClick={() => router.push(`/accessory/type?type=gun`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                 beforeW={width < 700 ? `26%` : width < 1400 ? `24%` : `38%`}
                 beforeL={width < 700 ? `37%` : width < 1400 ? `38%` : `31%`}
               >
                 수납도구
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                   marginT={`16px`}
                 >
                   수납함
@@ -789,7 +824,9 @@ const AppHeader = () => {
                 height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                onClick={() =>
+                  menuLinkHandler(`/accessory/type?type=foamcannon`)
+                }
               >
                 <Image
                   width={`78%`}
@@ -801,28 +838,38 @@ const AppHeader = () => {
               <MainTextStyle
                 beforeW={`80%`}
                 beforeL={`10%`}
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                onClick={() =>
+                  menuLinkHandler(`/accessory/type?type=foamcannon`)
+                }
               >
                 EVOLUTION SERIES
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                  }
                   marginT={`16px`}
                 >
                   AVA EVOLUTION P60
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                  }
                 >
                   AVA EVOLUTION P70
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                  }
                 >
                   AVA EVOLUTION P80
                 </SubTextStyle>
                 <SubTextStyle
                   marginB={width < 700 ? `25px` : `40px`}
-                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                  }
                 >
                   AVA EVOLUTION P90
                 </SubTextStyle>
@@ -840,7 +887,7 @@ const AppHeader = () => {
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 width={`115px`}
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
               >
                 <Image
                   width={`78%`}
@@ -850,24 +897,24 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 beforeW={`70%`}
                 beforeL={`15%`}
               >
                 MASTER SERIES
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                   marginT={`16px`}
                 >
                   AVA Master P60
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 >
                   AVA Master P70
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 >
                   AVA Master P80
                 </SubTextStyle>
@@ -885,7 +932,7 @@ const AppHeader = () => {
                 height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
-                onClick={() => router.push(`/accessory/type?type=hose`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
               >
                 <Image
                   width={`78%`}
@@ -895,24 +942,24 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                 beforeW={`46%`}
                 beforeL={`27%`}
               >
                 GO SERIES
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                   marginT={`16px`}
                 >
                   AVA GO P40
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                 >
                   AVA GO P50
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                 >
                   AVA GO P55
                 </SubTextStyle>
@@ -930,7 +977,7 @@ const AppHeader = () => {
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 width={`115px`}
-                onClick={() => router.push(`/accessory/type?type=gun`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
               >
                 <Image
                   width={`78%`}
@@ -940,25 +987,25 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => router.push(`/accessory/type?type=gun`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                 beforeW={`64%`}
                 beforeL={`18%`}
               >
                 SMART SERIES
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                   marginT={`16px`}
                 >
                   AVA SMART P50
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                 >
                   AVA SMART P55
                 </SubTextStyle>
                 <SubTextStyle
                   marginB={width < 700 ? `25px` : `40px`}
-                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                 >
                   AVA SMART P60
                 </SubTextStyle>
@@ -976,7 +1023,7 @@ const AppHeader = () => {
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 width={`115px`}
-                onClick={() => router.push(`/accessory/type?type=gun`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
               >
                 <Image
                   width={`78%`}
@@ -986,20 +1033,20 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => router.push(`/accessory/type?type=gun`)}
+                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                 beforeW={`46%`}
                 beforeL={`27%`}
               >
                 V6 SERIES
                 <SubTextStyle
-                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                   marginT={`16px`}
                 >
                   AVA V6 P70
                 </SubTextStyle>
                 <SubTextStyle
                   marginB={width < 700 ? `25px` : `40px`}
-                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                 >
                   AVA V6 P90
                 </SubTextStyle>
