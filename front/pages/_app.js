@@ -75,7 +75,11 @@ const Fourleaf = ({ Component }) => {
           rel="stylesheet"
         />
         {/* 오픈산스 폰트 */}
-        <link href="https://use.typekit.net/nck2djs.css" rel="stylesheet" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="//fonts.googleapis.com/css?family=Open+Sans+Condensed"
+        />
       </Head>
       <Component />
     </ThemeProvider>

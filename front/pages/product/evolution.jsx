@@ -105,6 +105,12 @@ const Evolution = () => {
               </RsWrapper>
             </Wrapper>
           </Wrapper>
+
+          <RsWrapper padding={`100px 0`}>
+            <Text isEng fontWeight={`bold`} fontSize={`48px`}>
+              EVOLUTION SERIES
+            </Text>
+          </RsWrapper>
         </WholeWrapper>
       </ClientLayout>
     </>

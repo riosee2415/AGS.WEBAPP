@@ -300,7 +300,8 @@ export const Text = styled.p`
   letter-spacing: ${(props) => props.letterSpacing};
   font-family: ${(props) =>
     props.isGong && "GongGothicMedium" ? "GongGothicMedium" : ""};
-  font-family: ${(props) => (props.isEng && "open-sans" ? "open-sans" : "")};
+  font-family: ${(props) =>
+    props.isEng && "Open Sans Condensed" ? "Open Sans Condensed" : ""};
   ${(props) =>
     props.isEllipsis
       ? `
