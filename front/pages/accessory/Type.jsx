@@ -25,6 +25,7 @@ import { useRouter } from "next/router";
 
 const Type = () => {
   ////// GLOBAL STATE //////
+  const width = useWidth();
 
   ////// HOOKS //////
   ////// REDUX //////
@@ -34,7 +35,7 @@ const Type = () => {
   ////// HANDLER //////
   ////// DATAVIEW //////
 
-  const data = [
+  const accDataArr = [
     // 1
     {
       type: "foamcannon",
@@ -52,21 +53,36 @@ const Type = () => {
           description: "대부분의 1리터 병으로 결합이 가능합니다.",
         },
       ],
-      bgImg:
-        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-main-ban.png",
+      thumbnail:
+        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_acc-foam-cannon.png",
       youtube: "",
-      images: [{ image: "" }, { image: "" }, { image: "" }],
+      images: [
+        {
+          image:
+            "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-1.png",
+        },
+        {
+          image:
+            "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-2.png",
+        },
+        {
+          image:
+            "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-3.png",
+        },
+      ],
       products: [
         {
           type: "1",
-          prodImg: "",
+          prodImg:
+            "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-basic.png",
           prodTitle: "베이직 폼 캐논",
           prodDescription:
             "시중에 판매되는 기본 폼캐논의 분포량은 2-7%까지 조절이 가능하였으나 AVA 폼캐논은 최대 1-20% 사이로 조절이 가능합니다. 기본 28mm 직경의 병을 결합하여 사용할 수 있습니다. 노즐 부분에 잠금기능이 있는데 하나는 폼 발포가 잠긴 상태에서 물만 도포가 되며, 웃는 모양으로 변경 시 폼이 도포가 됩니다.",
         },
         {
           type: "2",
-          prodImg: "",
+          prodImg:
+            "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-brass.png",
           prodTitle: "브라스 폼 캐논",
           prodDescription:
             "AVA 브라스 폼캐논은 황동으로 제작된 본체와 스테인리스스틸 노즐이 제공되며 베이직 폼 캐논보다는 내구성이 뛰어나고 긴 수명을 자랑합니다. 분포량은 최대 1-5% 사이로 조절이 가능하며 노즐 분사 각도 및 세제량 또한 미세하게 조절 가능합니다.",
@@ -86,8 +102,7 @@ const Type = () => {
             "다양한 길이, 다양한 각도로 작업이 힘든 현장에서도 손쉽게 작업이 가능합니다.",
         },
       ],
-      bgImg: "",
-      youtube: "",
+      thumbnail: "",
       images: [{ image: "" }, { image: "" }, { image: "" }],
       products: [
         {
@@ -151,8 +166,7 @@ const Type = () => {
             "특수 노즐은 펌프에서 세척하는 표면으로 적절한 양의 힘을 전달할 때 가장 효과적입니다.",
         },
       ],
-      bgImg: "",
-      youtube: "",
+      thumbnail: "",
       subTitle:
         "AVA의 모든 노즐에는 어떤 제품과 호환이 되는지 표시가 되어있습니다.",
       subTitle2: "초록색: P30-P60 모델, 파란색: P70-P80 모델, 보라색: P90 모델",
@@ -226,8 +240,7 @@ const Type = () => {
             "AVA의 파티오 클리너는 나무 데크 뿐만 아니라 딱딱한 표면에 매우 효율적입니다.",
         },
       ],
-      bgImg: "",
-      youtube: "",
+      thumbnail: "",
       images: [{ image: "" }, { image: "" }, { image: "" }],
       products: [
         {
@@ -259,8 +272,7 @@ const Type = () => {
           description: "다양한 호스로 더 효과적인 작업을 해보세요!",
         },
       ],
-      bgImg: "",
-      youtube: "",
+      thumbnail: "",
       images: [{ image: "" }, { image: "" }, { image: "" }],
       products: [
         {
@@ -311,7 +323,7 @@ const Type = () => {
             "극세사 브러시는 창문, 유리 등 깨지기 쉬운 표면에 적합합니다.",
         },
       ],
-      bgImg: "",
+      thumbnail: "",
       images: [{ image: "" }, { image: "" }, { image: "" }],
       products: [
         {
@@ -355,7 +367,7 @@ const Type = () => {
             "최대 90%의 적은 힘으로 손가락 하나로 작동이 가능하며 손이 피로해지는 것을 방지했습니다.",
         },
       ],
-      bgImg: "",
+      thumbnail: "",
       images: [{ image: "" }, { image: "" }, { image: "" }],
       products: [
         {
@@ -381,7 +393,7 @@ const Type = () => {
             "나사산이 있는 부속품을 결합할 수 있도록 제작된 어댑터입니다.",
         },
       ],
-      bgImg: "",
+      thumbnail: "",
       images: [{ image: "" }, { image: "" }, { image: "" }],
       products: [
         {
@@ -428,7 +440,7 @@ const Type = () => {
             "고객님들의 편한 사용을 위해 보관함을 제작하였습니다. 수납함 하나로 모든 노즐을 보관 할 수 있습니다.",
         },
       ],
-      bgImg: "",
+      thumbnail: "",
       images: [{ image: "" }, { image: "" }, { image: "" }],
       products: [
         {
@@ -445,16 +457,31 @@ const Type = () => {
   return (
     <>
       <Head>
-        <title>AGS | 폼캐논&#38;렌스</title>
+        <title>AVA | 폼캐논&#38;렌스</title>
       </Head>
 
       <ClientLayout>
-        {data.map((data, idx) => {
+        {accDataArr.map((data, idx) => {
           if (router.query.type === data.type) {
             return (
               <>
                 <Wrapper position={`relative`} key={idx}>
-                  <Image src={data.bgImg} alt="bgImg" width={`100%`} />
+                  <Image
+                    src={
+                      "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-black.png"
+                    }
+                    alt="bgImg"
+                    width={`100%`}
+                    height={`600px`}
+                  />
+                  <Image
+                    src={
+                      "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-green.png"
+                    }
+                    alt="bgImg"
+                    width={`100%`}
+                    height={`230px`}
+                  />
 
                   <Wrapper
                     position={`absolute`}
@@ -462,7 +489,25 @@ const Type = () => {
                     left={`0`}
                     height={`100%`}
                   >
-                    <RsWrapper al={`flex-start`}>
+                    <RsWrapper
+                      al={`flex-start`}
+                      ju={`flex-start`}
+                      padding={`200px 0 0`}
+                      position={`relative`}
+                    >
+                      <Wrapper
+                        position={`absolute`}
+                        bottom={`0`}
+                        right={`0`}
+                        width={`auto`}
+                      >
+                        <Image
+                          src={data.thumbnail}
+                          alt="thumbnail"
+                          width={`auto`}
+                        />
+                      </Wrapper>
+
                       <Text
                         fontSize={`20px`}
                         fontWeight={`700`}
@@ -480,20 +525,99 @@ const Type = () => {
                         {data.title}
                       </Text>
 
-                      {data.description.map((data, idx) => {
+                      {data.description.map((value, idx) => {
                         return (
                           <Text
                             fontSize={`20px`}
                             color={Theme.white_C}
                             key={idx}
                           >
-                            {data.description}
+                            {value.description}
                           </Text>
                         );
                       })}
                     </RsWrapper>
                   </Wrapper>
                 </Wrapper>
+
+                <Wrapper padding={`0 50px`}>
+                  <Wrapper margin={`100px 0`}>
+                    <Wrapper
+                      width={width < 900 ? `100%` : `910px`}
+                      height={`512px`}
+                      bgColor={Theme.lightGrey_C}
+                    >
+                      유튜부
+                    </Wrapper>
+                  </Wrapper>
+
+                  <Wrapper dr={`row`} ju={`space-between`} margin={`0 0 100px`}>
+                    {data.images.map((value, idx) => {
+                      return (
+                        <Image
+                          src={value.image}
+                          alt="img"
+                          width={`calc(100% / 3 - 10px)`}
+                        />
+                      );
+                    })}
+                  </Wrapper>
+                </Wrapper>
+
+                {data.products.map((value, idx) => {
+                  return (
+                    <Wrapper
+                      key={idx}
+                      bgColor={Theme.black3_C}
+                      al={`flex-end`}
+                      ju={`flex-end`}
+                      position={`relative`}
+                    >
+                      <Image
+                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_right-pattern.png`}
+                        alt="bgImg"
+                        width={`auto`}
+                      />
+
+                      <Wrapper
+                        position={`absolute`}
+                        padding={`100px 0`}
+                        top={`0`}
+                        left={`0`}
+                      >
+                        <RsWrapper>
+                          <Wrapper dr={`row`}>
+                            <Image
+                              src={value.prodImg}
+                              width={`390px`}
+                              alt="prodImg"
+                            />
+                            <Wrapper
+                              width={
+                                width < 900 ? `100%` : `calc(100% - 390px)`
+                              }
+                              padding={width < 900 ? `0` : `0 0 0 80px`}
+                              al={`flex-start`}
+                            >
+                              <Text
+                                fontSize={`36px`}
+                                fontWeight={`700`}
+                                color={Theme.basicTheme_C}
+                                margin={`0 0 30px`}
+                              >
+                                {value.prodTitle}
+                              </Text>
+
+                              <Text color={Theme.white_C} fontSize={`20px`}>
+                                {value.prodDescription}
+                              </Text>
+                            </Wrapper>
+                          </Wrapper>
+                        </RsWrapper>
+                      </Wrapper>
+                    </Wrapper>
+                  );
+                })}
               </>
             );
           }
