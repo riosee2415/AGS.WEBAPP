@@ -220,9 +220,7 @@ const AppHeader = () => {
                 }
                 isActive={router.pathname === `/product`}
               >
-                <Link href={`/product`}>
-                  <ATag onClick={menuProdHandler}>제품소개</ATag>
-                </Link>
+                <ATag onClick={menuProdHandler}>제품소개</ATag>
               </CustomBtn>
               <CustomBtn
                 color={
@@ -232,9 +230,7 @@ const AppHeader = () => {
                 }
                 isActive={router.pathname === `/accessory`}
               >
-                <Link href={`/accessory`}>
-                  <ATag onClick={menuAcceHandler}>악세사리</ATag>
-                </Link>
+                <ATag onClick={menuAcceHandler}>악세사리</ATag>
               </CustomBtn>
               <CustomBtn
                 color={
