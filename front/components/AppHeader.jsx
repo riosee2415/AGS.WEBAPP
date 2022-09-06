@@ -746,7 +746,7 @@ const AppHeader = () => {
         >
           <Wrapper
             dr={`row`}
-            ju={`space-between`}
+            ju={width < 700 ? `flex-start` : `space-between`}
             margin={width < 700 ? `0 0 50px` : `0 0 118px`}
           >
             <Title
@@ -766,9 +766,10 @@ const AppHeader = () => {
               <CloseOutlinedStyle />
             </Wrapper>
           </Wrapper>
-          <Wrapper dr={`row`} ju={`space-around`} al={`flex-start`}>
+          <Wrapper dr={`row`} ju={`flex-start`} al={`flex-start`}>
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `250px`}
+              al={width < 700 ? `flex-start` : ``}
             >
               <Wrapper
                 bgColor={Theme.basicTheme_C}
@@ -818,6 +819,7 @@ const AppHeader = () => {
             </Wrapper>
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `250px`}
+              al={width < 700 ? `flex-start` : ``}
               margin={width < 700 ? `50px 0 0` : ``}
             >
               <Wrapper
@@ -862,6 +864,7 @@ const AppHeader = () => {
             </Wrapper>
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `250px`}
+              al={width < 700 ? `flex-start` : ``}
               margin={width < 1400 ? `50px 0 0` : ``}
             >
               <Wrapper
@@ -906,6 +909,7 @@ const AppHeader = () => {
             </Wrapper>
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `250px`}
+              al={width < 700 ? `flex-start` : ``}
               margin={width < 1400 ? `50px 0 0` : ``}
             >
               <Wrapper
@@ -951,6 +955,7 @@ const AppHeader = () => {
             </Wrapper>
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `250px`}
+              al={width < 700 ? `flex-start` : ``}
               margin={width < 1400 ? `50px 0 0` : ``}
             >
               <Wrapper
