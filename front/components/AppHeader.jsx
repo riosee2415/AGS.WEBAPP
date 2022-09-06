@@ -6,6 +6,7 @@ import {
   CommonButton,
   ATag,
   Text,
+  Title,
 } from "./commonComponents";
 import Theme from "./Theme";
 import wrapper from "../store/configureStore";
@@ -111,7 +112,7 @@ const HoverText = styled(Text)`
   }
 `;
 
-const MainTextStyle = styled(Text)`
+const MainTextStyle = styled(Wrapper)`
   font-size: 22px;
   font-weight: bold;
   cursor: pointer;
@@ -125,7 +126,7 @@ const MainTextStyle = styled(Text)`
     color: ${Theme.basicTheme_C};
 
     &::before {
-      width: 100%;
+      width: ${(props) => props.beforeW || `30%`};
     }
   }
   &::before {
@@ -134,9 +135,14 @@ const MainTextStyle = styled(Text)`
     height: 2px;
     background-color: ${Theme.basicTheme_C};
     position: absolute;
-    bottom: -5px;
-    left: 0;
+    top: 30px;
+    left: ${(props) => props.beforeL || `35%`};
+
     transition: 0.5s;
+  }
+
+  @media (max-width: 700px) {
+    align-items: flex-start;
   }
 `;
 
@@ -148,6 +154,7 @@ const SubTextStyle = styled(Text)`
   margin-bottom: ${(props) => props.marginB || `10px`};
   margin-top: ${(props) => props.marginT};
   line-height: 21px;
+  font-weight: normal;
 
   &:hover {
     color: ${Theme.basicTheme_C};
@@ -410,14 +417,12 @@ const AppHeader = () => {
             ju={`space-between`}
             margin={width < 700 ? `0 0 50px` : `0 0 118px`}
           >
-            <Text
-              borderBottom={`4px solid ${Theme.basicTheme_C}`}
+            <Title
               fontSize={width < 700 ? `30px` : `50px`}
-              fontWeight={`500`}
               color={Theme.white_C}
             >
               악세사리
-            </Text>
+            </Title>
             <Wrapper
               width={width < 700 ? `39px` : `65px`}
               height={width < 700 ? `39px` : `65px`}
@@ -432,12 +437,11 @@ const AppHeader = () => {
           <Wrapper dr={`row`} ju={`space-around`} al={`flex-start`}>
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `240px`}
-              al={width < 700 ? `flex-start` : ``}
             >
               <Wrapper
                 bgColor={Theme.basicTheme_C}
                 radius="10px"
-                height={`115px`}
+                height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 onClick={() => router.push(`/accessory/type?type=foamcannon`)}
@@ -452,66 +456,67 @@ const AppHeader = () => {
                 onClick={() => router.push(`/accessory/type?type=foamcannon`)}
               >
                 폼 캐논
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  marginT={`16px`}
+                >
+                  베이직 폼 캐논
+                </SubTextStyle>
+                <SubTextStyle
+                  marginB={width < 700 ? `25px` : `40px`}
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  브라스 폼 캐논
+                </SubTextStyle>
               </MainTextStyle>
 
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-                marginT={`16px`}
-              >
-                베이직 폼 캐논
-              </SubTextStyle>
-              <SubTextStyle
-                marginB={`40px`}
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                브라스 폼 캐논
-              </SubTextStyle>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                beforeW={`20%`}
+                beforeL={`40%`}
               >
                 랜스
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  marginT={`16px`}
+                >
+                  줌 랜스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  플랙스 랜스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  텔레스코픽 랜스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  90˚ 앵글 랜스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  135˚ 앵글 랜스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  고정랜스
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-                marginT={`16px`}
-              >
-                줌 랜스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                플랙스 랜스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                텔레스코픽 랜스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                90˚ 앵글 랜스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                135˚ 앵글 랜스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                고정랜스
-              </SubTextStyle>
             </Wrapper>
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `240px`}
               margin={width < 700 ? `50px 0 0` : ``}
-              al={width < 700 ? `flex-start` : ``}
             >
               <Wrapper
                 bgColor={Theme.basicTheme_C}
                 radius="10px"
-                height={`115px`}
+                height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 onClick={() => router.push(`/accessory/type?type=nozzle`)}
@@ -524,72 +529,76 @@ const AppHeader = () => {
               </Wrapper>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                beforeW={`20%`}
+                beforeL={`40%`}
               >
                 노즐
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  marginT={`16px`}
+                >
+                  가변 노즐
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  터보 노즐
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  0˚ 노즐
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  15˚ 노즐
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  25˚ 노즐
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  40˚ 노즐
+                </SubTextStyle>
+                <SubTextStyle
+                  marginB={width < 700 ? `25px` : `40px`}
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  60˚ 노즐
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-                marginT={`16px`}
-              >
-                가변 노즐
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                터보 노즐
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                0˚ 노즐
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                15˚ 노즐
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                25˚ 노즐
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                40˚ 노즐
-              </SubTextStyle>
-              <SubTextStyle
-                marginB={`40px`}
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                60˚ 노즐
-              </SubTextStyle>
+
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                beforeW={`56%`}
+                beforeL={`22%`}
               >
                 파티오 클리너
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  marginT={`16px`}
+                >
+                  베이직 파티오 클리너
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  프리미엄 파티오 클리너
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-                marginT={`16px`}
-              >
-                베이직 파티오 클리너
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                프리미엄 파티오 클리너
-              </SubTextStyle>
             </Wrapper>
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `240px`}
               margin={width < 1400 ? `50px 0 0` : ``}
-              al={width < 700 ? `flex-start` : ``}
             >
               <Wrapper
                 bgColor={Theme.basicTheme_C}
                 radius="10px"
-                height={`115px`}
+                height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 onClick={() => router.push(`/accessory/type?type=hose`)}
@@ -602,62 +611,64 @@ const AppHeader = () => {
               </Wrapper>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=hose`)}
+                beforeW={`20%`}
+                beforeL={`40%`}
               >
                 호스
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  marginT={`16px`}
+                >
+                  스틸 고압 호스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                >
+                  고압연장 호스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                >
+                  편사 호스
+                </SubTextStyle>
+                <SubTextStyle
+                  marginB={width < 700 ? `25px` : `40px`}
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                >
+                  파이프 세척 호스
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-                marginT={`16px`}
-              >
-                스틸 고압 호스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-              >
-                고압연장 호스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-              >
-                편사 호스
-              </SubTextStyle>
-              <SubTextStyle
-                marginB={`40px`}
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-              >
-                파이프 세척 호스
-              </SubTextStyle>
+
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=hose`)}
               >
                 브러시
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  marginT={`16px`}
+                >
+                  사각 브러시
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                >
+                  가구 브러시
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                >
+                  극세사 브러시
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-                marginT={`16px`}
-              >
-                사각 브러시
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-              >
-                가구 브러시
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-              >
-                극세사 브러시
-              </SubTextStyle>
             </Wrapper>
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `240px`}
               margin={width < 1400 ? `50px 0 0` : ``}
-              al={width < 700 ? `flex-start` : ``}
             >
               <Wrapper
                 bgColor={Theme.basicTheme_C}
                 radius="10px"
-                height={`115px`}
+                height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 onClick={() => router.push(`/accessory/type?type=gun`)}
@@ -672,47 +683,51 @@ const AppHeader = () => {
                 onClick={() => router.push(`/accessory/type?type=gun`)}
               >
                 고압건
+                <SubTextStyle
+                  marginB={width < 700 ? `25px` : `40px`}
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  marginT={`16px`}
+                >
+                  제로포스 고압건
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                marginB={`40px`}
-                onClick={() => router.push(`/accessory/type?type=gun`)}
-                marginT={`16px`}
-              >
-                제로포스 고압건
-              </SubTextStyle>
+
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=gun`)}
               >
                 어댑터
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  marginT={`16px`}
+                >
+                  암/수 어댑터
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                >
+                  노즐 회전 어댑터
+                </SubTextStyle>
+                <SubTextStyle
+                  marginB={width < 700 ? `25px` : `40px`}
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                >
+                  AVA to 카쳐 호스 어댑터
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=gun`)}
-                marginT={`16px`}
-              >
-                암/수 어댑터
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=gun`)}
-              >
-                노즐 회전 어댑터
-              </SubTextStyle>
-              <SubTextStyle
-                marginB={`40px`}
-                onClick={() => router.push(`/accessory/type?type=gun`)}
-              >
-                AVA to 카쳐 호스 어댑터
-              </SubTextStyle>
+
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=gun`)}
+                beforeW={`38%`}
+                beforeL={`31%`}
               >
                 수납도구
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  marginT={`16px`}
+                >
+                  수납함
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=gun`)}
-                marginT={`16px`}
-              >
-                수납함
-              </SubTextStyle>
             </Wrapper>
           </Wrapper>
         </Wrapper>
