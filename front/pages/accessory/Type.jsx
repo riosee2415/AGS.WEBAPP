@@ -611,7 +611,16 @@ const Type = () => {
   return (
     <>
       <Head>
-        <title>AVA | 폼캐논&#38;렌스</title>
+        <title>
+          AVA |{" "}
+          {router.query.type === `foamcannon`
+            ? router.query.type === `nozzle`
+              ? router.query.type === `hose`
+                ? "호스&브러시"
+                : "노즐&파티오클리너"
+              : "폼캐논&렌스"
+            : "고압건&어댑터&수납함"}
+        </title>
       </Head>
 
       <ClientLayout>
