@@ -13,6 +13,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { COMPANY_GET_REQUEST } from "../reducers/company";
 import { message } from "antd";
 import styled from "styled-components";
+import Link from "next/link";
 
 const SnsBox = styled(Wrapper)`
   &:hover {
@@ -84,7 +85,11 @@ const AppFooter = () => {
           margin={`0 0 60px`}
         >
           <Wrapper width={`33.3%`} al={`flex-start`}>
-            <HoverT margin={`0 0 14px`}>브랜드 소개</HoverT>
+            <HoverT margin={`0 0 14px`}>
+              <Link href={`/`}>
+                <ATag>브랜드 소개</ATag>
+              </Link>
+            </HoverT>
             <HoverT margin={`0 0 14px`}>제품 소개</HoverT>
             <HoverT>악세사리</HoverT>
           </Wrapper>

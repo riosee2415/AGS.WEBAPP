@@ -218,7 +218,7 @@ const AppHeader = () => {
                     ? Theme.white_C
                     : Theme.black2_C
                 }
-                isActive={router.pathname === `/1`}
+                isActive={router.pathname === `/product`}
               >
                 <ATag onClick={menuProdHandler}>제품소개</ATag>
               </CustomBtn>
@@ -228,7 +228,7 @@ const AppHeader = () => {
                     ? Theme.white_C
                     : Theme.black2_C
                 }
-                isActive={router.pathname === `/1`}
+                isActive={router.pathname === `/accessory`}
               >
                 <ATag onClick={menuAcceHandler}>악세사리</ATag>
               </CustomBtn>
@@ -238,9 +238,9 @@ const AppHeader = () => {
                     ? Theme.white_C
                     : Theme.black2_C
                 }
-                isActive={router.pathname === `/1`}
+                isActive={router.pathname === `/center`}
               >
-                <Link href={`/`}>
+                <Link href={`/center`}>
                   <ATag>고객지원</ATag>
                 </Link>
               </CustomBtn>
@@ -250,9 +250,9 @@ const AppHeader = () => {
                     ? Theme.white_C
                     : Theme.black2_C
                 }
-                isActive={router.pathname === `/1`}
+                isActive={router.pathname === `/center/brand`}
               >
-                <Link href={`/`}>
+                <Link href={`/center/brand`}>
                   <ATag>브랜드소개</ATag>
                 </Link>
               </CustomBtn>
@@ -349,9 +349,9 @@ const AppHeader = () => {
                     ? Theme.white_C
                     : Theme.black2_C
                 }
-                isActive={router.pathname === "/"}
+                isActive={router.pathname === "/center"}
               >
-                <Link href={`/shop`}>
+                <Link href={`/center`}>
                   <a>고객지원</a>
                 </Link>
               </CustomBtn>
@@ -361,9 +361,9 @@ const AppHeader = () => {
                     ? Theme.white_C
                     : Theme.black2_C
                 }
-                isActive={router.pathname === "/"}
+                isActive={router.pathname === "/center/brand"}
               >
-                <Link href={`/franchisee`}>
+                <Link href={`/center/brand`}>
                   <a>브랜드소개</a>
                 </Link>
               </CustomBtn>
