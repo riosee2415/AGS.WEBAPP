@@ -24,6 +24,18 @@ const MainText = styled(Text)`
   font-size: 150px;
   font-weight: 600;
   color: ${(props) => props.theme.white_C};
+
+  @media (max-width: 1280px) {
+    font-size: 120px;
+  }
+
+  @media (max-width: 1100px) {
+    font-size: 90px;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 30px;
+  }
 `;
 
 const AbsoluteInfoWrapper = styled(Wrapper)`
@@ -34,6 +46,7 @@ const AbsoluteInfoWrapper = styled(Wrapper)`
   padding: 98px 90px 100px;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
   background-color: ${(props) => props.theme.basicTheme_C};
   bottom: -96px;
   left: 50;
@@ -48,6 +61,7 @@ const AbsoluteInfoWrapper = styled(Wrapper)`
     width: 1100px;
   }
   @media (max-width: 1100px) {
+    padding: 58px 50px 60px;
     width: 900px;
   }
   @media (max-width: 900px) {
@@ -66,7 +80,6 @@ const AbsoluteInfoWrapper = styled(Wrapper)`
 const HoverTab = styled(Text)`
   cursor: pointer;
   font-size: 32px;
-  margin: 0 30px 0 0;
   position: relative;
   line-height: 1.43;
 
@@ -87,6 +100,10 @@ const HoverTab = styled(Text)`
       opacity: 1;
       width: 85%;
     }
+  }
+
+  @media (max-width: 700px) {
+    font-size: 16px;
   }
 `;
 
@@ -129,10 +146,20 @@ const HoverArrowButton = styled(Wrapper)`
   height: 51px;
   background-color: ${(props) => props.theme.basicTheme_C};
   cursor: pointer;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 15px;
 
   border: 1px solid ${(props) => props.theme.basicTheme_C};
   border-radius: 100%;
+
+  @media (max-width: 1100px) {
+    width: 41px;
+    height: 41px;
+  }
+
+  @media (max-width: 700px) {
+    width: 31px;
+    height: 31px;
+  }
 `;
 
 const Home = ({}) => {
@@ -219,6 +246,7 @@ const Home = ({}) => {
           {/* MAIN BANNER(VIDEO) START */}
           <Wrapper position={`relative`}>
             <Image
+              height={`100vh`}
               src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_main-ban.png`}
               alt={`video`}
             />
@@ -229,39 +257,54 @@ const Home = ({}) => {
           {/* INFO START */}
           <Wrapper
             bgColor={Theme.darkGrey_C}
-            padding={`184px 0`}
+            padding={width < 700 ? `50px 0` : `184px 0`}
             color={Theme.white_C}
           >
             <RsWrapper dr={`row`}>
-              <Wrapper width={`50%`} al={`flex-start`}>
+              <Wrapper width={width < 700 ? `100%` : `50%`} al={`flex-start`}>
                 <Image
-                  width={`380px`}
+                  width={width < 1280 ? `280px` : `380px`}
                   src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_innovation.png`}
                 />
                 <Text
-                  fontSize={`42px`}
+                  fontSize={width < 700 ? `22px` : `42px`}
                   fontWeight={`500`}
-                  margin={`76px 0 28px`}
+                  margin={width < 700 ? `30px 0` : `76px 0 28px`}
                 >
                   AVA 고압 세척기
                 </Text>
 
-                <Text width={`600px`} fontSize={`18px`}>
+                <Text
+                  width={width < 700 ? `100%` : `600px`}
+                  fontSize={width < 1280 ? `16px` : `18px`}
+                >
                   AVA 고압 세척기에 대한 설명이 들어갈 곳입니다. 설명이 길게
                   들어가게 된다면, AVA고압 세척기에 대한 설명이 들어갈 곳입니다.
                   설명이 길게 들어가게 된다면, AVA 고압 세척기에 대한 설명이
                   들어갈 곳입니다. 설명이 길게 들어가게 된다면,
                 </Text>
 
-                <Wrapper dr={`row`} ju={`flex-start`} margin={`80px 0 0 `}>
-                  <Text fontSize={`30px`} fontWeight={`bold`}>
+                <HoverButton>
+                  <Text
+                    fontSize={
+                      width < 1100 ? (width < 700 ? `16px` : `20px`) : `30px`
+                    }
+                    fontWeight={`bold`}
+                  >
                     고압세척기 시리즈 보러가기
                   </Text>
-                </Wrapper>
+                  <HoverArrowButton className="arrowBtn">
+                    <Image
+                      width={width < 1100 ? `20px` : `24px`}
+                      src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_arrow.png`}
+                      alt={`arrow`}
+                    />
+                  </HoverArrowButton>
+                </HoverButton>
               </Wrapper>
-              <Wrapper width={`50%`} al={`flex-end`}>
+              <Wrapper width={width < 700 ? `100%` : `50%`} al={`flex-end`}>
                 <Image
-                  width={`580px`}
+                  width={width < 1280 ? `100%` : `580px`}
                   src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_pressure-washers.png`}
                 />
               </Wrapper>
@@ -271,78 +314,126 @@ const Home = ({}) => {
 
           {/* PRODUCT INFO START */}
 
-          <Wrapper position={`relative`} padding={`98px 0 370px`}>
+          <Wrapper
+            position={`relative`}
+            padding={width < 700 ? `50px 0 450px` : `98px 0 370px`}
+          >
             <RsWrapper>
               <Wrapper
                 al={`flex-start`}
                 margin={`0 0 24px`}
-                fontSize={`42px`}
+                fontSize={width < 700 ? `20px` : `42px`}
                 fontWeight={`500`}
               >
                 <Text>제품설명</Text>
               </Wrapper>
 
               <Wrapper dr={`row`} ju={`space-between`}>
-                <Wrapper width={`48%`}>
+                <Wrapper width={`48%`} position={`relative`}>
                   <Image
                     width={`100%`}
                     src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_prod-pressure-washers.png`}
                     alt={`productImage1`}
                   />
+                  <Wrapper
+                    height={`100%`}
+                    bgColor={Theme.basicTheme_C}
+                    opcity={`0.75`}
+                    position={`aboslute`}
+                  ></Wrapper>
                 </Wrapper>
-                <Wrapper width={`48%`}>
+                <Wrapper width={`48%`} position={`relative`}>
                   <Image
                     width={`100%`}
                     src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_prod-acc.png`}
                     alt={`productImage2`}
                   />
+                  <Wrapper
+                    height={`100%`}
+                    bgColor={Theme.basicTheme_C}
+                    opcity={`0.75`}
+                    position={`aboslute`}
+                  ></Wrapper>
                 </Wrapper>
               </Wrapper>
 
               {/* ABSOLUTE INFO START */}
               <AbsoluteInfoWrapper>
-                <Wrapper width={`calc(100% / 3)`} al={`flex-start`}>
-                  <Text fontSize={`32px`} fontWieght={`500`}>
+                <Wrapper
+                  width={width < 700 ? `100%` : `calc(100% / 3)`}
+                  al={`flex-start`}
+                  margin={`0 0 20px`}
+                >
+                  <Text
+                    fontSize={
+                      width < 1100 ? (width < 700 ? `18px` : `28px`) : `32px`
+                    }
+                    fontWieght={`500`}
+                  >
                     뛰어난 성능
                   </Text>
                   <Wrapper
-                    fontSize={`18px`}
+                    fontSize={
+                      width < 1100 ? (width < 700 ? `14px` : `16px`) : `18px`
+                    }
                     fontWeight={`500`}
                     al={`flex-start`}
-                    margin={`20px 0 0`}
+                    margin={width < 700 ? `10px 0 0` : `20px 0 0`}
                   >
                     <Text>● 높은 분사력</Text>
-                    <Text>● 뛰어난 토출량</Text>
+                    <Text margin={`10px 0`}>● 뛰어난 토출량</Text>
                     <Text>● 압도적인 사용시간</Text>
                   </Wrapper>
                 </Wrapper>
-                <Wrapper width={`calc(100% / 3)`} al={`flex-start`}>
-                  <Text fontSize={`32px`} fontWieght={`500`}>
+                <Wrapper
+                  width={width < 700 ? `100%` : `calc(100% / 3)`}
+                  al={`flex-start`}
+                  margin={`0 0 20px`}
+                >
+                  <Text
+                    fontSize={
+                      width < 1100 ? (width < 700 ? `18px` : `28px`) : `32px`
+                    }
+                    fontWieght={`500`}
+                  >
                     인체공학적인 디자인
                   </Text>
                   <Wrapper
-                    fontSize={`18px`}
+                    fontSize={
+                      width < 1100 ? (width < 700 ? `14px` : `16px`) : `18px`
+                    }
                     fontWeight={`500`}
                     al={`flex-start`}
-                    margin={`20px 0 0`}
+                    margin={width < 700 ? `10px 0 0` : `20px 0 0`}
                   >
                     <Text>● Zero-Force 방아쇠로 피로감 감소</Text>
-                    <Text>● 직관적인 체결 부위</Text>
+                    <Text margin={`10px 0`}>● 직관적인 체결 부위</Text>
                     <Text>● 세견되고 고급진 디자인 &amp; 릴호스</Text>
                   </Wrapper>
                 </Wrapper>
-                <Wrapper width={`calc(100% / 3)`} al={`flex-start`}>
-                  <Text fontSize={`32px`} fontWieght={`500`}>
+                <Wrapper
+                  width={width < 700 ? `100%` : `calc(100% / 3)`}
+                  al={`flex-start`}
+                  margin={`0 0 20px`}
+                >
+                  <Text
+                    fontSize={
+                      width < 1100 ? (width < 700 ? `18px` : `28px`) : `32px`
+                    }
+                    fontWieght={`500`}
+                  >
                     강력한 내구성
                   </Text>
                   <Wrapper
-                    fontSize={`18px`}
+                    fontSize={
+                      width < 1100 ? (width < 700 ? `14px` : `16px`) : `18px`
+                    }
                     fontWeight={`500`}
                     al={`flex-start`}
-                    margin={`20px 0 0`}
+                    margin={width < 700 ? `10px 0 0` : `20px 0 0`}
                   >
                     <Text>● 오래 사용 가능한 4실린더 금속 펌프</Text>
-                    <Text>● 플렉시블 스틸 고압 호스</Text>
+                    <Text margin={`10px 0`}>● 플렉시블 스틸 고압 호스</Text>
                   </Wrapper>
                 </Wrapper>
               </AbsoluteInfoWrapper>
@@ -354,22 +445,40 @@ const Home = ({}) => {
           {/* PRODUCT TYPE INFO START */}
           <Wrapper
             position={`relative`}
-            padding={`198px 0 320px`}
+            padding={width < 700 ? `120px 0` : `198px 0 320px`}
             bgColor={Theme.black3_C}
           >
             <RsWrapper dr={`row`} ju={`space-between`} al={`flex-start`}>
-              <Wrapper width={`50%`} color={Theme.white_C} al={`flex-start`}>
-                <Text fontSize={`50px`} fontWeight={`500`}>
+              <Wrapper
+                width={width < 700 ? `100%` : `50%`}
+                color={Theme.white_C}
+                al={`flex-start`}
+              >
+                <Text
+                  fontSize={width < 700 ? `20px` : `50px`}
+                  fontWeight={`500`}
+                >
                   AVA 고압 세척기
                 </Text>
 
-                <Wrapper dr={`row`} ju={`flex-start`} margin={`68px 0 30px`}>
+                <Wrapper
+                  dr={`row`}
+                  ju={`flex-start`}
+                  margin={width < 700 ? `30px 0` : `68px 0 30px`}
+                >
                   {productTypeArr.map((data, idx) => {
                     return (
                       <HoverTab
+                        key={idx}
+                        margin={
+                          idx === 4
+                            ? `0`
+                            : width < 700
+                            ? `0 20px 0 0`
+                            : `0 30px 0 0`
+                        }
                         isActive={data.name === prodTypeTab}
                         onClick={() => prodTypeTabHandler(data.name)}
-                        key={idx}
                       >
                         {data.name}
                       </HoverTab>
@@ -377,8 +486,15 @@ const Home = ({}) => {
                   })}
                 </Wrapper>
 
-                <Wrapper minHeight={`116px`} ju={`flex-start`}>
-                  <Text width={`100%`} fontSize={`22px`} lineHeight={`1.3`}>
+                <Wrapper
+                  minHeight={width < 700 ? `50px` : `116px`}
+                  ju={`flex-start`}
+                >
+                  <Text
+                    width={`100%`}
+                    fontSize={width < 700 ? `14px` : `22px`}
+                    lineHeight={`1.3`}
+                  >
                     {
                       productTypeArr.find((data) => data.name === prodTypeTab)
                         .content
@@ -387,7 +503,12 @@ const Home = ({}) => {
                 </Wrapper>
 
                 <HoverButton>
-                  <Text fontSize={`30px`} fontWeight={`bold`}>
+                  <Text
+                    fontSize={
+                      width < 1100 ? (width < 700 ? `16px` : `20px`) : `30px`
+                    }
+                    fontWeight={`bold`}
+                  >
                     {
                       productTypeArr.find((data) => data.name === prodTypeTab)
                         .buttonContent
@@ -395,14 +516,14 @@ const Home = ({}) => {
                   </Text>
                   <HoverArrowButton className="arrowBtn">
                     <Image
-                      width={`24px`}
+                      width={width < 1100 ? `20px` : `24px`}
                       src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_arrow.png`}
                       alt={`arrow`}
                     />
                   </HoverArrowButton>
                 </HoverButton>
               </Wrapper>
-              <Wrapper width={`50%`}>
+              <Wrapper width={width < 700 ? `100%` : `50%`}>
                 <Image
                   width={`100%`}
                   src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_evolution-eq.png`}
@@ -431,19 +552,29 @@ const Home = ({}) => {
           {/* PRODUCT TYPE INFO END */}
 
           {/* USE INFO START */}
-          <RsWrapper padding={`114px 0 50px`}>
+          <RsWrapper padding={width < 700 ? `50px 0` : `114px 0 50px`}>
             <Wrapper al={`flex-start`}>
-              <Text fontSize={`48px`} fontWeight={`500`}>
+              <Text fontSize={width < 700 ? `20px` : `48px`} fontWeight={`500`}>
                 고압 세척기 및 악세사리 사용용도
               </Text>
             </Wrapper>
 
-            <Wrapper dr={`row`} al={`flex-start`} margin={`70px 0 0`}>
+            <Wrapper
+              dr={`row`}
+              al={`flex-start`}
+              margin={width < 700 ? `35px 0 0` : `70px 0 0`}
+            >
               {useInfoArr.map((data, idx) => {
                 return (
                   <Wrapper
                     key={idx}
-                    width={`calc(100% / 4)`}
+                    width={
+                      width < 1100
+                        ? width < 700
+                          ? `100%`
+                          : `calc(100% / 2)`
+                        : `calc(100% / 4)`
+                    }
                     ju={`flex-start`}
                     padding={
                       idx === 0
@@ -451,6 +582,9 @@ const Home = ({}) => {
                         : idx === 3
                         ? `0 0 0 10px`
                         : `0 10px`
+                    }
+                    margin={
+                      width < 1100 && width < 700 ? `0 0 20px` : `0 0 10px`
                     }
                   >
                     <Image
@@ -460,7 +594,7 @@ const Home = ({}) => {
                     />
 
                     <Text
-                      fontSize={`18px`}
+                      fontSize={width < 700 ? `14px` : `18px`}
                       textAlign={`center`}
                       margin={`20px 0 0`}
                     >
@@ -472,14 +606,22 @@ const Home = ({}) => {
             </Wrapper>
             <Text
               textAlign={`center`}
-              margin={`70px 0 0`}
-              fontSize={`22px`}
+              margin={width < 700 ? `35px 0 0` : `70px 0 0`}
+              fontSize={width < 700 ? `16px` : `22px`}
               fontWeight={`600`}
             >
-              {`고압세척기는 다양한 용도를 가지고 있는데 AVA는 모든 세척작업을 쉽게 할 수 있도록 친화적인 악세서리를 제공하며\nAVA의 고압세척기는 최고의 내구성으로 오랜 수명을 자랑합니다.`}
+              {width < 1100
+                ? width < 700
+                  ? `고압세척기는 다양한 용도를 가지고 있는데 AVA는\n모든 세척작업을 쉽게 할 수 있도록 친화적인 악세서리를\n제공하며 AVA의 고압세척기는 최고의 내구성으로\n오랜 수명을 자랑합니다.`
+                  : `고압세척기는 다양한 용도를 가지고 있는데 AVA는 모든 세척작업을 쉽게 할 수 있도록\n친화적인 악세서리를 제공하며 AVA의 고압세척기는\n최고의 내구성으로 오랜 수명을 자랑합니다.`
+                : `고압세척기는 다양한 용도를 가지고 있는데 AVA는 모든 세척작업을 쉽게 할 수 있도록 친화적인 악세서리를 제공하며\nAVA의 고압세척기는 최고의 내구성으로 오랜 수명을 자랑합니다.`}
             </Text>
 
-            <Text margin={`24px 0 0`} fontSize={`22px`} fontWeight={`600`}>
+            <Text
+              margin={`24px 0 0`}
+              fontSize={width < 700 ? `16px` : `22px`}
+              fontWeight={`600`}
+            >
               AVA 제품을 선택해주셔서 감사합니다.
             </Text>
           </RsWrapper>
