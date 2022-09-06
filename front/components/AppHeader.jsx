@@ -125,11 +125,11 @@ const AppHeader = () => {
             : Theme.white_C
         }
       >
-        <RsWrapper
-          width={`auto`}
+        <Wrapper
+          width={`100%`}
           height={`80px`}
           dr={`row`}
-          padding={`10px 0`}
+          padding={`10px 50px`}
           ju={`space-between`}
         >
           <Wrapper dr={`row`} width={`auto`}>
@@ -202,7 +202,7 @@ const AppHeader = () => {
           <CommonButton width={`84px`} height={`35px`}>
             SHOP
           </CommonButton>
-        </RsWrapper>
+        </Wrapper>
       </WebRow>
 
       {/* mobile */}
