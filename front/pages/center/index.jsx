@@ -7,6 +7,7 @@ import axios from "axios";
 import { END } from "redux-saga";
 import useWidth from "../../hooks/useWidth";
 import {
+  ATag,
   Image,
   RsWrapper,
   Text,
@@ -16,8 +17,10 @@ import {
 } from "../../components/commonComponents";
 import Theme from "../../components/Theme";
 import styled from "styled-components";
+import Link from "next/link";
 
 const MenuWrap = styled(Wrapper)`
+  cursor: pointer;
   width: 410px;
   height: 240px;
   background-color: ${(props) => props.theme.black2_C};
@@ -107,7 +110,9 @@ const Index = () => {
                   fontWeight={`bold`}
                   color={Theme.white_C}
                 >
-                  FAQ
+                  <Link href={`/center/faq`}>
+                    <ATag>FAQ</ATag>
+                  </Link>
                 </Text>
               </MenuWrap>
 
@@ -124,7 +129,9 @@ const Index = () => {
                   fontWeight={`bold`}
                   color={Theme.white_C}
                 >
-                  브랜드 소개
+                  <Link href={`/center/brand`}>
+                    <ATag>브랜드 소개</ATag>
+                  </Link>
                 </Text>
               </MenuWrap>
             </Wrapper>
@@ -143,7 +150,9 @@ const Index = () => {
                   fontWeight={`bold`}
                   color={Theme.white_C}
                 >
-                  제품 관련 영상
+                  <Link href={`/center/productVideo`}>
+                    <ATag>제품 관련 영상</ATag>
+                  </Link>
                 </Text>
               </MenuWrap>
 
@@ -160,7 +169,9 @@ const Index = () => {
                   fontWeight={`bold`}
                   color={Theme.white_C}
                 >
-                  대리점 안내
+                  <Link href={`/center/info`}>
+                    <ATag>대리점 안내</ATag>
+                  </Link>
                 </Text>
               </MenuWrap>
             </Wrapper>

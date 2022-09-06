@@ -39,7 +39,7 @@ const CustomBtn = styled(Wrapper)`
   }
 
   @media (max-width: 900px) {
-    padding: 4px;
+    padding: 6px 10px;
     font-size: 14px;
   }
 `;
@@ -156,6 +156,7 @@ const Index = () => {
               dr={`row`}
             >
               <Text
+                width={width < 800 ? `100%` : `auto`}
                 fontWeight={`bold`}
                 fontSize={width < 800 ? `28px` : `48px`}
                 lineHeight={`1`}
@@ -230,6 +231,7 @@ const Index = () => {
               dr={`row`}
             >
               <Text
+                width={width < 800 ? `100%` : `auto`}
                 fontWeight={`bold`}
                 fontSize={width < 800 ? `28px` : `48px`}
                 lineHeight={`1`}
@@ -282,7 +284,7 @@ const Index = () => {
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-master/img_8.png`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-main/img_master.png`}
                 />
                 <Image
                   width={`32%`}
@@ -304,6 +306,7 @@ const Index = () => {
               dr={`row`}
             >
               <Text
+                width={width < 800 ? `100%` : `auto`}
                 fontWeight={`bold`}
                 fontSize={width < 800 ? `28px` : `48px`}
                 lineHeight={`1`}
@@ -378,6 +381,7 @@ const Index = () => {
               dr={`row`}
             >
               <Text
+                width={width < 800 ? `100%` : `auto`}
                 fontWeight={`bold`}
                 fontSize={width < 800 ? `28px` : `48px`}
                 lineHeight={`1`}
@@ -453,6 +457,7 @@ const Index = () => {
               dr={`row`}
             >
               <Text
+                width={width < 800 ? `100%` : `auto`}
                 fontWeight={`bold`}
                 fontSize={width < 800 ? `28px` : `48px`}
                 lineHeight={`1`}

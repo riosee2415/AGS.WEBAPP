@@ -103,7 +103,7 @@ const ProductVideo = () => {
                     al={`flex-start`}
                     key={data.id}
                   >
-                    <Wrapper height={`350px`}>
+                    <Wrapper height={width < 700 ? `200px` : `350px`}>
                       <iframe
                         width={`100%`}
                         height={`100%`}

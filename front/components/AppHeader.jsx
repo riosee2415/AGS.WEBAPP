@@ -6,6 +6,7 @@ import {
   CommonButton,
   ATag,
   Text,
+  Title,
 } from "./commonComponents";
 import Theme from "./Theme";
 import wrapper from "../store/configureStore";
@@ -24,6 +25,7 @@ const CustomBtn = styled(Text)`
   width: 130px;
   padding: 10px 0;
   font-size: 16px;
+  text-align: center;
 
   ${(props) =>
     props.isActive &&
@@ -38,7 +40,6 @@ const CustomBtn = styled(Text)`
   @media (max-width: 800px) {
     width: 90px;
     padding: 6px 0;
-    font-size: 14px;
   }
 `;
 
@@ -111,17 +112,40 @@ const HoverText = styled(Text)`
   }
 `;
 
-const MainTextStyle = styled(Text)`
+const MainTextStyle = styled(Wrapper)`
   font-size: 22px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
   color: ${Theme.white_C};
-  margin-bottom: 16px;
+  position: relative;
+
+  line-height: 26px;
 
   &:hover {
     color: ${Theme.basicTheme_C};
-    border-bottom: 2px solid ${Theme.basicTheme_C};
+
+    &::before {
+      width: ${(props) => props.beforeW || `30%`};
+    }
+  }
+  &::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: ${Theme.basicTheme_C};
+    position: absolute;
+    top: 30px;
+    left: ${(props) => props.beforeL || `35%`};
+
+    transition: 0.5s;
+  }
+
+  @media (max-width: 700px) {
+    align-items: flex-start;
+    &::before {
+      left: 0;
+    }
   }
 `;
 
@@ -131,10 +155,22 @@ const SubTextStyle = styled(Text)`
   transition: 0.5s;
   color: ${Theme.white_C};
   margin-bottom: ${(props) => props.marginB || `10px`};
+  margin-top: ${(props) => props.marginT};
+  line-height: 21px;
+  font-weight: normal;
 
   &:hover {
     color: ${Theme.basicTheme_C};
   }
+
+  @media (max-width: 700px) {
+    font-size: 16px;
+  }
+`;
+
+const CloseOutlinedStyle = styled(CloseOutlined)`
+  font-size: 20px;
+  font-weight: 900;
 `;
 
 const AppHeader = () => {
@@ -218,7 +254,7 @@ const AppHeader = () => {
                     ? Theme.white_C
                     : Theme.black2_C
                 }
-                isActive={router.pathname === `/1`}
+                isActive={router.pathname === `/product`}
               >
                 <ATag onClick={menuProdHandler}>제품소개</ATag>
               </CustomBtn>
@@ -228,7 +264,7 @@ const AppHeader = () => {
                     ? Theme.white_C
                     : Theme.black2_C
                 }
-                isActive={router.pathname === `/1`}
+                isActive={router.pathname === `/accessory`}
               >
                 <ATag onClick={menuAcceHandler}>악세사리</ATag>
               </CustomBtn>
@@ -238,9 +274,9 @@ const AppHeader = () => {
                     ? Theme.white_C
                     : Theme.black2_C
                 }
-                isActive={router.pathname === `/1`}
+                isActive={router.pathname === `/center`}
               >
-                <Link href={`/`}>
+                <Link href={`/center`}>
                   <ATag>고객지원</ATag>
                 </Link>
               </CustomBtn>
@@ -250,9 +286,9 @@ const AppHeader = () => {
                     ? Theme.white_C
                     : Theme.black2_C
                 }
-                isActive={router.pathname === `/1`}
+                isActive={router.pathname === `/center/brand`}
               >
-                <Link href={`/`}>
+                <Link href={`/center/brand`}>
                   <ATag>브랜드소개</ATag>
                 </Link>
               </CustomBtn>
@@ -318,57 +354,45 @@ const AppHeader = () => {
             </Wrapper>
             <Wrapper
               al={`center`}
+              padding={`0 0 300px`}
               height={`100vh`}
               bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/meat88/assets/images/store-page/img_bg.png")`}
             >
               <CustomBtn
-                color={
-                  headerScroll === false && router.pathname === "/"
-                    ? Theme.white_C
-                    : Theme.black2_C
-                }
-                isActive={router.pathname === "/"}
+                color={Theme.black2_C}
+                isActive={router.pathname === "/product"}
               >
-                <Link href={`/brand`}>
-                  <a>제품소개</a>
-                </Link>
+                <a onClick={menuProdHandler}>제품소개</a>
               </CustomBtn>
               <CustomBtn
-                color={
-                  headerScroll === false && router.pathname === "/"
-                    ? Theme.white_C
-                    : Theme.black2_C
-                }
-                isActive={router.pathname === "/"}
+                color={Theme.black2_C}
+                isActive={router.pathname === "/accessory"}
               >
                 <a onClick={menuAcceHandler}>악세사리</a>
               </CustomBtn>
               <CustomBtn
-                color={
-                  headerScroll === false && router.pathname === "/"
-                    ? Theme.white_C
-                    : Theme.black2_C
-                }
-                isActive={router.pathname === "/"}
+                color={Theme.black2_C}
+                isActive={router.pathname === "/center"}
               >
-                <Link href={`/shop`}>
+                <Link href={`/center`}>
                   <a>고객지원</a>
                 </Link>
               </CustomBtn>
               <CustomBtn
-                color={
-                  headerScroll === false && router.pathname === "/"
-                    ? Theme.white_C
-                    : Theme.black2_C
-                }
-                isActive={router.pathname === "/"}
+                color={Theme.black2_C}
+                isActive={router.pathname === "/center/brand"}
               >
-                <Link href={`/franchisee`}>
+                <Link href={`/center/brand`}>
                   <a>브랜드소개</a>
                 </Link>
               </CustomBtn>
 
-              <CommonButton width={`84px`} height={`35px`}>
+              <CommonButton
+                fontSize={`16px`}
+                margin={`17px 0 0`}
+                width={`84px`}
+                height={`35px`}
+              >
                 SHOP
               </CommonButton>
             </Wrapper>
@@ -394,23 +418,21 @@ const AppHeader = () => {
             ju={`space-between`}
             margin={width < 700 ? `0 0 50px` : `0 0 118px`}
           >
-            <Text
-              borderBottom={`4px solid ${Theme.basicTheme_C}`}
-              fontSize={`50px`}
-              fontWeight={`500`}
+            <Title
+              fontSize={width < 700 ? `30px` : `50px`}
               color={Theme.white_C}
             >
               악세사리
-            </Text>
+            </Title>
             <Wrapper
-              width={`65px`}
-              height={`65px`}
+              width={width < 700 ? `39px` : `65px`}
+              height={width < 700 ? `39px` : `65px`}
               bgColor={Theme.basicTheme_C}
               radius={`50%`}
               onClick={menuAcceHandler}
               cursor={`pointer`}
             >
-              <CloseOutlined width={`13px`} fontWeight={`bold`} />
+              <CloseOutlinedStyle />
             </Wrapper>
           </Wrapper>
           <Wrapper dr={`row`} ju={`space-around`} al={`flex-start`}>
@@ -420,7 +442,7 @@ const AppHeader = () => {
               <Wrapper
                 bgColor={Theme.basicTheme_C}
                 radius="10px"
-                height={`115px`}
+                height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 onClick={() => router.push(`/accessory/type?type=foamcannon`)}
@@ -433,55 +455,62 @@ const AppHeader = () => {
               </Wrapper>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                beforeW={width < 1400 ? `20%` : ``}
+                beforeL={width < 1400 ? `40%` : ``}
               >
                 폼 캐논
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  marginT={`16px`}
+                >
+                  베이직 폼 캐논
+                </SubTextStyle>
+                <SubTextStyle
+                  marginB={width < 700 ? `25px` : `40px`}
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  브라스 폼 캐논
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                베이직 폼 캐논
-              </SubTextStyle>
-              <SubTextStyle
-                marginB={`40px`}
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                브라스 폼 캐논
-              </SubTextStyle>
+
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                beforeW={width < 1400 ? `12%` : `20%`}
+                beforeL={width < 1400 ? `44%` : `40%`}
               >
                 랜스
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  marginT={`16px`}
+                >
+                  줌 랜스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  플랙스 랜스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  텔레스코픽 랜스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  90˚ 앵글 랜스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  135˚ 앵글 랜스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  고정랜스
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                줌 랜스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                플랙스 랜스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                텔레스코픽 랜스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                90˚ 앵글 랜스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                135˚ 앵글 랜스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-              >
-                고정랜스
-              </SubTextStyle>
             </Wrapper>
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `240px`}
@@ -490,7 +519,7 @@ const AppHeader = () => {
               <Wrapper
                 bgColor={Theme.basicTheme_C}
                 radius="10px"
-                height={`115px`}
+                height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 onClick={() => router.push(`/accessory/type?type=nozzle`)}
@@ -503,60 +532,67 @@ const AppHeader = () => {
               </Wrapper>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                beforeW={width < 1400 ? `12%` : `20%`}
+                beforeL={width < 1400 ? `44%` : `40%`}
               >
                 노즐
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  marginT={`16px`}
+                >
+                  가변 노즐
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  터보 노즐
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  0˚ 노즐
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  15˚ 노즐
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  25˚ 노즐
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  40˚ 노즐
+                </SubTextStyle>
+                <SubTextStyle
+                  marginB={width < 700 ? `25px` : `40px`}
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  60˚ 노즐
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                가변 노즐
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                터보 노즐
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                0˚ 노즐
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                15˚ 노즐
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                25˚ 노즐
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                40˚ 노즐
-              </SubTextStyle>
-              <SubTextStyle
-                marginB={`40px`}
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                60˚ 노즐
-              </SubTextStyle>
+
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                beforeW={width < 1400 ? `40%` : `56%`}
+                beforeL={width < 1400 ? `30%` : `22%`}
               >
                 파티오 클리너
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  marginT={`16px`}
+                >
+                  베이직 파티오 클리너
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  프리미엄 파티오 클리너
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                베이직 파티오 클리너
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=nozzle`)}
-              >
-                프리미엄 파티오 클리너
-              </SubTextStyle>
             </Wrapper>
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `240px`}
@@ -565,7 +601,7 @@ const AppHeader = () => {
               <Wrapper
                 bgColor={Theme.basicTheme_C}
                 radius="10px"
-                height={`115px`}
+                height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 onClick={() => router.push(`/accessory/type?type=hose`)}
@@ -578,50 +614,57 @@ const AppHeader = () => {
               </Wrapper>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=hose`)}
+                beforeW={width < 1400 ? `12%` : `20%`}
+                beforeL={width < 1400 ? `44%` : `40%`}
               >
                 호스
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  marginT={`16px`}
+                >
+                  스틸 고압 호스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                >
+                  고압연장 호스
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                >
+                  편사 호스
+                </SubTextStyle>
+                <SubTextStyle
+                  marginB={width < 700 ? `25px` : `40px`}
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                >
+                  파이프 세척 호스
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-              >
-                스틸 고압 호스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-              >
-                고압연장 호스
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-              >
-                편사 호스
-              </SubTextStyle>
-              <SubTextStyle
-                marginB={`40px`}
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-              >
-                파이프 세척 호스
-              </SubTextStyle>
+
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=hose`)}
+                beforeW={width < 1400 ? `20%` : ``}
+                beforeL={width < 1400 ? `40%` : ``}
               >
                 브러시
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  marginT={`16px`}
+                >
+                  사각 브러시
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                >
+                  가구 브러시
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                >
+                  극세사 브러시
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-              >
-                사각 브러시
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-              >
-                가구 브러시
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=hose`)}
-              >
-                극세사 브러시
-              </SubTextStyle>
             </Wrapper>
             <Wrapper
               width={width < 800 ? `300px` : width < 1400 ? `360px` : `240px`}
@@ -630,7 +673,7 @@ const AppHeader = () => {
               <Wrapper
                 bgColor={Theme.basicTheme_C}
                 radius="10px"
-                height={`115px`}
+                height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 onClick={() => router.push(`/accessory/type?type=gun`)}
@@ -643,46 +686,324 @@ const AppHeader = () => {
               </Wrapper>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=gun`)}
+                beforeW={width < 1400 ? `20%` : ``}
+                beforeL={width < 1400 ? `40%` : ``}
               >
                 고압건
+                <SubTextStyle
+                  marginB={width < 700 ? `25px` : `40px`}
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  marginT={`16px`}
+                >
+                  제로포스 고압건
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                marginB={`40px`}
-                onClick={() => router.push(`/accessory/type?type=gun`)}
-              >
-                제로포스 고압건
-              </SubTextStyle>
+
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=gun`)}
+                beforeW={width < 1400 ? `20%` : ``}
+                beforeL={width < 1400 ? `40%` : ``}
               >
                 어댑터
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  marginT={`16px`}
+                >
+                  암/수 어댑터
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                >
+                  노즐 회전 어댑터
+                </SubTextStyle>
+                <SubTextStyle
+                  marginB={width < 700 ? `25px` : `40px`}
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                >
+                  AVA to 카쳐 호스 어댑터
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=gun`)}
-              >
-                암/수 어댑터
-              </SubTextStyle>
-              <SubTextStyle
-                onClick={() => router.push(`/accessory/type?type=gun`)}
-              >
-                노즐 회전 어댑터
-              </SubTextStyle>
-              <SubTextStyle
-                marginB={`40px`}
-                onClick={() => router.push(`/accessory/type?type=gun`)}
-              >
-                AVA to 카쳐 호스 어댑터
-              </SubTextStyle>
+
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=gun`)}
+                beforeW={width < 1400 ? `24%` : `38%`}
+                beforeL={width < 1400 ? `38%` : `31%`}
               >
                 수납도구
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  marginT={`16px`}
+                >
+                  수납함
+                </SubTextStyle>
               </MainTextStyle>
-              <SubTextStyle
+            </Wrapper>
+          </Wrapper>
+        </Wrapper>
+      </MenuWrapperStyle>
+
+      {/** 제품소개 */}
+      <MenuWrapperStyle hidden={hiddenProdMenu ? `` : `hidden`}>
+        <Wrapper
+          padding={
+            width < 700
+              ? `30px 30px`
+              : width < 950
+              ? `78px 30px `
+              : width < 1150
+              ? `78px 100px `
+              : `78px 198px `
+          }
+        >
+          <Wrapper
+            dr={`row`}
+            ju={`space-between`}
+            margin={width < 700 ? `0 0 50px` : `0 0 118px`}
+          >
+            <Title
+              fontSize={width < 700 ? `30px` : `50px`}
+              color={Theme.white_C}
+            >
+              제품소개
+            </Title>
+            <Wrapper
+              width={width < 700 ? `39px` : `65px`}
+              height={width < 700 ? `39px` : `65px`}
+              bgColor={Theme.basicTheme_C}
+              radius={`50%`}
+              onClick={menuProdHandler}
+              cursor={`pointer`}
+            >
+              <CloseOutlinedStyle />
+            </Wrapper>
+          </Wrapper>
+          <Wrapper dr={`row`} ju={`flex-start`} al={`flex-start`}>
+            <Wrapper
+              width={width < 800 ? `300px` : width < 1400 ? `360px` : `250px`}
+              al={width < 700 ? `flex-start` : ``}
+            >
+              <Wrapper
+                bgColor={Theme.basicTheme_C}
+                radius="10px"
+                width={`115px`}
+                height={width < 700 ? `90px` : `115px`}
+                margin={`0 0 30px`}
+                cursor={`pointer`}
+                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+              >
+                <Image
+                  width={`78%`}
+                  height={`78%`}
+                  alt="menu1-image"
+                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_evolution.png"
+                />
+              </Wrapper>
+              <MainTextStyle
+                beforeW={`80%`}
+                beforeL={`10%`}
+                onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+              >
+                EVOLUTION SERIES
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                  marginT={`16px`}
+                >
+                  AVA EVOLUTION P60
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  AVA EVOLUTION P70
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  AVA EVOLUTION P80
+                </SubTextStyle>
+                <SubTextStyle
+                  marginB={width < 700 ? `25px` : `40px`}
+                  onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                >
+                  AVA EVOLUTION P90
+                </SubTextStyle>
+              </MainTextStyle>
+            </Wrapper>
+            <Wrapper
+              width={width < 800 ? `300px` : width < 1400 ? `360px` : `250px`}
+              al={width < 700 ? `flex-start` : ``}
+              margin={width < 700 ? `50px 0 0` : ``}
+            >
+              <Wrapper
+                bgColor={Theme.basicTheme_C}
+                radius="10px"
+                height={width < 700 ? `90px` : `115px`}
+                margin={`0 0 30px`}
+                cursor={`pointer`}
+                width={`115px`}
+                onClick={() => router.push(`/accessory/type?type=nozzle`)}
+              >
+                <Image
+                  width={`78%`}
+                  height={`78%`}
+                  alt="menu2-image"
+                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_master.png"
+                />
+              </Wrapper>
+              <MainTextStyle
+                onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                beforeW={`70%`}
+                beforeL={`15%`}
+              >
+                MASTER SERIES
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                  marginT={`16px`}
+                >
+                  AVA Master P60
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  AVA Master P70
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=nozzle`)}
+                >
+                  AVA Master P80
+                </SubTextStyle>
+              </MainTextStyle>
+            </Wrapper>
+            <Wrapper
+              width={width < 800 ? `300px` : width < 1400 ? `360px` : `250px`}
+              al={width < 700 ? `flex-start` : ``}
+              margin={width < 1400 ? `50px 0 0` : ``}
+            >
+              <Wrapper
+                bgColor={Theme.basicTheme_C}
+                radius="10px"
+                width={`115px`}
+                height={width < 700 ? `90px` : `115px`}
+                margin={`0 0 30px`}
+                cursor={`pointer`}
+                onClick={() => router.push(`/accessory/type?type=hose`)}
+              >
+                <Image
+                  width={`78%`}
+                  height={`78%`}
+                  alt="menu3-image"
+                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_go.png"
+                />
+              </Wrapper>
+              <MainTextStyle
+                onClick={() => router.push(`/accessory/type?type=hose`)}
+                beforeW={`46%`}
+                beforeL={`27%`}
+              >
+                GO SERIES
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                  marginT={`16px`}
+                >
+                  AVA GO P40
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                >
+                  AVA GO P50
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=hose`)}
+                >
+                  AVA GO P55
+                </SubTextStyle>
+              </MainTextStyle>
+            </Wrapper>
+            <Wrapper
+              width={width < 800 ? `300px` : width < 1400 ? `360px` : `250px`}
+              al={width < 700 ? `flex-start` : ``}
+              margin={width < 1400 ? `50px 0 0` : ``}
+            >
+              <Wrapper
+                bgColor={Theme.basicTheme_C}
+                radius="10px"
+                height={width < 700 ? `90px` : `115px`}
+                margin={`0 0 30px`}
+                cursor={`pointer`}
+                width={`115px`}
                 onClick={() => router.push(`/accessory/type?type=gun`)}
               >
-                수납함
-              </SubTextStyle>
+                <Image
+                  width={`78%`}
+                  height={`78%`}
+                  alt="menu4-image"
+                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_smart.png"
+                />
+              </Wrapper>
+              <MainTextStyle
+                onClick={() => router.push(`/accessory/type?type=gun`)}
+                beforeW={`64%`}
+                beforeL={`18%`}
+              >
+                SMART SERIES
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  marginT={`16px`}
+                >
+                  AVA SMART P50
+                </SubTextStyle>
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                >
+                  AVA SMART P55
+                </SubTextStyle>
+                <SubTextStyle
+                  marginB={width < 700 ? `25px` : `40px`}
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                >
+                  AVA SMART P60
+                </SubTextStyle>
+              </MainTextStyle>
+            </Wrapper>
+            <Wrapper
+              width={width < 800 ? `300px` : width < 1400 ? `360px` : `250px`}
+              al={width < 700 ? `flex-start` : ``}
+              margin={width < 1400 ? `50px 0 0` : ``}
+            >
+              <Wrapper
+                bgColor={Theme.basicTheme_C}
+                radius="10px"
+                height={width < 700 ? `90px` : `115px`}
+                margin={`0 0 30px`}
+                cursor={`pointer`}
+                width={`115px`}
+                onClick={() => router.push(`/accessory/type?type=gun`)}
+              >
+                <Image
+                  width={`78%`}
+                  height={`78%`}
+                  alt="menu4-image"
+                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_v6.png"
+                />
+              </Wrapper>
+              <MainTextStyle
+                onClick={() => router.push(`/accessory/type?type=gun`)}
+                beforeW={`46%`}
+                beforeL={`27%`}
+              >
+                V6 SERIES
+                <SubTextStyle
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                  marginT={`16px`}
+                >
+                  AVA V6 P70
+                </SubTextStyle>
+                <SubTextStyle
+                  marginB={width < 700 ? `25px` : `40px`}
+                  onClick={() => router.push(`/accessory/type?type=gun`)}
+                >
+                  AVA V6 P90
+                </SubTextStyle>
+              </MainTextStyle>
             </Wrapper>
           </Wrapper>
         </Wrapper>
