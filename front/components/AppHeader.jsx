@@ -219,6 +219,7 @@ const AppHeader = () => {
         setHiddenProdMenu(false);
       }
       router.push(link);
+      window.scrollTo(0, 0);
     },
     [hiddenAcceMenu, hiddenProdMenu]
   );
