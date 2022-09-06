@@ -20,6 +20,16 @@ const SnsBox = styled(Wrapper)`
   }
 `;
 
+const HoverT = styled(Text)`
+  color: ${(props) => props.theme.black2_C};
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: ${(props) => props.theme.basicTheme_C};
+  }
+`;
+
 const AppFooter = () => {
   const width = useWidth();
 
@@ -74,26 +84,27 @@ const AppFooter = () => {
           margin={`0 0 60px`}
         >
           <Wrapper width={`33.3%`} al={`flex-start`}>
-            <Text margin={`0 0 14px`}>브랜드 소개</Text>
-            <Text margin={`0 0 14px`}> 제품 소개</Text>
-            <Text>악세사리</Text>
+            <HoverT margin={`0 0 14px`}>브랜드 소개</HoverT>
+            <HoverT margin={`0 0 14px`}>제품 소개</HoverT>
+            <HoverT>악세사리</HoverT>
           </Wrapper>
           <Wrapper
             width={`33.3%`}
             al={`flex-start`}
             fontSize={width < 700 ? `14px` : `18px`}
           >
-            <Text>고객 문의</Text>
+            <HoverT>고객지원</HoverT>
           </Wrapper>
           <Wrapper
             width={`33.3%`}
             al={`flex-start`}
             fontSize={width < 700 ? `14px` : `18px`}
           >
-            <Text margin={`0 0 14px`}>Evolution Series</Text>
-            <Text margin={`0 0 14px`}>Master Series</Text>
-            <Text margin={`0 0 14px`}>GO Series</Text>
-            <Text>Smart Series</Text>
+            <HoverT margin={`0 0 14px`}>Evolution Series</HoverT>
+            <HoverT margin={`0 0 14px`}>Master Series</HoverT>
+            <HoverT margin={`0 0 14px`}>GO Series</HoverT>
+            <HoverT margin={`0 0 14px`}>Smart Series</HoverT>
+            <HoverT>V6 Series</HoverT>
           </Wrapper>
         </Wrapper>
 
@@ -102,11 +113,11 @@ const AppFooter = () => {
           ju={`flex-start`}
           fontSize={width < 700 ? `12px` : `16px`}
         >
-          <Text>이용약관</Text>
-          <Text margin={width < 800 ? `0 30px` : `0 100px`}>
+          <HoverT>이용약관</HoverT>
+          <HoverT margin={width < 800 ? `0 30px` : `0 100px`}>
             개인정보처리방침
-          </Text>
-          <Text>example@email.com</Text>
+          </HoverT>
+          <HoverT>example@email.com</HoverT>
         </Wrapper>
       </RsWrapper>
 

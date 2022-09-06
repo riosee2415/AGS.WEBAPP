@@ -80,6 +80,12 @@ const Fourleaf = ({ Component }) => {
           type="text/css"
           href="//fonts.googleapis.com/css?family=Open+Sans+Condensed"
         />
+
+        {/* 이사만루 폰트  font-family: 'EsaManru'; */}
+        <link
+          href="https://webfontworld.github.io/gonggames/EsaManru.css"
+          rel="stylesheet"
+        />
       </Head>
       <Component />
     </ThemeProvider>

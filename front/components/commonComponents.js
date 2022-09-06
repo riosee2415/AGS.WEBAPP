@@ -302,6 +302,7 @@ export const Text = styled.p`
     props.isGong && "GongGothicMedium" ? "GongGothicMedium" : ""};
   font-family: ${(props) =>
     props.isEng && "Open Sans Condensed" ? "Open Sans Condensed" : ""};
+  font-family: ${(props) => props.isEsa && "EsaManru"};
   ${(props) =>
     props.isEllipsis
       ? `
