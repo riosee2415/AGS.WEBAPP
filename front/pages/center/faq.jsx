@@ -47,7 +47,6 @@ const Faq = () => {
   ////// TOGGLE //////
   const tabHandler = useCallback(
     (data) => {
-      console.log(tab);
       setTab(data);
     },
     [tab]

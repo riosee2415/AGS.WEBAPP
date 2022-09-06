@@ -85,7 +85,7 @@ const ProductVideo = () => {
   return (
     <>
       <Head>
-        <title>페이지 이름을 적어주세요</title>
+        <title>AGS | 제품 관련영상</title>
       </Head>
       <ClientLayout>
         <WholeWrapper>
