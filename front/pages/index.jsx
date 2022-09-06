@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import { LOAD_MY_INFO_REQUEST } from "../reducers/user";
 import ClientLayout from "../components/ClientLayout";
 import axios from "axios";
@@ -30,6 +30,7 @@ const AbsoluteInfoWrapper = styled(Wrapper)`
   width: 1350px;
 
   position: absolute;
+  z-index: 1;
   padding: 98px 90px 100px;
   flex-direction: row;
   justify-content: space-between;
@@ -62,21 +63,155 @@ const AbsoluteInfoWrapper = styled(Wrapper)`
   }
 `;
 
+const HoverTab = styled(Text)`
+  cursor: pointer;
+  font-size: 32px;
+  margin: 0 30px 0 0;
+  position: relative;
+  line-height: 1.43;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: ${(props) => (props.isActive ? `85%` : `0`)};
+    left: 0;
+    height: 2px;
+    background-color: ${(props) => props.theme.basicTheme_C};
+    transition: 0.5s;
+    opacity: ${(props) => (props.isActive ? 1 : 0)};
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+      width: 85%;
+    }
+  }
+`;
+
+const HoverButton = styled(Wrapper)`
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 80px 0 0;
+
+  & p {
+    position: relative;
+  }
+
+  & p::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: ${(props) => (props.isActive ? `85%` : `0`)};
+    left: 0;
+    height: 2px;
+    background-color: ${(props) => props.theme.basicTheme_C};
+    transition: 0.5s;
+    opacity: ${(props) => (props.isActive ? 1 : 0)};
+  }
+
+  &:hover {
+    & p::before {
+      opacity: 1;
+      width: 100%;
+    }
+
+    & .arrowBtn {
+      background-color: ${(props) => props.theme.white_C};
+    }
+  }
+`;
+
+const HoverArrowButton = styled(Wrapper)`
+  width: 51px;
+  height: 51px;
+  background-color: ${(props) => props.theme.basicTheme_C};
+  cursor: pointer;
+  margin: 0 0 0 5px;
+
+  border: 1px solid ${(props) => props.theme.basicTheme_C};
+  border-radius: 100%;
+`;
+
 const Home = ({}) => {
-  const width = useWidth();
   ////// GLOBAL STATE //////
 
   ////// HOOKS //////
+  const width = useWidth();
+
+  const [prodTypeTab, setProdTypeTab] = useState(`EVOLUTION`);
+
   ////// REDUX //////
   ////// USEEFFECT //////
   ////// TOGGLE //////
   ////// HANDLER //////
+
+  const prodTypeTabHandler = useCallback(
+    (type) => {
+      setProdTypeTab(type);
+    },
+    [prodTypeTab]
+  );
+
   ////// DATAVIEW //////
+
+  const productTypeArr = [
+    {
+      name: "EVOLUTION",
+      content: `EVOLUTION 설명이 들어갈 곳입니다. EVOLUTION 설명이 들어갈 곳입니다. EVOLUTION 설명이 들어갈 곳입니다. EVOLUTION 설명이 들어갈 곳입니다. EVOLUTION 설명이 들어갈 곳입니다. `,
+      buttonContent: `EVOLUTION 시리즈 자세히 보러가기`,
+    },
+    {
+      name: "MASTER",
+      content: `MASTER 설명이 들어갈 곳입니다. MASTER 설명이 들어갈 곳입니다. MASTER 설명이 들어갈 곳입니다. MASTER 설명이 들어갈 곳입니다. MASTER 설명이 들어갈 곳입니다. `,
+      buttonContent: `MASTER 시리즈 자세히 보러가기`,
+    },
+    {
+      name: "SMART",
+      content: `SMART 설명이 들어갈 곳입니다. SMART 설명이 들어갈 곳입니다. SMART 설명이 들어갈 곳입니다. SMART 설명이 들어갈 곳입니다. SMART 설명이 들어갈 곳입니다. `,
+      buttonContent: `SMART 시리즈 자세히 보러가기`,
+    },
+    {
+      name: "GO",
+      content: `GO 설명이 들어갈 곳입니다. GO 설명이 들어갈 곳입니다. GO 설명이 들어갈 곳입니다. GO 설명이 들어갈 곳입니다. GO 설명이 들어갈 곳입니다. `,
+      buttonContent: `GO 시리즈 자세히 보러가기`,
+    },
+    {
+      name: "V6",
+      content: `V6 설명이 들어갈 곳입니다. V6 설명이 들어갈 곳입니다. V6 설명이 들어갈 곳입니다. V6 설명이 들어갈 곳입니다. V6 설명이 들어갈 곳입니다. `,
+      buttonContent: `V6 시리즈 자세히 보러가기`,
+    },
+  ];
+
+  const useInfoArr = [
+    {
+      thumbnail:
+        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_1.png",
+      content: `가변노즐과 고압건은 옥외 가구에\n손상없이 사용 가능합니다.\n여름을 대비해 준비해보세요!`,
+    },
+    {
+      thumbnail:
+        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_2.png",
+      content: `파이프 호스는 손쉽게 배수관 및 파이프를\n청소할 수 있도록 해줍니다.\n배관 역류를 방지하기 위해\n이 제품으로 손쉽게 배관 청소를 해보세요!`,
+    },
+    {
+      thumbnail:
+        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_3.png",
+      content: `25˚ 노즐은 녹조, 흙, 먼지 등을 깔끔하게\n청소하면서 표면을 부드럽게 해줍니다.\n노즐을 사용하여 먼지를 제거해보세요!`,
+    },
+    {
+      thumbnail:
+        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_4.png",
+      content: `극세사 브러시는 흙과 먼지를\n제거하는 동시에 부드럽게 브러시를\n이동시켜줍니다. 이 제품은 스크래치 발생을\n줄여주며 파손 위험이 있는 유리 또는\n차에 사용해보세요!`,
+    },
+  ];
 
   return (
     <>
       <Head>
-        <title>AGS</title>
+        <title>AVA</title>
       </Head>
 
       <ClientLayout>
@@ -216,7 +351,139 @@ const Home = ({}) => {
           </Wrapper>
           {/* PRODUCT INFO END */}
 
-          <Wrapper padding={`198px 0 320px`} bgColor={Theme.black3_C}></Wrapper>
+          {/* PRODUCT TYPE INFO START */}
+          <Wrapper
+            position={`relative`}
+            padding={`198px 0 320px`}
+            bgColor={Theme.black3_C}
+          >
+            <RsWrapper dr={`row`} ju={`space-between`} al={`flex-start`}>
+              <Wrapper width={`50%`} color={Theme.white_C} al={`flex-start`}>
+                <Text fontSize={`50px`} fontWeight={`500`}>
+                  AVA 고압 세척기
+                </Text>
+
+                <Wrapper dr={`row`} ju={`flex-start`} margin={`68px 0 30px`}>
+                  {productTypeArr.map((data, idx) => {
+                    return (
+                      <HoverTab
+                        isActive={data.name === prodTypeTab}
+                        onClick={() => prodTypeTabHandler(data.name)}
+                        key={idx}
+                      >
+                        {data.name}
+                      </HoverTab>
+                    );
+                  })}
+                </Wrapper>
+
+                <Wrapper minHeight={`116px`} ju={`flex-start`}>
+                  <Text width={`100%`} fontSize={`22px`} lineHeight={`1.3`}>
+                    {
+                      productTypeArr.find((data) => data.name === prodTypeTab)
+                        .content
+                    }
+                  </Text>
+                </Wrapper>
+
+                <HoverButton>
+                  <Text fontSize={`30px`} fontWeight={`bold`}>
+                    {
+                      productTypeArr.find((data) => data.name === prodTypeTab)
+                        .buttonContent
+                    }
+                  </Text>
+                  <HoverArrowButton className="arrowBtn">
+                    <Image
+                      width={`24px`}
+                      src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_arrow.png`}
+                      alt={`arrow`}
+                    />
+                  </HoverArrowButton>
+                </HoverButton>
+              </Wrapper>
+              <Wrapper width={`50%`}>
+                <Image
+                  width={`100%`}
+                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_evolution-eq.png`}
+                />
+              </Wrapper>
+            </RsWrapper>
+
+            <Image
+              bottom={`0`}
+              right={`0`}
+              width={`31%`}
+              position={`absolute`}
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_right-pattern.png`}
+              alt={`backPattern`}
+            />
+
+            <Image
+              bottom={`0`}
+              right={`0`}
+              width={`100%`}
+              position={`absolute`}
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_water-drop.png`}
+              alt={`backWater`}
+            />
+          </Wrapper>
+          {/* PRODUCT TYPE INFO END */}
+
+          {/* USE INFO START */}
+          <RsWrapper padding={`114px 0 50px`}>
+            <Wrapper al={`flex-start`}>
+              <Text fontSize={`48px`} fontWeight={`500`}>
+                고압 세척기 및 악세사리 사용용도
+              </Text>
+            </Wrapper>
+
+            <Wrapper dr={`row`} al={`flex-start`} margin={`70px 0 0`}>
+              {useInfoArr.map((data, idx) => {
+                return (
+                  <Wrapper
+                    key={idx}
+                    width={`calc(100% / 4)`}
+                    ju={`flex-start`}
+                    padding={
+                      idx === 0
+                        ? `0 10px 0 0`
+                        : idx === 3
+                        ? `0 0 0 10px`
+                        : `0 10px`
+                    }
+                  >
+                    <Image
+                      height={`334px`}
+                      src={data.thumbnail}
+                      alt={`useInfoImage`}
+                    />
+
+                    <Text
+                      fontSize={`18px`}
+                      textAlign={`center`}
+                      margin={`20px 0 0`}
+                    >
+                      {data.content}
+                    </Text>
+                  </Wrapper>
+                );
+              })}
+            </Wrapper>
+            <Text
+              textAlign={`center`}
+              margin={`70px 0 0`}
+              fontSize={`22px`}
+              fontWeight={`600`}
+            >
+              {`고압세척기는 다양한 용도를 가지고 있는데 AVA는 모든 세척작업을 쉽게 할 수 있도록 친화적인 악세서리를 제공하며\nAVA의 고압세척기는 최고의 내구성으로 오랜 수명을 자랑합니다.`}
+            </Text>
+
+            <Text margin={`24px 0 0`} fontSize={`22px`} fontWeight={`600`}>
+              AVA 제품을 선택해주셔서 감사합니다.
+            </Text>
+          </RsWrapper>
+          {/* USE INFO END */}
         </WholeWrapper>
       </ClientLayout>
     </>
