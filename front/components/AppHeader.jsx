@@ -143,6 +143,9 @@ const MainTextStyle = styled(Wrapper)`
 
   @media (max-width: 700px) {
     align-items: flex-start;
+    &::before {
+      left: 0;
+    }
   }
 `;
 
@@ -452,6 +455,8 @@ const AppHeader = () => {
               </Wrapper>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=foamcannon`)}
+                beforeW={width < 1400 ? `20%` : ``}
+                beforeL={width < 1400 ? `40%` : ``}
               >
                 폼 캐논
                 <SubTextStyle
@@ -470,8 +475,8 @@ const AppHeader = () => {
 
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=foamcannon`)}
-                beforeW={`20%`}
-                beforeL={`40%`}
+                beforeW={width < 1400 ? `12%` : `20%`}
+                beforeL={width < 1400 ? `44%` : `40%`}
               >
                 랜스
                 <SubTextStyle
@@ -527,8 +532,8 @@ const AppHeader = () => {
               </Wrapper>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=nozzle`)}
-                beforeW={`20%`}
-                beforeL={`40%`}
+                beforeW={width < 1400 ? `12%` : `20%`}
+                beforeL={width < 1400 ? `44%` : `40%`}
               >
                 노즐
                 <SubTextStyle
@@ -572,8 +577,8 @@ const AppHeader = () => {
 
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=nozzle`)}
-                beforeW={`56%`}
-                beforeL={`22%`}
+                beforeW={width < 1400 ? `40%` : `56%`}
+                beforeL={width < 1400 ? `30%` : `22%`}
               >
                 파티오 클리너
                 <SubTextStyle
@@ -609,8 +614,8 @@ const AppHeader = () => {
               </Wrapper>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=hose`)}
-                beforeW={`20%`}
-                beforeL={`40%`}
+                beforeW={width < 1400 ? `12%` : `20%`}
+                beforeL={width < 1400 ? `44%` : `40%`}
               >
                 호스
                 <SubTextStyle
@@ -639,6 +644,8 @@ const AppHeader = () => {
 
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=hose`)}
+                beforeW={width < 1400 ? `20%` : ``}
+                beforeL={width < 1400 ? `40%` : ``}
               >
                 브러시
                 <SubTextStyle
@@ -679,6 +686,8 @@ const AppHeader = () => {
               </Wrapper>
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=gun`)}
+                beforeW={width < 1400 ? `20%` : ``}
+                beforeL={width < 1400 ? `40%` : ``}
               >
                 고압건
                 <SubTextStyle
@@ -692,6 +701,8 @@ const AppHeader = () => {
 
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=gun`)}
+                beforeW={width < 1400 ? `20%` : ``}
+                beforeL={width < 1400 ? `40%` : ``}
               >
                 어댑터
                 <SubTextStyle
@@ -715,8 +726,8 @@ const AppHeader = () => {
 
               <MainTextStyle
                 onClick={() => router.push(`/accessory/type?type=gun`)}
-                beforeW={`38%`}
-                beforeL={`31%`}
+                beforeW={width < 1400 ? `24%` : `38%`}
+                beforeL={width < 1400 ? `38%` : `31%`}
               >
                 수납도구
                 <SubTextStyle
