@@ -102,7 +102,7 @@ const HoverTab = styled(Text)`
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     font-size: 16px;
   }
 `;
@@ -156,7 +156,7 @@ const HoverArrowButton = styled(Wrapper)`
     height: 41px;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     width: 31px;
     height: 31px;
   }
@@ -257,25 +257,25 @@ const Home = ({}) => {
           {/* INFO START */}
           <Wrapper
             bgColor={Theme.darkGrey_C}
-            padding={width < 700 ? `50px 0` : `184px 0`}
+            padding={width < 800 ? `50px 0` : `184px 0`}
             color={Theme.white_C}
           >
             <RsWrapper dr={`row`}>
-              <Wrapper width={width < 700 ? `100%` : `50%`} al={`flex-start`}>
+              <Wrapper width={width < 800 ? `100%` : `50%`} al={`flex-start`}>
                 <Image
                   width={width < 1280 ? `280px` : `380px`}
                   src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_innovation.png`}
                 />
                 <Text
-                  fontSize={width < 700 ? `22px` : `42px`}
+                  fontSize={width < 800 ? `22px` : `42px`}
                   fontWeight={`500`}
-                  margin={width < 700 ? `30px 0` : `76px 0 28px`}
+                  margin={width < 800 ? `30px 0` : `76px 0 28px`}
                 >
                   AVA 고압 세척기
                 </Text>
 
                 <Text
-                  width={width < 700 ? `100%` : `600px`}
+                  width={width < 800 ? `100%` : `600px`}
                   fontSize={width < 1280 ? `16px` : `18px`}
                 >
                   AVA 고압 세척기에 대한 설명이 들어갈 곳입니다. 설명이 길게
@@ -287,7 +287,7 @@ const Home = ({}) => {
                 <HoverButton>
                   <Text
                     fontSize={
-                      width < 1100 ? (width < 700 ? `16px` : `20px`) : `30px`
+                      width < 1100 ? (width < 800 ? `16px` : `20px`) : `30px`
                     }
                     fontWeight={`bold`}
                   >
@@ -302,7 +302,7 @@ const Home = ({}) => {
                   </HoverArrowButton>
                 </HoverButton>
               </Wrapper>
-              <Wrapper width={width < 700 ? `100%` : `50%`} al={`flex-end`}>
+              <Wrapper width={width < 800 ? `100%` : `50%`} al={`flex-end`}>
                 <Image
                   width={width < 1280 ? `100%` : `580px`}
                   src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_pressure-washers.png`}
@@ -316,13 +316,13 @@ const Home = ({}) => {
 
           <Wrapper
             position={`relative`}
-            padding={width < 700 ? `50px 0 450px` : `98px 0 370px`}
+            padding={width < 800 ? `50px 0 450px` : `98px 0 370px`}
           >
             <RsWrapper>
               <Wrapper
                 al={`flex-start`}
                 margin={`0 0 24px`}
-                fontSize={width < 700 ? `20px` : `42px`}
+                fontSize={width < 800 ? `20px` : `42px`}
                 fontWeight={`500`}
               >
                 <Text>제품설명</Text>
@@ -360,13 +360,13 @@ const Home = ({}) => {
               {/* ABSOLUTE INFO START */}
               <AbsoluteInfoWrapper>
                 <Wrapper
-                  width={width < 700 ? `100%` : `calc(100% / 3)`}
+                  width={width < 800 ? `100%` : `calc(100% / 3)`}
                   al={`flex-start`}
                   margin={`0 0 20px`}
                 >
                   <Text
                     fontSize={
-                      width < 1100 ? (width < 700 ? `18px` : `28px`) : `32px`
+                      width < 1100 ? (width < 800 ? `18px` : `28px`) : `32px`
                     }
                     fontWieght={`500`}
                   >
@@ -374,11 +374,11 @@ const Home = ({}) => {
                   </Text>
                   <Wrapper
                     fontSize={
-                      width < 1100 ? (width < 700 ? `14px` : `16px`) : `18px`
+                      width < 1100 ? (width < 800 ? `14px` : `16px`) : `18px`
                     }
                     fontWeight={`500`}
                     al={`flex-start`}
-                    margin={width < 700 ? `10px 0 0` : `20px 0 0`}
+                    margin={width < 800 ? `10px 0 0` : `20px 0 0`}
                   >
                     <Text>● 높은 분사력</Text>
                     <Text margin={`10px 0`}>● 뛰어난 토출량</Text>
@@ -386,13 +386,13 @@ const Home = ({}) => {
                   </Wrapper>
                 </Wrapper>
                 <Wrapper
-                  width={width < 700 ? `100%` : `calc(100% / 3)`}
+                  width={width < 800 ? `100%` : `calc(100% / 3)`}
                   al={`flex-start`}
                   margin={`0 0 20px`}
                 >
                   <Text
                     fontSize={
-                      width < 1100 ? (width < 700 ? `18px` : `28px`) : `32px`
+                      width < 1100 ? (width < 800 ? `18px` : `28px`) : `32px`
                     }
                     fontWieght={`500`}
                   >
@@ -400,11 +400,11 @@ const Home = ({}) => {
                   </Text>
                   <Wrapper
                     fontSize={
-                      width < 1100 ? (width < 700 ? `14px` : `16px`) : `18px`
+                      width < 1100 ? (width < 800 ? `14px` : `16px`) : `18px`
                     }
                     fontWeight={`500`}
                     al={`flex-start`}
-                    margin={width < 700 ? `10px 0 0` : `20px 0 0`}
+                    margin={width < 800 ? `10px 0 0` : `20px 0 0`}
                   >
                     <Text>● Zero-Force 방아쇠로 피로감 감소</Text>
                     <Text margin={`10px 0`}>● 직관적인 체결 부위</Text>
@@ -412,13 +412,13 @@ const Home = ({}) => {
                   </Wrapper>
                 </Wrapper>
                 <Wrapper
-                  width={width < 700 ? `100%` : `calc(100% / 3)`}
+                  width={width < 800 ? `100%` : `calc(100% / 3)`}
                   al={`flex-start`}
                   margin={`0 0 20px`}
                 >
                   <Text
                     fontSize={
-                      width < 1100 ? (width < 700 ? `18px` : `28px`) : `32px`
+                      width < 1100 ? (width < 800 ? `18px` : `28px`) : `32px`
                     }
                     fontWieght={`500`}
                   >
@@ -426,11 +426,11 @@ const Home = ({}) => {
                   </Text>
                   <Wrapper
                     fontSize={
-                      width < 1100 ? (width < 700 ? `14px` : `16px`) : `18px`
+                      width < 1100 ? (width < 800 ? `14px` : `16px`) : `18px`
                     }
                     fontWeight={`500`}
                     al={`flex-start`}
-                    margin={width < 700 ? `10px 0 0` : `20px 0 0`}
+                    margin={width < 800 ? `10px 0 0` : `20px 0 0`}
                   >
                     <Text>● 오래 사용 가능한 4실린더 금속 펌프</Text>
                     <Text margin={`10px 0`}>● 플렉시블 스틸 고압 호스</Text>
@@ -445,17 +445,17 @@ const Home = ({}) => {
           {/* PRODUCT TYPE INFO START */}
           <Wrapper
             position={`relative`}
-            padding={width < 700 ? `120px 0` : `198px 0 320px`}
+            padding={width < 800 ? `120px 0` : `198px 0 320px`}
             bgColor={Theme.black3_C}
           >
             <RsWrapper dr={`row`} ju={`space-between`} al={`flex-start`}>
               <Wrapper
-                width={width < 700 ? `100%` : `50%`}
+                width={width < 800 ? `100%` : `50%`}
                 color={Theme.white_C}
                 al={`flex-start`}
               >
                 <Text
-                  fontSize={width < 700 ? `20px` : `50px`}
+                  fontSize={width < 800 ? `20px` : `50px`}
                   fontWeight={`500`}
                 >
                   AVA 고압 세척기
@@ -464,7 +464,7 @@ const Home = ({}) => {
                 <Wrapper
                   dr={`row`}
                   ju={`flex-start`}
-                  margin={width < 700 ? `30px 0` : `68px 0 30px`}
+                  margin={width < 800 ? `30px 0` : `68px 0 30px`}
                 >
                   {productTypeArr.map((data, idx) => {
                     return (
@@ -473,7 +473,7 @@ const Home = ({}) => {
                         margin={
                           idx === 4
                             ? `0`
-                            : width < 700
+                            : width < 800
                             ? `0 20px 0 0`
                             : `0 30px 0 0`
                         }
@@ -487,12 +487,12 @@ const Home = ({}) => {
                 </Wrapper>
 
                 <Wrapper
-                  minHeight={width < 700 ? `50px` : `116px`}
+                  minHeight={width < 800 ? `50px` : `116px`}
                   ju={`flex-start`}
                 >
                   <Text
                     width={`100%`}
-                    fontSize={width < 700 ? `14px` : `22px`}
+                    fontSize={width < 800 ? `14px` : `22px`}
                     lineHeight={`1.3`}
                   >
                     {
@@ -505,7 +505,7 @@ const Home = ({}) => {
                 <HoverButton>
                   <Text
                     fontSize={
-                      width < 1100 ? (width < 700 ? `16px` : `20px`) : `30px`
+                      width < 1100 ? (width < 800 ? `16px` : `20px`) : `30px`
                     }
                     fontWeight={`bold`}
                   >
@@ -523,7 +523,7 @@ const Home = ({}) => {
                   </HoverArrowButton>
                 </HoverButton>
               </Wrapper>
-              <Wrapper width={width < 700 ? `100%` : `50%`}>
+              <Wrapper width={width < 800 ? `100%` : `50%`}>
                 <Image
                   width={`100%`}
                   src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_evolution-eq.png`}
@@ -552,9 +552,9 @@ const Home = ({}) => {
           {/* PRODUCT TYPE INFO END */}
 
           {/* USE INFO START */}
-          <RsWrapper padding={width < 700 ? `50px 0` : `114px 0 50px`}>
+          <RsWrapper padding={width < 800 ? `50px 0` : `114px 0 50px`}>
             <Wrapper al={`flex-start`}>
-              <Text fontSize={width < 700 ? `20px` : `48px`} fontWeight={`500`}>
+              <Text fontSize={width < 800 ? `20px` : `48px`} fontWeight={`500`}>
                 고압 세척기 및 악세사리 사용용도
               </Text>
             </Wrapper>
@@ -562,7 +562,7 @@ const Home = ({}) => {
             <Wrapper
               dr={`row`}
               al={`flex-start`}
-              margin={width < 700 ? `35px 0 0` : `70px 0 0`}
+              margin={width < 800 ? `35px 0 0` : `70px 0 0`}
             >
               {useInfoArr.map((data, idx) => {
                 return (
@@ -570,7 +570,7 @@ const Home = ({}) => {
                     key={idx}
                     width={
                       width < 1100
-                        ? width < 700
+                        ? width < 800
                           ? `100%`
                           : `calc(100% / 2)`
                         : `calc(100% / 4)`
@@ -584,7 +584,7 @@ const Home = ({}) => {
                         : `0 10px`
                     }
                     margin={
-                      width < 1100 && width < 700 ? `0 0 20px` : `0 0 10px`
+                      width < 1100 && width < 800 ? `0 0 20px` : `0 0 10px`
                     }
                   >
                     <Image
@@ -594,7 +594,7 @@ const Home = ({}) => {
                     />
 
                     <Text
-                      fontSize={width < 700 ? `14px` : `18px`}
+                      fontSize={width < 800 ? `14px` : `18px`}
                       textAlign={`center`}
                       margin={`20px 0 0`}
                     >
@@ -606,12 +606,12 @@ const Home = ({}) => {
             </Wrapper>
             <Text
               textAlign={`center`}
-              margin={width < 700 ? `35px 0 0` : `70px 0 0`}
-              fontSize={width < 700 ? `16px` : `22px`}
+              margin={width < 800 ? `35px 0 0` : `70px 0 0`}
+              fontSize={width < 800 ? `16px` : `22px`}
               fontWeight={`600`}
             >
               {width < 1100
-                ? width < 700
+                ? width < 800
                   ? `고압세척기는 다양한 용도를 가지고 있는데 AVA는\n모든 세척작업을 쉽게 할 수 있도록 친화적인 악세서리를\n제공하며 AVA의 고압세척기는 최고의 내구성으로\n오랜 수명을 자랑합니다.`
                   : `고압세척기는 다양한 용도를 가지고 있는데 AVA는 모든 세척작업을 쉽게 할 수 있도록\n친화적인 악세서리를 제공하며 AVA의 고압세척기는\n최고의 내구성으로 오랜 수명을 자랑합니다.`
                 : `고압세척기는 다양한 용도를 가지고 있는데 AVA는 모든 세척작업을 쉽게 할 수 있도록 친화적인 악세서리를 제공하며\nAVA의 고압세척기는 최고의 내구성으로 오랜 수명을 자랑합니다.`}
@@ -619,7 +619,7 @@ const Home = ({}) => {
 
             <Text
               margin={`24px 0 0`}
-              fontSize={width < 700 ? `16px` : `22px`}
+              fontSize={width < 800 ? `16px` : `22px`}
               fontWeight={`600`}
             >
               AVA 제품을 선택해주셔서 감사합니다.
