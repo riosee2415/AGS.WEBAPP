@@ -746,7 +746,7 @@ const AppHeader = () => {
         >
           <Wrapper
             dr={`row`}
-            ju={width < 700 ? `flex-start` : `space-between`}
+            ju={`space-between`}
             margin={width < 700 ? `0 0 50px` : `0 0 118px`}
           >
             <Title
