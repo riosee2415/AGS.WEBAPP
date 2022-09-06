@@ -207,7 +207,6 @@ const AppHeader = () => {
 
       {/* mobile */}
       <MobileRow
-        justify={`center`}
         bgColor={
           headerScroll === false && router.pathname === "/"
             ? `tranparent`
@@ -258,6 +257,7 @@ const AppHeader = () => {
               <CloseOutlined onClick={drawarToggle} />
             </Wrapper>
             <Wrapper
+              al={`center`}
               height={`100vh`}
               bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/meat88/assets/images/store-page/img_bg.png")`}
             >
@@ -309,6 +309,10 @@ const AppHeader = () => {
                   <a>브랜드소개</a>
                 </Link>
               </CustomBtn>
+
+              <CommonButton width={`84px`} height={`35px`}>
+                SHOP
+              </CommonButton>
             </Wrapper>
           </Drawer>
         )}

@@ -84,11 +84,11 @@ const Index = () => {
   return (
     <>
       <Head>
-        <title>AGS | 고객지원</title>
+        <title>AVA | 고객지원</title>
       </Head>
       <ClientLayout>
         <WholeWrapper>
-          <RsWrapper height={width < 700 ? `70vh` : `100vh`}>
+          <RsWrapper height={width < 700 ? `80vh` : `100vh`}>
             <Title fontSize={`50px`} margin={`0 0 50px`}>
               고객지원
             </Title>
