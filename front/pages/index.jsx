@@ -164,6 +164,19 @@ const HoverArrowButton = styled(Wrapper)`
   }
 `;
 
+const HoverImageWrapper = styled(Wrapper)`
+  cursor: pointer;
+
+  & div {
+    opacity: 0 !important;
+  }
+  &:hover {
+    & div {
+      opacity: 0.75 !important;
+    }
+  }
+`;
+
 const Home = ({}) => {
   ////// GLOBAL STATE //////
 
@@ -262,7 +275,7 @@ const Home = ({}) => {
               src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_main-ban.png`}
               alt={`video`}
             />
-            <MainText>MADE TO LAST</MainText>
+            <MainText isEng>MADE TO LAST</MainText>
           </Wrapper>
           {/* MAIN BANNER(VIDEO) END */}
 
@@ -282,6 +295,7 @@ const Home = ({}) => {
                   fontSize={width < 800 ? `22px` : `42px`}
                   fontWeight={`500`}
                   margin={width < 800 ? `30px 0` : `76px 0 28px`}
+                  isGong
                 >
                   AVA 고압 세척기
                 </Text>
@@ -337,36 +351,54 @@ const Home = ({}) => {
                 fontSize={width < 800 ? `24px` : `42px`}
                 fontWeight={`500`}
               >
-                <Text>제품설명</Text>
+                <Text isGong>제품설명</Text>
               </Wrapper>
 
               <Wrapper dr={`row`} ju={`space-between`}>
-                <Wrapper width={`48%`} position={`relative`}>
+                <HoverImageWrapper width={`48%`} position={`relative`}>
                   <Image
                     width={`100%`}
                     src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_prod-pressure-washers.png`}
                     alt={`productImage1`}
                   />
                   <Wrapper
+                    position={`absolute`}
                     height={`100%`}
                     bgColor={Theme.basicTheme_C}
-                    opcity={`0.75`}
-                    position={`aboslute`}
-                  ></Wrapper>
-                </Wrapper>
-                <Wrapper width={`48%`} position={`relative`}>
+                    opacity={`0.75`}
+                  />
+                  <Wrapper position={`absolute`} height={`100%`}>
+                    <Text
+                      fontSize={width < 700 ? `18px` : `34px`}
+                      color={Theme.white_C}
+                      isGong
+                    >
+                      고압세척기
+                    </Text>
+                  </Wrapper>
+                </HoverImageWrapper>
+                <HoverImageWrapper width={`48%`} position={`relative`}>
                   <Image
                     width={`100%`}
                     src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_prod-acc.png`}
                     alt={`productImage2`}
                   />
                   <Wrapper
+                    position={`absolute`}
                     height={`100%`}
                     bgColor={Theme.basicTheme_C}
-                    opcity={`0.75`}
-                    position={`aboslute`}
-                  ></Wrapper>
-                </Wrapper>
+                    opacity={`0.75`}
+                  />
+                  <Wrapper position={`absolute`} height={`100%`}>
+                    <Text
+                      fontSize={width < 700 ? `18px` : `34px`}
+                      color={Theme.white_C}
+                      isGong
+                    >
+                      악세사리
+                    </Text>
+                  </Wrapper>
+                </HoverImageWrapper>
               </Wrapper>
 
               {/* ABSOLUTE INFO START */}
@@ -381,6 +413,7 @@ const Home = ({}) => {
                       width < 1100 ? (width < 800 ? `18px` : `28px`) : `32px`
                     }
                     fontWieght={`500`}
+                    isGong
                   >
                     뛰어난 성능
                   </Text>
@@ -433,6 +466,7 @@ const Home = ({}) => {
                       width < 1100 ? (width < 800 ? `18px` : `28px`) : `32px`
                     }
                     fontWieght={`500`}
+                    isGong
                   >
                     인체공학적인 디자인
                   </Text>
@@ -485,6 +519,7 @@ const Home = ({}) => {
                       width < 1100 ? (width < 800 ? `18px` : `28px`) : `32px`
                     }
                     fontWieght={`500`}
+                    isGong
                   >
                     강력한 내구성
                   </Text>
@@ -539,6 +574,7 @@ const Home = ({}) => {
                 <Text
                   fontSize={width < 800 ? `24px` : `50px`}
                   fontWeight={`500`}
+                  isGong
                 >
                   AVA 고압 세척기
                 </Text>
@@ -561,6 +597,7 @@ const Home = ({}) => {
                         }
                         isActive={data.name === prodTypeTab}
                         onClick={() => prodTypeTabHandler(data.name)}
+                        isEng
                       >
                         {data.name}
                       </HoverTab>
@@ -639,7 +676,11 @@ const Home = ({}) => {
           {/* USE INFO START */}
           <RsWrapper padding={width < 800 ? `50px 0` : `114px 0 50px`}>
             <Wrapper al={`flex-start`}>
-              <Text fontSize={width < 800 ? `24px` : `48px`} fontWeight={`500`}>
+              <Text
+                fontSize={width < 800 ? `24px` : `48px`}
+                fontWeight={`500`}
+                isGong
+              >
                 고압 세척기 및 악세사리 사용용도
               </Text>
             </Wrapper>
