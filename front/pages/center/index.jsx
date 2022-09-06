@@ -84,7 +84,7 @@ const Index = () => {
   return (
     <>
       <Head>
-        <title>AVA | 고객지원</title>
+        <title>AGS | 고객지원</title>
       </Head>
       <ClientLayout>
         <WholeWrapper>
