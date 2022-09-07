@@ -11,7 +11,7 @@ const question = require("./question");
 const questiontype = require("./questiontype");
 const seo = require("./seo");
 const faq = require("./faq");
-const faqType = require("./faqType");
+const faqtype = require("./faqtype");
 const product = require("./product");
 const agency = require("./agency");
 
@@ -38,7 +38,7 @@ db.Question = question;
 db.QuestionType = questiontype;
 db.Seo = seo;
 db.Faq = faq;
-db.FaqType = faqType;
+db.FaqType = faqtype;
 db.Product = product;
 db.Agency = agency;
 
