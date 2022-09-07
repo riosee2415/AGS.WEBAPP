@@ -66,7 +66,7 @@ const Faq = () => {
             </Wrapper>
 
             <Wrapper margin={`0 0 100px`}>
-              {faqs.length === 0 ? (
+              {faqs && faqs.length === 0 ? (
                 <Wrapper height={`200px`}>
                   <Empty description="FAQ가 준비중입니다." />
                 </Wrapper>
