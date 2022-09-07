@@ -173,6 +173,16 @@ const CloseOutlinedStyle = styled(CloseOutlined)`
   font-weight: 900;
 `;
 
+const MenuTitleStyle = styled(Title)`
+  transition: 0.5s;
+  &:hover {
+    color: ${Theme.basicTheme_C};
+    &::before {
+      background: ${(props) => props.theme.white_C};
+    }
+  }
+`;
+
 const AppHeader = () => {
   const width = useWidth();
   const dispatch = useDispatch();
@@ -432,12 +442,14 @@ const AppHeader = () => {
             ju={`space-between`}
             margin={width < 700 ? `0 0 50px` : `0 0 118px`}
           >
-            <Title
+            <MenuTitleStyle
               fontSize={width < 700 ? `30px` : `50px`}
               color={Theme.white_C}
+              cursor={`pointer`}
+              onClick={() => menuLinkHandler("/accessory")}
             >
               악세사리
-            </Title>
+            </MenuTitleStyle>
             <Wrapper
               width={width < 700 ? `39px` : `65px`}
               height={width < 700 ? `39px` : `65px`}
@@ -799,12 +811,14 @@ const AppHeader = () => {
             ju={`space-between`}
             margin={width < 700 ? `0 0 50px` : `0 0 118px`}
           >
-            <Title
+            <MenuTitleStyle
               fontSize={width < 700 ? `30px` : `50px`}
               color={Theme.white_C}
+              cursor={"pointer"}
+              onClick={() => menuLinkHandler("/product")}
             >
               제품소개
-            </Title>
+            </MenuTitleStyle>
             <Wrapper
               width={width < 700 ? `39px` : `65px`}
               height={width < 700 ? `39px` : `65px`}
