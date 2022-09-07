@@ -828,9 +828,7 @@ const AppHeader = () => {
                 height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
-                onClick={() =>
-                  menuLinkHandler(`/accessory/type?type=foamcannon`)
-                }
+                onClick={() => menuLinkHandler(`/product/evolution`)}
               >
                 <Image
                   width={`78%`}
@@ -842,38 +840,28 @@ const AppHeader = () => {
               <MainTextStyle
                 beforeW={width < 700 ? `68%` : width < 1400 ? `60%` : `80%`}
                 beforeL={width < 700 ? `40%` : width < 1400 ? `20%` : `10%`}
-                onClick={() =>
-                  menuLinkHandler(`/accessory/type?type=foamcannon`)
-                }
+                onClick={() => menuLinkHandler(`/product/evolution`)}
               >
                 EVOLUTION SERIES
                 <SubTextStyle
-                  onClick={() =>
-                    menuLinkHandler(`/accessory/type?type=foamcannon`)
-                  }
+                  onClick={() => menuLinkHandler(`/product/evolution`)}
                   marginT={`16px`}
                 >
                   AVA EVOLUTION P60
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() =>
-                    menuLinkHandler(`/accessory/type?type=foamcannon`)
-                  }
+                  onClick={() => menuLinkHandler(`/product/evolution`)}
                 >
                   AVA EVOLUTION P70
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() =>
-                    menuLinkHandler(`/accessory/type?type=foamcannon`)
-                  }
+                  onClick={() => menuLinkHandler(`/product/evolution`)}
                 >
                   AVA EVOLUTION P80
                 </SubTextStyle>
                 <SubTextStyle
                   marginB={width < 700 ? `` : `40px`}
-                  onClick={() =>
-                    menuLinkHandler(`/accessory/type?type=foamcannon`)
-                  }
+                  onClick={() => menuLinkHandler(`/product/evolution`)}
                 >
                   AVA EVOLUTION P90
                 </SubTextStyle>
@@ -891,7 +879,7 @@ const AppHeader = () => {
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 width={`115px`}
-                onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                onClick={() => menuLinkHandler(`/product/master`)}
               >
                 <Image
                   width={`78%`}
@@ -901,24 +889,24 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                onClick={() => menuLinkHandler(`/product/master`)}
                 beforeW={width < 700 ? `56%` : width < 1400 ? `50%` : `70%`}
                 beforeL={width < 700 ? `15%` : width < 1400 ? `25%` : `15%`}
               >
                 MASTER SERIES
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/product/master`)}
                   marginT={`16px`}
                 >
                   AVA Master P60
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/product/master`)}
                 >
                   AVA Master P70
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                  onClick={() => menuLinkHandler(`/product/master`)}
                 >
                   AVA Master P80
                 </SubTextStyle>
@@ -936,7 +924,7 @@ const AppHeader = () => {
                 height={width < 700 ? `90px` : `115px`}
                 margin={`0 0 30px`}
                 cursor={`pointer`}
-                onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
+                onClick={() => menuLinkHandler(`/product/go`)}
               >
                 <Image
                   width={`78%`}
@@ -946,25 +934,21 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
+                onClick={() => menuLinkHandler(`/product/go`)}
                 beforeW={width < 700 ? `38%` : width < 1400 ? `31%` : `46%`}
                 beforeL={width < 700 ? `68%` : width < 1400 ? `35%` : `27%`}
               >
                 GO SERIES
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
+                  onClick={() => menuLinkHandler(`/product/go`)}
                   marginT={`16px`}
                 >
                   AVA GO P40
                 </SubTextStyle>
-                <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
-                >
+                <SubTextStyle onClick={() => menuLinkHandler(`/product/go`)}>
                   AVA GO P50
                 </SubTextStyle>
-                <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
-                >
+                <SubTextStyle onClick={() => menuLinkHandler(`/product/go`)}>
                   AVA GO P55
                 </SubTextStyle>
               </MainTextStyle>
@@ -981,7 +965,7 @@ const AppHeader = () => {
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 width={`115px`}
-                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                onClick={() => menuLinkHandler(`/product/smart`)}
               >
                 <Image
                   width={`78%`}
@@ -991,25 +975,23 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                onClick={() => menuLinkHandler(`/product/smart`)}
                 beforeW={width < 700 ? `54%` : width < 1400 ? `50%` : `70%`}
                 beforeL={width < 700 ? `15%` : width < 1400 ? `25%` : `15%`}
               >
                 SMART SERIES
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/product/smart`)}
                   marginT={`16px`}
                 >
                   AVA SMART P50
                 </SubTextStyle>
-                <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
-                >
+                <SubTextStyle onClick={() => menuLinkHandler(`/product/smart`)}>
                   AVA SMART P55
                 </SubTextStyle>
                 <SubTextStyle
                   marginB={width < 700 ? `` : `40px`}
-                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/product/smart`)}
                 >
                   AVA SMART P60
                 </SubTextStyle>
@@ -1027,7 +1009,7 @@ const AppHeader = () => {
                 margin={`0 0 30px`}
                 cursor={`pointer`}
                 width={`115px`}
-                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                onClick={() => menuLinkHandler(`/product/v6`)}
               >
                 <Image
                   width={`78%`}
@@ -1037,20 +1019,20 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                onClick={() => menuLinkHandler(`/product/v6`)}
                 beforeW={width < 700 ? `38%` : width < 1400 ? `31%` : `46%`}
                 beforeL={width < 700 ? `68%` : width < 1400 ? `35%` : `27%`}
               >
                 V6 SERIES
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/product/v6`)}
                   marginT={`16px`}
                 >
                   AVA V6 P70
                 </SubTextStyle>
                 <SubTextStyle
                   marginB={width < 700 ? `` : `40px`}
-                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                  onClick={() => menuLinkHandler(`/product/v6`)}
                 >
                   AVA V6 P90
                 </SubTextStyle>
