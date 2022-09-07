@@ -56,12 +56,12 @@ const Fourleaf = ({ Component }) => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="AVA" />
         <meta property="og:site_name" content="AVA" />
-        <meta property="og:url" content="https://company.gs09.co.kr/" />
+        <meta property="og:url" content="https://avakorea.kr/" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="400" />
         <meta property="og:image" content="./og_img.png" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://company.gs09.co.kr" />
+        <link rel="canonical" href="https://avakorea.kr" />
 
         <meta
           name="keywords"
