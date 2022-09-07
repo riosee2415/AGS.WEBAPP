@@ -17,6 +17,7 @@ import {
 import Theme from "../../components/Theme";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import styled from "styled-components";
+import Link from "next/link";
 
 const CustomBtn = styled(Wrapper)`
   cursor: pointer;
@@ -138,26 +139,30 @@ const Index = () => {
               >
                 폼 캐논
               </Text>
-              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
-                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  폼캐논
-                </Text>
-                <Wrapper
-                  bgColor={Theme.basicTheme_C}
-                  width={width < 900 ? `26px` : `36px`}
-                  height={width < 900 ? `26px` : `36px`}
-                  radius={`50%`}
-                >
-                  <Text
-                    textAling={`right`}
-                    padding={`10px`}
-                    color={Theme.black2_C}
-                    fontSize={width < 900 ? `12px` : `16px`}
-                  >
-                    <ArrowRightOutlined />
-                  </Text>
-                </Wrapper>
-              </CustomBtn>
+              <Link href={`/accessory/type?type=foamcannon`}>
+                <a>
+                  <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                    <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                      폼캐논
+                    </Text>
+                    <Wrapper
+                      bgColor={Theme.basicTheme_C}
+                      width={width < 900 ? `26px` : `36px`}
+                      height={width < 900 ? `26px` : `36px`}
+                      radius={`50%`}
+                    >
+                      <Text
+                        textAling={`right`}
+                        padding={`10px`}
+                        color={Theme.black2_C}
+                        fontSize={width < 900 ? `12px` : `16px`}
+                      >
+                        <ArrowRightOutlined />
+                      </Text>
+                    </Wrapper>
+                  </CustomBtn>
+                </a>
+              </Link>
             </Wrapper>
             <Text
               fontSize={width < 800 ? `14px` : `22px`}
@@ -213,26 +218,30 @@ const Index = () => {
               >
                 랜스
               </Text>
-              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
-                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  랜스
-                </Text>
-                <Wrapper
-                  bgColor={Theme.basicTheme_C}
-                  width={width < 900 ? `26px` : `36px`}
-                  height={width < 900 ? `26px` : `36px`}
-                  radius={`50%`}
-                >
-                  <Text
-                    textAling={`right`}
-                    padding={`10px`}
-                    color={Theme.black2_C}
-                    fontSize={width < 900 ? `12px` : `16px`}
-                  >
-                    <ArrowRightOutlined />
-                  </Text>
-                </Wrapper>
-              </CustomBtn>
+              <Link href={`/accessory/type?type=foamcannon`}>
+                <a>
+                  <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                    <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                      랜스
+                    </Text>
+                    <Wrapper
+                      bgColor={Theme.basicTheme_C}
+                      width={width < 900 ? `26px` : `36px`}
+                      height={width < 900 ? `26px` : `36px`}
+                      radius={`50%`}
+                    >
+                      <Text
+                        textAling={`right`}
+                        padding={`10px`}
+                        color={Theme.black2_C}
+                        fontSize={width < 900 ? `12px` : `16px`}
+                      >
+                        <ArrowRightOutlined />
+                      </Text>
+                    </Wrapper>
+                  </CustomBtn>
+                </a>
+              </Link>
             </Wrapper>
             <Text
               fontSize={width < 800 ? `14px` : `22px`}
@@ -287,26 +296,30 @@ const Index = () => {
               >
                 노즐
               </Text>
-              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
-                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  노즐
-                </Text>
-                <Wrapper
-                  bgColor={Theme.basicTheme_C}
-                  width={width < 900 ? `26px` : `36px`}
-                  height={width < 900 ? `26px` : `36px`}
-                  radius={`50%`}
-                >
-                  <Text
-                    textAling={`right`}
-                    padding={`10px`}
-                    color={Theme.black2_C}
-                    fontSize={width < 900 ? `12px` : `16px`}
-                  >
-                    <ArrowRightOutlined />
-                  </Text>
-                </Wrapper>
-              </CustomBtn>
+              <Link href={`/accessory/type?type=nozzle`}>
+                <a>
+                  <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                    <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                      노즐
+                    </Text>
+                    <Wrapper
+                      bgColor={Theme.basicTheme_C}
+                      width={width < 900 ? `26px` : `36px`}
+                      height={width < 900 ? `26px` : `36px`}
+                      radius={`50%`}
+                    >
+                      <Text
+                        textAling={`right`}
+                        padding={`10px`}
+                        color={Theme.black2_C}
+                        fontSize={width < 900 ? `12px` : `16px`}
+                      >
+                        <ArrowRightOutlined />
+                      </Text>
+                    </Wrapper>
+                  </CustomBtn>
+                </a>
+              </Link>
             </Wrapper>
             <Text
               fontSize={width < 800 ? `14px` : `22px`}
@@ -363,26 +376,30 @@ const Index = () => {
               >
                 파티오 클리너
               </Text>
-              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
-                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  파티오 클리너
-                </Text>
-                <Wrapper
-                  bgColor={Theme.basicTheme_C}
-                  width={width < 900 ? `26px` : `36px`}
-                  height={width < 900 ? `26px` : `36px`}
-                  radius={`50%`}
-                >
-                  <Text
-                    textAling={`right`}
-                    padding={`10px`}
-                    color={Theme.black2_C}
-                    fontSize={width < 900 ? `12px` : `16px`}
-                  >
-                    <ArrowRightOutlined />
-                  </Text>
-                </Wrapper>
-              </CustomBtn>
+              <Link href={`/accessory/type?type=nozzle`}>
+                <a>
+                  <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                    <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                      파티오 클리너
+                    </Text>
+                    <Wrapper
+                      bgColor={Theme.basicTheme_C}
+                      width={width < 900 ? `26px` : `36px`}
+                      height={width < 900 ? `26px` : `36px`}
+                      radius={`50%`}
+                    >
+                      <Text
+                        textAling={`right`}
+                        padding={`10px`}
+                        color={Theme.black2_C}
+                        fontSize={width < 900 ? `12px` : `16px`}
+                      >
+                        <ArrowRightOutlined />
+                      </Text>
+                    </Wrapper>
+                  </CustomBtn>
+                </a>
+              </Link>
             </Wrapper>
             <Text
               fontSize={width < 800 ? `14px` : `22px`}
@@ -437,26 +454,30 @@ const Index = () => {
               >
                 호스
               </Text>
-              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
-                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  호스
-                </Text>
-                <Wrapper
-                  bgColor={Theme.basicTheme_C}
-                  width={width < 900 ? `26px` : `36px`}
-                  height={width < 900 ? `26px` : `36px`}
-                  radius={`50%`}
-                >
-                  <Text
-                    textAling={`right`}
-                    padding={`10px`}
-                    color={Theme.black2_C}
-                    fontSize={width < 900 ? `12px` : `16px`}
-                  >
-                    <ArrowRightOutlined />
-                  </Text>
-                </Wrapper>
-              </CustomBtn>
+              <Link href={`/accessory/type?type=hose`}>
+                <a>
+                  <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                    <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                      호스
+                    </Text>
+                    <Wrapper
+                      bgColor={Theme.basicTheme_C}
+                      width={width < 900 ? `26px` : `36px`}
+                      height={width < 900 ? `26px` : `36px`}
+                      radius={`50%`}
+                    >
+                      <Text
+                        textAling={`right`}
+                        padding={`10px`}
+                        color={Theme.black2_C}
+                        fontSize={width < 900 ? `12px` : `16px`}
+                      >
+                        <ArrowRightOutlined />
+                      </Text>
+                    </Wrapper>
+                  </CustomBtn>
+                </a>
+              </Link>
             </Wrapper>
             <Text
               fontSize={width < 800 ? `14px` : `22px`}
@@ -512,26 +533,30 @@ const Index = () => {
               >
                 브러시
               </Text>
-              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
-                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  브러시
-                </Text>
-                <Wrapper
-                  bgColor={Theme.basicTheme_C}
-                  width={width < 900 ? `26px` : `36px`}
-                  height={width < 900 ? `26px` : `36px`}
-                  radius={`50%`}
-                >
-                  <Text
-                    textAling={`right`}
-                    padding={`10px`}
-                    color={Theme.black2_C}
-                    fontSize={width < 900 ? `12px` : `16px`}
-                  >
-                    <ArrowRightOutlined />
-                  </Text>
-                </Wrapper>
-              </CustomBtn>
+              <Link href={`/accessory/type?type=hose`}>
+                <a>
+                  <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                    <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                      브러시
+                    </Text>
+                    <Wrapper
+                      bgColor={Theme.basicTheme_C}
+                      width={width < 900 ? `26px` : `36px`}
+                      height={width < 900 ? `26px` : `36px`}
+                      radius={`50%`}
+                    >
+                      <Text
+                        textAling={`right`}
+                        padding={`10px`}
+                        color={Theme.black2_C}
+                        fontSize={width < 900 ? `12px` : `16px`}
+                      >
+                        <ArrowRightOutlined />
+                      </Text>
+                    </Wrapper>
+                  </CustomBtn>
+                </a>
+              </Link>
             </Wrapper>
             <Text
               fontSize={width < 800 ? `14px` : `22px`}
@@ -587,26 +612,30 @@ const Index = () => {
               >
                 고압건
               </Text>
-              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
-                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  고압건
-                </Text>
-                <Wrapper
-                  bgColor={Theme.basicTheme_C}
-                  width={width < 900 ? `26px` : `36px`}
-                  height={width < 900 ? `26px` : `36px`}
-                  radius={`50%`}
-                >
-                  <Text
-                    textAling={`right`}
-                    padding={`10px`}
-                    color={Theme.black2_C}
-                    fontSize={width < 900 ? `12px` : `16px`}
-                  >
-                    <ArrowRightOutlined />
-                  </Text>
-                </Wrapper>
-              </CustomBtn>
+              <Link href={`/accessory/type?type=gun`}>
+                <a>
+                  <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                    <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                      고압건
+                    </Text>
+                    <Wrapper
+                      bgColor={Theme.basicTheme_C}
+                      width={width < 900 ? `26px` : `36px`}
+                      height={width < 900 ? `26px` : `36px`}
+                      radius={`50%`}
+                    >
+                      <Text
+                        textAling={`right`}
+                        padding={`10px`}
+                        color={Theme.black2_C}
+                        fontSize={width < 900 ? `12px` : `16px`}
+                      >
+                        <ArrowRightOutlined />
+                      </Text>
+                    </Wrapper>
+                  </CustomBtn>
+                </a>
+              </Link>
             </Wrapper>
             <Text
               fontSize={width < 800 ? `14px` : `22px`}
@@ -663,26 +692,30 @@ const Index = () => {
               >
                 어댑터
               </Text>
-              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
-                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  어댑터
-                </Text>
-                <Wrapper
-                  bgColor={Theme.basicTheme_C}
-                  width={width < 900 ? `26px` : `36px`}
-                  height={width < 900 ? `26px` : `36px`}
-                  radius={`50%`}
-                >
-                  <Text
-                    textAling={`right`}
-                    padding={`10px`}
-                    color={Theme.black2_C}
-                    fontSize={width < 900 ? `12px` : `16px`}
-                  >
-                    <ArrowRightOutlined />
-                  </Text>
-                </Wrapper>
-              </CustomBtn>
+              <Link href={`/accessory/type?type=gun`}>
+                <a>
+                  <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                    <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                      어댑터
+                    </Text>
+                    <Wrapper
+                      bgColor={Theme.basicTheme_C}
+                      width={width < 900 ? `26px` : `36px`}
+                      height={width < 900 ? `26px` : `36px`}
+                      radius={`50%`}
+                    >
+                      <Text
+                        textAling={`right`}
+                        padding={`10px`}
+                        color={Theme.black2_C}
+                        fontSize={width < 900 ? `12px` : `16px`}
+                      >
+                        <ArrowRightOutlined />
+                      </Text>
+                    </Wrapper>
+                  </CustomBtn>
+                </a>
+              </Link>
             </Wrapper>
             <Text
               fontSize={width < 800 ? `14px` : `22px`}
