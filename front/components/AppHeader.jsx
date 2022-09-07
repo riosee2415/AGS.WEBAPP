@@ -811,12 +811,14 @@ const AppHeader = () => {
             ju={`space-between`}
             margin={width < 700 ? `0 0 50px` : `0 0 118px`}
           >
-            <Title
+            <MenuTitleStyle
               fontSize={width < 700 ? `30px` : `50px`}
               color={Theme.white_C}
+              cursor={"pointer"}
+              onClick={() => menuLinkHandler("/product")}
             >
               제품소개
-            </Title>
+            </MenuTitleStyle>
             <Wrapper
               width={width < 700 ? `39px` : `65px`}
               height={width < 700 ? `39px` : `65px`}
