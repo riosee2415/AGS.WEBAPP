@@ -20,6 +20,7 @@ import {
   RsWrapper,
   Text,
   TextInput,
+  Title,
   WholeWrapper,
   Wrapper,
 } from "../../components/commonComponents";
@@ -67,24 +68,11 @@ const Faq = () => {
       <ClientLayout>
         <WholeWrapper>
           <RsWrapper>
-            <Wrapper margin={width < 700 ? `30px 0 0` : `70px 0 0`}>
-              <Wrapper>
-                <Text
-                  fontSize={`50px`}
-                  fontWeight={`500`}
-                  color={Theme.black2_C}
-                >
-                  FAQ
-                </Text>
-              </Wrapper>
-              <Wrapper
-                width={`106px`}
-                borderBottom={`4px solid ${Theme.basicTheme_C}`}
-                margin={`0 0 50px`}
-              />
+            <Wrapper margin={width < 700 ? `30px 0 20px` : `70px 0 50px`}>
+              <Title>FAQ</Title>
             </Wrapper>
 
-            <Wrapper>
+            <Wrapper margin={`0 0 100px`}>
               <>
                 {faqs &&
                   faqs.map((data, idx) => {
@@ -95,6 +83,7 @@ const Faq = () => {
                         radius={`10px`}
                         margin={`0 0 25px`}
                         padding={`20px`}
+                        cursor={`pointer`}
                         isActive={data.id === tab ? true : false}
                         onClick={() => tabHandler(data.id)}
                         key={idx}

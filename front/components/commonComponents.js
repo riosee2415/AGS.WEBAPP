@@ -505,7 +505,7 @@ export const TextArea = styled.textarea`
 `;
 
 export const Title = styled(Text)`
-  font-size: 50px;
+  font-size: ${(props) => props.fontSize || `50px`};
   position: relative;
   padding: 0 5px;
   font-family: "GongGothicMedium";

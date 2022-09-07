@@ -19,12 +19,15 @@ import Popup from "../components/popup/popup";
 import Mainslider from "../components/slide/MainSlider";
 import ToastEditorComponent from "../components/editor/ToastEditorComponent";
 import UseInfoSlider from "../components/slide/UseInfoSlider";
+import Iframe from "react-iframe";
 
 const MainText = styled(Text)`
   position: absolute;
+  text-align: center;
   font-size: 150px;
   font-weight: 600;
   color: ${(props) => props.theme.white_C};
+  line-height: 80px;
 
   @media (max-width: 1280px) {
     font-size: 120px;
@@ -33,14 +36,10 @@ const MainText = styled(Text)`
   @media (max-width: 1100px) {
     font-size: 90px;
   }
-
-  @media (max-width: 700px) {
-    font-size: 30px;
-  }
 `;
 
 const AbsoluteInfoWrapper = styled(Wrapper)`
-  width: 1350px;
+  width: 1280px;
 
   position: absolute;
   z-index: 1;
@@ -52,12 +51,7 @@ const AbsoluteInfoWrapper = styled(Wrapper)`
   bottom: -96px;
   left: 50;
   border-radius: 10px;
-  @media (max-width: 1500px) {
-    width: 1350px;
-  }
-  @media (max-width: 1350px) {
-    width: 1280px;
-  }
+
   @media (max-width: 1280px) {
     width: 1100px;
   }
@@ -72,8 +66,7 @@ const AbsoluteInfoWrapper = styled(Wrapper)`
     width: 700px;
   }
   @media (max-width: 700px) {
-    padding: 30px 0;
-    width: 65%;
+    width: 100%;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -164,6 +157,7 @@ const HoverArrowButton = styled(Wrapper)`
     height: 31px;
   }
 `;
+const Video = styled.video``;
 
 const HoverImageWrapper = styled(Wrapper)`
   cursor: pointer;
@@ -270,14 +264,51 @@ const Home = ({}) => {
       <ClientLayout>
         <WholeWrapper>
           {/* MAIN BANNER(VIDEO) START */}
-          <Wrapper position={`relative`}>
-            <Image
-              height={`100vh`}
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_main-ban.png`}
-              alt={`video`}
+
+          <Wrapper
+            bgColor={Theme.black_C}
+            width={`100vw`}
+            height={width < 700 ? `100vh` : `1085px`}
+            position={`relative`}
+            overflow={`hidden`}
+          >
+            <Wrapper bgColor={Theme.black_C} height={`100%`}>
+              <Iframe
+                allow="fullscreen"
+                loop={true}
+                width={`100%`}
+                height={`1085px`}
+                frameBorder={`0`}
+                src={`https://player.vimeo.com/video/746831123?h=8c3b52dac3?autopause=0&playsinline=1&autoplay=1&loop=1&muted=1`}
+                className="iframe-div"
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen
+              ></Iframe>
+            </Wrapper>
+            <Wrapper
+              position={`absolute`}
+              width={`100%`}
+              height={`80%`}
+              top={`0`}
+              left={`0`}
+              bgColor={Theme.black_C}
+              opacity={`0.4`}
             />
-            <MainText isEng>MADE TO LAST</MainText>
+            <Wrapper
+              position={`absolute`}
+              width={`100%`}
+              height={`20%`}
+              bottom={`0`}
+              left={`0`}
+              bgColor={`linear-gradient(rgba(0,0,0,0.4), rgba(24,24,26,0.6) , rgba(24,24,26,1))`}
+              // opacity={`0.4`}
+            />
+            <MainText isEng>
+              {width < 700 ? `MADE TO\nLAST` : `MADE TO LAST`}
+            </MainText>
           </Wrapper>
+
           {/* MAIN BANNER(VIDEO) END */}
 
           {/* INFO START */}
@@ -407,7 +438,7 @@ const Home = ({}) => {
                 <Wrapper
                   width={width < 800 ? `100%` : `calc(100% / 3)`}
                   al={`flex-start`}
-                  margin={`0 0 20px`}
+                  margin={width < 800 && `0 0 20px`}
                 >
                   <Text
                     fontSize={
@@ -460,7 +491,7 @@ const Home = ({}) => {
                 <Wrapper
                   width={width < 800 ? `100%` : `calc(100% / 3)`}
                   al={`flex-start`}
-                  margin={`0 0 20px`}
+                  margin={width < 800 && `0 0 20px`}
                 >
                   <Text
                     fontSize={
@@ -513,7 +544,7 @@ const Home = ({}) => {
                 <Wrapper
                   width={width < 800 ? `100%` : `calc(100% / 3)`}
                   al={`flex-start`}
-                  margin={`0 0 20px`}
+                  margin={width < 800 && `0 0 20px`}
                 >
                   <Text
                     fontSize={
