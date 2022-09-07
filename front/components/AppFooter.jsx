@@ -155,7 +155,9 @@ const AppFooter = () => {
             개인정보처리방침
           </HoverT>
           <HoverT>
-            <ATag href={``}>example@email.com</ATag>
+            <ATag href={"mailto:support@avaofnorway.com"}>
+              support@avaofnorway.com
+            </ATag>
           </HoverT>
         </Wrapper>
       </RsWrapper>
@@ -168,11 +170,16 @@ const AppFooter = () => {
           radius={`50%`}
           border={`1px solid ${Theme.black2_C}`}
         >
-          <Image
-            width={`14px`}
-            alt={`facebook`}
-            src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_face-book.png`}
-          />
+          <ATag
+            href={`https://www.facebook.com/avaofnorway/`}
+            target={`_blank`}
+          >
+            <Image
+              width={`14px`}
+              alt={`facebook`}
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_face-book.png`}
+            />
+          </ATag>
         </SnsBox>
         <SnsBox
           margin={`0 6px`}
@@ -181,11 +188,16 @@ const AppFooter = () => {
           radius={`50%`}
           border={`1px solid ${Theme.black2_C}`}
         >
-          <Image
-            width={`14px`}
-            alt={`instar`}
-            src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_insta.png`}
-          />
+          <ATag
+            href={`https://www.instagram.com/avapressurewashers/`}
+            target={`_blank`}
+          >
+            <Image
+              width={`14px`}
+              alt={`instar`}
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_insta.png`}
+            />
+          </ATag>
         </SnsBox>
         <SnsBox
           margin={`0 6px`}
@@ -194,11 +206,16 @@ const AppFooter = () => {
           radius={`50%`}
           border={`1px solid ${Theme.black2_C}`}
         >
-          <Image
-            width={`14px`}
-            alt={`in`}
-            src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_in.png`}
-          />
+          <ATag
+            href={`https://www.linkedin.com/company/ava-of-norway-as/`}
+            target={`_blank`}
+          >
+            <Image
+              width={`14px`}
+              alt={`in`}
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_in.png`}
+            />
+          </ATag>
         </SnsBox>
         <SnsBox
           margin={`0 6px`}
@@ -207,11 +224,16 @@ const AppFooter = () => {
           radius={`50%`}
           border={`1px solid ${Theme.black2_C}`}
         >
-          <Image
-            width={`14px`}
-            alt={`yoptodu`}
-            src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_youtube.png`}
-          />
+          <ATag
+            href={`https://www.youtube.com/channel/UCVuGcx-zlpcpNmybUFzCzyg`}
+            target={`_blank`}
+          >
+            <Image
+              width={`14px`}
+              alt={`yoptodu`}
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_youtube.png`}
+            />
+          </ATag>
         </SnsBox>
       </Wrapper>
     </WholeWrapper>
