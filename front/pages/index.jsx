@@ -199,35 +199,35 @@ const Home = ({}) => {
       thumbnail:
         "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_evolution-eq.png",
       name: "EVOLUTION",
-      content: `EVOLUTION 설명이 들어갈 곳입니다. EVOLUTION 설명이 들어갈 곳입니다. EVOLUTION 설명이 들어갈 곳입니다. EVOLUTION 설명이 들어갈 곳입니다. EVOLUTION 설명이 들어갈 곳입니다. `,
+      content: `EVOLUTION 시리즈 제품은 내구성과 성능을 위해 오래 지속 가능한 4&6기통 실린더 금속펌프로 제작되었습니다.`,
       buttonContent: `EVOLUTION 시리즈 자세히 보러가기`,
     },
     {
       thumbnail:
         "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_master-eq.png",
       name: "MASTER",
-      content: `MASTER 설명이 들어갈 곳입니다. MASTER 설명이 들어갈 곳입니다. MASTER 설명이 들어갈 곳입니다. MASTER 설명이 들어갈 곳입니다. MASTER 설명이 들어갈 곳입니다. `,
+      content: `MASTER 시리즈는 내구성과 성능을 위해 오래 지속되는 4기통 금속 펌프가 내장되어 있습니다.`,
       buttonContent: `MASTER 시리즈 자세히 보러가기`,
     },
     {
       thumbnail:
         "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_smart-eq.png",
       name: "SMART",
-      content: `SMART 설명이 들어갈 곳입니다. SMART 설명이 들어갈 곳입니다. SMART 설명이 들어갈 곳입니다. SMART 설명이 들어갈 곳입니다. SMART 설명이 들어갈 곳입니다. `,
+      content: `SMART 시리즈는 상위버전인 MASTER 시리즈의 몇 가지 기능을 사용하며 일반적으로 고가의 기계에서 볼 수 있는 모든 기능을 갖춘 시리즈입니다.`,
       buttonContent: `SMART 시리즈 자세히 보러가기`,
     },
     {
       thumbnail:
         "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_go-eq.png",
       name: "GO",
-      content: `GO 설명이 들어갈 곳입니다. GO 설명이 들어갈 곳입니다. GO 설명이 들어갈 곳입니다. GO 설명이 들어갈 곳입니다. GO 설명이 들어갈 곳입니다. `,
+      content: `GO 시리즈는 작은 기계를 최대한으로 활용하기 위해 설계되었습니다.`,
       buttonContent: `GO 시리즈 자세히 보러가기`,
     },
     {
       thumbnail:
         "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_v6-eq.png",
       name: "V6",
-      content: `V6 설명이 들어갈 곳입니다. V6 설명이 들어갈 곳입니다. V6 설명이 들어갈 곳입니다. V6 설명이 들어갈 곳입니다. V6 설명이 들어갈 곳입니다. `,
+      content: `V6 시리즈는 고유량 6기통 금속 펌프로 소음과 진동이 적고 벽에 고정하여 사용가능합니다.`,
       buttonContent: `V6 시리즈 자세히 보러가기`,
     },
   ];

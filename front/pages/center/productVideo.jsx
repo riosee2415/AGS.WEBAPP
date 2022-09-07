@@ -90,7 +90,7 @@ const ProductVideo = () => {
       <ClientLayout>
         <WholeWrapper>
           <RsWrapper>
-            <Title dr={`row`} margin={`78px 0 0`}>
+            <Title dr={`row`} margin={`80px 0 0`}>
               제품
               <SpanText color={Theme.basicTheme_C}>{` 관련영상`}</SpanText>
             </Title>

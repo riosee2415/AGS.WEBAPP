@@ -68,7 +68,7 @@ const Faq = () => {
       <ClientLayout>
         <WholeWrapper>
           <RsWrapper>
-            <Wrapper margin={width < 700 ? `30px 0 20px` : `70px 0 50px`}>
+            <Wrapper margin={`80px 0 50px`}>
               <Title>FAQ</Title>
             </Wrapper>
 

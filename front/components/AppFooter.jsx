@@ -176,13 +176,6 @@ const AppFooter = () => {
           ju={`flex-start`}
           fontSize={width < 700 ? `12px` : `16px`}
         >
-          <HoverT>이용약관</HoverT>
-          <HoverT
-            isActive={router.pathname === `/product`}
-            margin={width < 800 ? `0 30px` : `0 100px`}
-          >
-            개인정보처리방침
-          </HoverT>
           <HoverT>
             <ATag href={"mailto:support@avaofnorway.com"}>
               support@avaofnorway.com
