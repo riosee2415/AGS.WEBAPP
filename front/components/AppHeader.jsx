@@ -20,6 +20,8 @@ import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 import { Drawer } from "antd";
+import { HIDDEN_ACC_MENU, HIDDEN_PRO_MENU } from "../reducers/menu";
+import { FAQ_LIST_FAILURE } from "../reducers/faq";
 
 const CustomBtn = styled(Text)`
   width: 130px;
@@ -180,10 +182,10 @@ const AppHeader = () => {
   const router = useRouter();
   const [headerScroll, setHeaderScroll] = useState(false);
   const [pageY, setPageY] = useState(0);
-  const [hiddenAcceMenu, setHiddenAcceMenu] = useState(false);
-  const [hiddenProdMenu, setHiddenProdMenu] = useState(false);
 
   const { me } = useSelector((state) => state.user);
+
+  const { hiddenAcceMenu, hiddenProdMenu } = useSelector((state) => state.menu);
 
   ////////////// - USE STATE- ///////////////
   const [drawar, setDrawar] = useState(false);
@@ -203,20 +205,32 @@ const AppHeader = () => {
   }, [drawar]);
 
   const menuAcceHandler = useCallback(() => {
-    setHiddenAcceMenu((prev) => !prev);
+    dispatch({
+      type: HIDDEN_ACC_MENU,
+      data: !hiddenAcceMenu,
+    });
   }, [hiddenAcceMenu]);
 
   const menuProdHandler = useCallback(() => {
-    setHiddenProdMenu((prev) => !prev);
+    dispatch({
+      type: HIDDEN_PRO_MENU,
+      data: !hiddenProdMenu,
+    });
   }, [hiddenProdMenu]);
 
   const menuLinkHandler = useCallback(
     (link) => {
       if (hiddenAcceMenu) {
-        setHiddenAcceMenu(false);
+        dispatch({
+          type: HIDDEN_ACC_MENU,
+          data: false,
+        });
       }
       if (hiddenProdMenu) {
-        setHiddenProdMenu(false);
+        dispatch({
+          type: HIDDEN_PRO_MENU,
+          data: false,
+        });
       }
       router.push(link);
       window.scrollTo(0, 0);
