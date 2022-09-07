@@ -20,12 +20,13 @@ import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 import { Drawer } from "antd";
+import { HIDDEN_ACC_MENU, HIDDEN_PRO_MENU } from "../reducers/menu";
+import { FAQ_LIST_FAILURE } from "../reducers/faq";
 
 const CustomBtn = styled(Text)`
   width: 130px;
   padding: 10px 0;
   font-size: 16px;
-  text-align: center;
 
   ${(props) =>
     props.isActive &&
@@ -100,15 +101,6 @@ const MenuWrapperStyle = styled(Wrapper)`
 
   &::-webkit-scrollbar {
     display: none; /* Chrome , Safari , Opera */
-  }
-`;
-
-const HoverText = styled(Text)`
-  transition: 0.5s;
-
-  &:hover {
-    color: ${Theme.basicTheme_C};
-    cursor: pointer;
   }
 `;
 
@@ -190,10 +182,10 @@ const AppHeader = () => {
   const router = useRouter();
   const [headerScroll, setHeaderScroll] = useState(false);
   const [pageY, setPageY] = useState(0);
-  const [hiddenAcceMenu, setHiddenAcceMenu] = useState(false);
-  const [hiddenProdMenu, setHiddenProdMenu] = useState(false);
 
   const { me } = useSelector((state) => state.user);
+
+  const { hiddenAcceMenu, hiddenProdMenu } = useSelector((state) => state.menu);
 
   ////////////// - USE STATE- ///////////////
   const [drawar, setDrawar] = useState(false);
@@ -213,20 +205,32 @@ const AppHeader = () => {
   }, [drawar]);
 
   const menuAcceHandler = useCallback(() => {
-    setHiddenAcceMenu((prev) => !prev);
+    dispatch({
+      type: HIDDEN_ACC_MENU,
+      data: !hiddenAcceMenu,
+    });
   }, [hiddenAcceMenu]);
 
   const menuProdHandler = useCallback(() => {
-    setHiddenProdMenu((prev) => !prev);
+    dispatch({
+      type: HIDDEN_PRO_MENU,
+      data: !hiddenProdMenu,
+    });
   }, [hiddenProdMenu]);
 
   const menuLinkHandler = useCallback(
     (link) => {
       if (hiddenAcceMenu) {
-        setHiddenAcceMenu(false);
+        dispatch({
+          type: HIDDEN_ACC_MENU,
+          data: false,
+        });
       }
       if (hiddenProdMenu) {
-        setHiddenProdMenu(false);
+        dispatch({
+          type: HIDDEN_PRO_MENU,
+          data: false,
+        });
       }
       router.push(link);
       window.scrollTo(0, 0);
@@ -377,25 +381,32 @@ const AppHeader = () => {
               <CloseOutlined onClick={drawarToggle} />
             </Wrapper>
             <Wrapper
-              al={`center`}
-              padding={`0 0 300px`}
+              al={`flex-start`}
+              padding={`0 0 450px 30px`}
               height={`100vh`}
-              bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/meat88/assets/images/store-page/img_bg.png")`}
+              bgColor={Theme.black2_C}
+              // bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/meat88/assets/images/store-page/img_bg.png")`}
             >
+              <Image
+                width={`80px`}
+                alt={`logo_img`}
+                margin={`0 0 50px`}
+                src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_white.png`}
+              />
               <CustomBtn
-                color={Theme.black2_C}
+                color={Theme.white_C}
                 isActive={router.pathname === "/product"}
               >
                 <a onClick={menuProdHandler}>제품소개</a>
               </CustomBtn>
               <CustomBtn
-                color={Theme.black2_C}
+                color={Theme.white_C}
                 isActive={router.pathname === "/accessory"}
               >
                 <a onClick={menuAcceHandler}>악세사리</a>
               </CustomBtn>
               <CustomBtn
-                color={Theme.black2_C}
+                color={Theme.white_C}
                 isActive={router.pathname === "/center"}
               >
                 <Link href={`/center`}>
@@ -403,7 +414,7 @@ const AppHeader = () => {
                 </Link>
               </CustomBtn>
               <CustomBtn
-                color={Theme.black2_C}
+                color={Theme.white_C}
                 isActive={router.pathname === "/center/brand"}
               >
                 <Link href={`/center/brand`}>

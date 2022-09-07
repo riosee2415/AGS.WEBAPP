@@ -13,6 +13,7 @@ import editor from "./editor";
 import agency from "./agency";
 import product from "./product";
 import faq from "./faq";
+import menu from "./menu";
 
 const rootReducer = (state, action) => {
   switch (action.type) {
@@ -34,6 +35,7 @@ const rootReducer = (state, action) => {
         agency,
         product,
         faq,
+        menu,
       });
       return combinedReducer(state, action);
     }

@@ -68,7 +68,7 @@ const MenuWrap = styled(Wrapper)`
   }
 
   @media (max-width: 700px) {
-    width: 48%;
+    width: 100%;
     height: 150px;
     margin: 1%;
   }
@@ -91,89 +91,97 @@ const Index = () => {
       </Head>
       <ClientLayout>
         <WholeWrapper>
-          <RsWrapper height={width < 700 ? `80vh` : `100vh`}>
+          <RsWrapper height={width < 700 ? `70vh` : `100vh`}>
             <Title fontSize={`50px`} margin={`0 0 50px`}>
               고객지원
             </Title>
 
             <Wrapper dr={`row`}>
-              <MenuWrap>
-                <Wrapper>
-                  <Image
-                    alt={`icon`}
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon-faq.png`}
-                  />
-                </Wrapper>
-                <Text
-                  fontSize={width < 900 ? `20px` : `36px`}
-                  margin={`10px 0 0`}
-                  fontWeight={`bold`}
-                  color={Theme.white_C}
-                >
-                  <Link href={`/center/faq`}>
-                    <ATag>FAQ</ATag>
-                  </Link>
-                </Text>
-              </MenuWrap>
+              <Link href={`/center/faq`}>
+                <ATag width={width < 700 ? `48%` : `auto`}>
+                  <MenuWrap>
+                    <Wrapper>
+                      <Image
+                        alt={`icon`}
+                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon-faq.png`}
+                      />
+                    </Wrapper>
+                    <Text
+                      fontSize={width < 900 ? `20px` : `36px`}
+                      margin={`10px 0 0`}
+                      fontWeight={`bold`}
+                      color={Theme.white_C}
+                    >
+                      FAQ
+                    </Text>
+                  </MenuWrap>
+                </ATag>
+              </Link>
 
-              <MenuWrap>
-                <Wrapper>
-                  <Image
-                    alt={`icon`}
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon_brand.png`}
-                  />
-                </Wrapper>
-                <Text
-                  fontSize={width < 900 ? `20px` : `36px`}
-                  margin={`10px 0 0`}
-                  fontWeight={`bold`}
-                  color={Theme.white_C}
-                >
-                  <Link href={`/center/brand`}>
-                    <ATag>브랜드 소개</ATag>
-                  </Link>
-                </Text>
-              </MenuWrap>
+              <Link href={`/center/brand`}>
+                <ATag width={width < 700 ? `48%` : `auto`}>
+                  <MenuWrap>
+                    <Wrapper>
+                      <Image
+                        alt={`icon`}
+                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon_brand.png`}
+                      />
+                    </Wrapper>
+                    <Text
+                      fontSize={width < 900 ? `20px` : `36px`}
+                      margin={`10px 0 0`}
+                      fontWeight={`bold`}
+                      color={Theme.white_C}
+                    >
+                      브랜드 소개
+                    </Text>
+                  </MenuWrap>
+                </ATag>
+              </Link>
             </Wrapper>
 
             <Wrapper dr={`row`}>
-              <MenuWrap>
-                <Wrapper>
-                  <Image
-                    alt={`icon`}
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon_video.png`}
-                  />
-                </Wrapper>
-                <Text
-                  fontSize={width < 900 ? `20px` : `36px`}
-                  margin={`10px 0 0`}
-                  fontWeight={`bold`}
-                  color={Theme.white_C}
-                >
-                  <Link href={`/center/productVideo`}>
-                    <ATag>제품 관련 영상</ATag>
-                  </Link>
-                </Text>
-              </MenuWrap>
+              <Link href={`/center/productVideo`}>
+                <ATag width={width < 700 ? `48%` : `auto`}>
+                  <MenuWrap>
+                    <Wrapper>
+                      <Image
+                        alt={`icon`}
+                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon_video.png`}
+                      />
+                    </Wrapper>
+                    <Text
+                      fontSize={width < 900 ? `20px` : `36px`}
+                      margin={`10px 0 0`}
+                      fontWeight={`bold`}
+                      color={Theme.white_C}
+                    >
+                      제품 관련 영상
+                    </Text>
+                  </MenuWrap>
+                </ATag>
+              </Link>
 
-              <MenuWrap>
-                <Wrapper>
-                  <Image
-                    alt={`icon`}
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon-store.png`}
-                  />
-                </Wrapper>
-                <Text
-                  fontSize={width < 900 ? `20px` : `36px`}
-                  margin={`10px 0 0`}
-                  fontWeight={`bold`}
-                  color={Theme.white_C}
-                >
-                  <Link href={`/center/info`}>
-                    <ATag>대리점 안내</ATag>
-                  </Link>
-                </Text>
-              </MenuWrap>
+              <Link href={`/center/info`}>
+                <ATag width={width < 700 ? `48%` : `auto`}>
+                  <MenuWrap>
+                    <Wrapper>
+                      <Image
+                        alt={`icon`}
+                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon-store.png`}
+                      />
+                    </Wrapper>
+                    <Text
+                      fontSize={width < 900 ? `20px` : `36px`}
+                      margin={`10px 0 0`}
+                      fontWeight={`bold`}
+                      color={Theme.white_C}
+                    >
+                      대리점 안내
+                    </Text>
+                  </MenuWrap>
+                </ATag>
+              </Link>
             </Wrapper>
           </RsWrapper>
         </WholeWrapper>

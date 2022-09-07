@@ -49,25 +49,37 @@ const Fourleaf = ({ Component }) => {
     <ThemeProvider theme={Theme}>
       <GlobalStyles />
       <Head>
-        <title>AGS | administrator</title>
+        <title>AVA | administrator</title>
 
         <meta name="author" content="4LEAF SOFTWARE <4leaf.ysh@gmail.com>" />
         {/* <!-- OG tag  --> */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="AGS" />
-        <meta property="og:site_name" content="AGS" />
-        <meta property="og:url" content="https://www.sample.com/" />
+        <meta property="og:title" content="AVA" />
+        <meta property="og:site_name" content="AVA" />
+        <meta property="og:url" content="https://avakorea.kr/" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="400" />
         <meta property="og:image" content="./og_img.png" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://www.sample.com" />
+        <link rel="canonical" href="https://avakorea.kr" />
 
-        <meta name="keywords" content="AGS" />
-        <meta property="og:keywords" content="AGS" />
+        <meta
+          name="keywords"
+          content="고압세척기, 아바고압세척기, 아바, 고압분무기, 고압분사기, 세차기, 고압세차기, 고압살수기, 세차용품, 외벽청소, 세차, ava고압세척기,ava고압세차기, 아바 p80, 아바 p55"
+        />
+        <meta
+          property="og:keywords"
+          content="고압세척기, 아바고압세척기, 아바, 고압분무기, 고압분사기, 세차기, 고압세차기, 고압살수기, 세차용품, 외벽청소, 세차, ava고압세척기,ava고압세차기, 아바 p80, 아바 p55"
+        />
 
-        <meta name="description" content={"AGS"} />
-        <meta property="og:description" content={"AGS"} />
+        <meta
+          name="description"
+          content={"고객의 만족을 위한 최상의 퀄리티 AVA 고압세척기"}
+        />
+        <meta
+          property="og:description"
+          content={"고객의 만족을 위한 최상의 퀄리티 AVA 고압세척기"}
+        />
 
         {/* 프리텐다드 폰트 */}
         <link
