@@ -14,6 +14,7 @@ import { COMPANY_GET_REQUEST } from "../reducers/company";
 import { message } from "antd";
 import styled from "styled-components";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const SnsBox = styled(Wrapper)`
   &:hover {
@@ -26,6 +27,12 @@ const HoverT = styled(Text)`
   cursor: pointer;
   transition: 0.3s;
 
+  ${(props) =>
+    props.isActive &&
+    `
+    color:  ${Theme.basicTheme_C};
+    `};
+
   &:hover {
     color: ${(props) => props.theme.basicTheme_C};
   }
@@ -33,6 +40,7 @@ const HoverT = styled(Text)`
 
 const AppFooter = () => {
   const width = useWidth();
+  const router = useRouter();
 
   const dispatch = useDispatch();
 
@@ -85,17 +93,23 @@ const AppFooter = () => {
           margin={`0 0 60px`}
         >
           <Wrapper width={`33.3%`} al={`flex-start`}>
-            <HoverT margin={`0 0 14px`}>
+            <HoverT
+              isActive={router.pathname === `/center/brand`}
+              margin={`0 0 14px`}
+            >
               <Link href={`/center/brand`}>
                 <ATag>브랜드 소개</ATag>
               </Link>
             </HoverT>
-            <HoverT margin={`0 0 14px`}>
+            <HoverT
+              isActive={router.pathname === `/product`}
+              margin={`0 0 14px`}
+            >
               <Link href={`/product`}>
                 <ATag>제품 소개</ATag>
               </Link>
             </HoverT>
-            <HoverT>
+            <HoverT isActive={router.pathname === `/accessory`}>
               <Link href={`/accessory`}>
                 <ATag>악세사리</ATag>
               </Link>
@@ -106,7 +120,7 @@ const AppFooter = () => {
             al={`flex-start`}
             fontSize={width < 700 ? `14px` : `18px`}
           >
-            <HoverT>
+            <HoverT isActive={router.pathname === `/center`}>
               <Link href={`/center`}>
                 <ATag>고객지원</ATag>
               </Link>
@@ -117,27 +131,39 @@ const AppFooter = () => {
             al={`flex-start`}
             fontSize={width < 700 ? `14px` : `18px`}
           >
-            <HoverT margin={`0 0 14px`}>
+            <HoverT
+              isActive={router.pathname === `/product/evolution`}
+              margin={`0 0 14px`}
+            >
               <Link href={`/product/evolution`}>
                 <ATag>Evolution Series</ATag>
               </Link>
             </HoverT>
-            <HoverT margin={`0 0 14px`}>
+            <HoverT
+              isActive={router.pathname === `/product/master`}
+              margin={`0 0 14px`}
+            >
               <Link href={`/product/master`}>
                 <ATag>Master Series</ATag>
               </Link>
             </HoverT>
-            <HoverT margin={`0 0 14px`}>
+            <HoverT
+              isActive={router.pathname === `/product/go`}
+              margin={`0 0 14px`}
+            >
               <Link href={`/product/go`}>
                 <ATag>GO Series</ATag>
               </Link>
             </HoverT>
-            <HoverT margin={`0 0 14px`}>
+            <HoverT
+              isActive={router.pathname === `/product/smart`}
+              margin={`0 0 14px`}
+            >
               <Link href={`/product/smart`}>
                 <ATag>Smart Series</ATag>
               </Link>
             </HoverT>
-            <HoverT>
+            <HoverT isActive={router.pathname === `/product/v6`}>
               <Link href={`/product/v6`}>
                 <ATag>V6 Series</ATag>
               </Link>
@@ -151,7 +177,10 @@ const AppFooter = () => {
           fontSize={width < 700 ? `12px` : `16px`}
         >
           <HoverT>이용약관</HoverT>
-          <HoverT margin={width < 800 ? `0 30px` : `0 100px`}>
+          <HoverT
+            isActive={router.pathname === `/product`}
+            margin={width < 800 ? `0 30px` : `0 100px`}
+          >
             개인정보처리방침
           </HoverT>
           <HoverT>

@@ -102,15 +102,6 @@ const MenuWrapperStyle = styled(Wrapper)`
   }
 `;
 
-const HoverText = styled(Text)`
-  transition: 0.5s;
-
-  &:hover {
-    color: ${Theme.basicTheme_C};
-    cursor: pointer;
-  }
-`;
-
 const MainTextStyle = styled(Wrapper)`
   font-size: 22px;
   font-weight: bold;
