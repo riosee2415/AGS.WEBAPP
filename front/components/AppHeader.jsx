@@ -543,6 +543,7 @@ const AppHeader = () => {
                   onClick={() =>
                     menuLinkHandler(`/accessory/type?type=foamcannon`)
                   }
+                  marginB={`0`}
                 >
                   고정랜스
                 </SubTextStyle>
@@ -625,6 +626,7 @@ const AppHeader = () => {
                 </SubTextStyle>
                 <SubTextStyle
                   onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                  marginB={`0`}
                 >
                   프리미엄 파티오 클리너
                 </SubTextStyle>
@@ -697,6 +699,7 @@ const AppHeader = () => {
                 </SubTextStyle>
                 <SubTextStyle
                   onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
+                  marginB={`0`}
                 >
                   극세사 브러시
                 </SubTextStyle>
