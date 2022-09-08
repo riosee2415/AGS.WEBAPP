@@ -586,7 +586,6 @@ const Home = ({}) => {
                 <Wrapper
                   width={width < 800 ? `100%` : `calc(100% / 3)`}
                   al={`flex-start`}
-                  margin={width < 800 && `0 0 20px`}
                 >
                   <Text
                     fontSize={
