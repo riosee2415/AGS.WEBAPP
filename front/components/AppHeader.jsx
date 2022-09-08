@@ -26,7 +26,7 @@ import { FAQ_LIST_FAILURE } from "../reducers/faq";
 const CustomBtn = styled(Text)`
   width: 130px;
   padding: 10px 0;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: bold;
 
   ${(props) =>
@@ -394,7 +394,7 @@ const AppHeader = () => {
               <Image
                 width={`74px`}
                 alt={`logo_img`}
-                margin={`0 0 50px`}
+                margin={`0 0 80px`}
                 src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_white.png`}
               />
               <CustomBtn
