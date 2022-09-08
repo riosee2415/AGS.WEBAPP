@@ -34,7 +34,7 @@ const Go = () => {
         <WholeWrapper>
           <Wrapper>
             <Wrapper
-              height={`600px`}
+              height={width < 700 ? `460px` : `600px`}
               position={`relative`}
               bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-black.png")`}
             >
@@ -144,11 +144,11 @@ const Go = () => {
             >
               GO SERIES
             </Text>
-            <Text fontSize={width < 900 ? `16px` : `22px`}>
+            <Text textAlign={`center`} fontSize={width < 900 ? `16px` : `22px`}>
               GO 시리즈는 작은 기계를 최대한으로 활용하기 위해 설계되었습니다.
             </Text>
 
-            <Text fontSize={width < 900 ? `16px` : `22px`}>
+            <Text textAlign={`center`} fontSize={width < 900 ? `16px` : `22px`}>
               초소형 및 경량형으로 어디든 손쉽게 휴대하여 사용하기 간편하며
               협소한 공간에서도 보관이 가능합니다.
             </Text>
