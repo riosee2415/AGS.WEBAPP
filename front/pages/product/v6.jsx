@@ -109,7 +109,6 @@ const V6 = () => {
             padding={width < 900 ? `70px 10px 0` : `100px 50px 0`}
             dr={`row`}
             ju={`space-between`}
-            margin={`0 0 100px`}
             wrap={`nowrap`}
             overflow={`auto`}
           >
@@ -144,35 +143,22 @@ const V6 = () => {
               V6 SERIES
             </Text>
 
-            {width < 700 ? (
-              <Text fontSize={width < 900 ? `16px` : `22px`}>
-                V6 시리즈는 자동차 매니아층과 퀄리티에 민감한분들을 위해
-                설계되었습니다. 고유량 6기통 금속 펌프는 소음과 진동이 적어 고정
-                설비에 적합합니다. 튜브 프레임은 이송 중 펌프와 모터를 모두
-                보호하며 패키지 전체를 콤팩트하게 유지합니다. 액세서리 보관을
-                위한 온보드 스토리지가 있으며 벽걸이 및 15미터 강철 강화 압력
-                호스가 포함되어 있습니다.
-              </Text>
-            ) : (
-              <>
-                <Text fontSize={width < 900 ? `16px` : `22px`}>
-                  V6 시리즈는 자동차 매니아층과 퀄리티에 민감한분들을 위해
-                  설계되었습니다.
-                </Text>
-                <Text fontSize={width < 900 ? `16px` : `22px`}>
-                  고유량 6기통 금속 펌프는 소음과 진동이 적어 고정 설비에
-                  적합합니다.
-                </Text>
-                <Text fontSize={width < 900 ? `16px` : `22px`}>
-                  튜브 프레임은 이송 중 펌프와 모터를 모두 보호하며 패키지
-                  전체를 콤팩트하게 유지합니다.
-                </Text>
-                <Text fontSize={width < 900 ? `16px` : `22px`}>
-                  액세서리 보관을 위한 온보드 스토리지가 있으며 벽걸이 및 15미터
-                  강철 강화 압력 호스가 포함되어 있습니다.
-                </Text>
-              </>
-            )}
+            <Text textAlign={`center`} fontSize={width < 900 ? `16px` : `22px`}>
+              V6 시리즈는 자동차 매니아층과 퀄리티에 민감한분들을 위해
+              설계되었습니다.
+            </Text>
+            <Text textAlign={`center`} fontSize={width < 900 ? `16px` : `22px`}>
+              고유량 6기통 금속 펌프는 소음과 진동이 적어 고정 설비에
+              적합합니다.
+            </Text>
+            <Text textAlign={`center`} fontSize={width < 900 ? `16px` : `22px`}>
+              튜브 프레임은 이송 중 펌프와 모터를 모두 보호하며 패키지 전체를
+              콤팩트하게 유지합니다.
+            </Text>
+            <Text textAlign={`center`} fontSize={width < 900 ? `16px` : `22px`}>
+              액세서리 보관을 위한 온보드 스토리지가 있으며 벽걸이 및 15미터
+              강철 강화 압력 호스가 포함되어 있습니다.
+            </Text>
           </RsWrapper>
 
           <Wrapper

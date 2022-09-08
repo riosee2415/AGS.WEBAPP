@@ -144,28 +144,37 @@ const Master = () => {
             >
               MASTER SERIES
             </Text>
-            <Text fontSize={width < 900 ? `16px` : `22px`}>
+            <Text textAlign={`center`} fontSize={width < 900 ? `16px` : `22px`}>
               MASTER 시리즈는 다양한 수상경력으로 AVA에서 가장 자신있는
               시리즈입니다.
             </Text>
             {width < 700 ? (
-              <Text fontSize={width < 900 ? `16px` : `22px`}>
+              <Text
+                textAlign={`center`}
+                fontSize={width < 900 ? `16px` : `22px`}
+              >
                 사용자 친화성, 효율성 및 디자인에 중점을 두었으며 내구성과
                 성능을 위해 오래 지속되는 4기통 금속 펌프가 내장되어 있습니다.
               </Text>
             ) : (
               <>
-                <Text fontSize={width < 900 ? `16px` : `22px`}>
+                <Text
+                  textAlign={`center`}
+                  fontSize={width < 900 ? `16px` : `22px`}
+                >
                   사용자 친화성, 효율성 및 디자인에 중점을 두었으며 내구성과
                   성능을 위해
                 </Text>
-                <Text fontSize={width < 900 ? `16px` : `22px`}>
+                <Text
+                  textAlign={`center`}
+                  fontSize={width < 900 ? `16px` : `22px`}
+                >
                   오래 지속되는 4기통 금속 펌프가 내장되어 있습니다.
                 </Text>
               </>
             )}
 
-            <Text fontSize={width < 900 ? `16px` : `22px`}>
+            <Text textAlign={`center`} fontSize={width < 900 ? `16px` : `22px`}>
               확장 가능한 전면 지지대와 낮은 무게 중심 그리고 회전 호스릴로 매우
               안정적입니다.
             </Text>
