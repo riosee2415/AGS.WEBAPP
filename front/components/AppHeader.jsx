@@ -26,7 +26,8 @@ import { FAQ_LIST_FAILURE } from "../reducers/faq";
 const CustomBtn = styled(Text)`
   width: 130px;
   padding: 10px 0;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: bold;
 
   ${(props) =>
     props.isActive &&
@@ -39,8 +40,8 @@ const CustomBtn = styled(Text)`
   }
 
   @media (max-width: 800px) {
-    width: 90px;
     padding: 6px 0;
+    font-size: 18px;
   }
 `;
 
@@ -383,16 +384,17 @@ const AppHeader = () => {
             </Wrapper>
             <Wrapper
               al={`flex-start`}
-              padding={`30px 0 0 30px`}
+              padding={`20px 0 0 20px`}
               height={`100vh`}
               ju={`flex-start`}
+              fontSize={`22px`}
               bgColor={Theme.black2_C}
               // bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/meat88/assets/images/store-page/img_bg.png")`}
             >
               <Image
                 width={`80px`}
                 alt={`logo_img`}
-                margin={`0 0 18px`}
+                margin={`0 0 50px`}
                 src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_white.png`}
               />
               <CustomBtn
