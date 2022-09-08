@@ -30,11 +30,9 @@ import {
 import { LOAD_MY_INFO_REQUEST } from "../../../reducers/user";
 import {
   FAQ_ADMIN_LIST_REQUEST,
-  FAQ_TYPE_LIST_REQUEST,
   FAQ_UPDATE_REQUEST,
   FAQ_CREATE_REQUEST,
   FAQ_DELETE_REQUEST,
-  FAQ_GRAPH_REQUEST,
 } from "../../../reducers/faq";
 import Theme from "../../../components/Theme";
 import { MenuUnfoldOutlined } from "@ant-design/icons";
@@ -42,8 +40,6 @@ import { MenuUnfoldOutlined } from "@ant-design/icons";
 const Faq = ({}) => {
   const { st_loadMyInfoDone, me } = useSelector((state) => state.user);
   const {
-    graph,
-    faqTypes,
     adminFaqs,
     st_faqUpdateDone,
     st_faqUpdateError,
@@ -52,7 +48,6 @@ const Faq = ({}) => {
     st_faqDeleteDone,
     st_faqDeleteError,
   } = useSelector((state) => state.faq);
-  console.log(adminFaqs);
 
   const [gData, setGData] = useState(null);
   const [aModal, setAModal] = useState(false);
@@ -94,10 +89,6 @@ const Faq = ({}) => {
           typeId: searchTab,
         },
       });
-
-      dispatch({
-        type: FAQ_GRAPH_REQUEST,
-      });
     }
   }, [st_faqUpdateDone]);
 
@@ -120,9 +111,6 @@ const Faq = ({}) => {
           typeId: searchTab,
         },
       });
-      dispatch({
-        type: FAQ_GRAPH_REQUEST,
-      });
     }
   }, [st_faqCreateDone]);
 
@@ -141,9 +129,6 @@ const Faq = ({}) => {
         data: {
           typeId: searchTab,
         },
-      });
-      dispatch({
-        type: FAQ_GRAPH_REQUEST,
       });
     }
   }, [st_faqDeleteDone]);
@@ -229,10 +214,8 @@ const Faq = ({}) => {
       data: {
         question: data.question,
         answer: data.answer,
-        typeId: data.FaqTypeId,
       },
     });
-    console.log(data.FaqTypeId, "sdfadsfadlsjkf;dslkfja;klewdjf;");
   }, []);
 
   ////// DATAVIEW //////
@@ -244,10 +227,7 @@ const Faq = ({}) => {
       title: "번호",
       dataIndex: "num",
     },
-    {
-      title: "유형 이름",
-      dataIndex: "value",
-    },
+
     {
       title: "질문",
       render: (data) => <Text fontWeight="700">{data.question}</Text>,
@@ -316,20 +296,6 @@ const Faq = ({}) => {
             >
               전체
             </Button>
-
-            {faqTypes.list.map((data, idx) => {
-              return (
-                <Button
-                  key={data.id}
-                  style={{ marginBottom: "5px" }}
-                  size="small"
-                  type={data.id === searchTab ? "primary" : "default"}
-                  onClick={() => setSearchTab(data.id)}
-                >
-                  {data.value}
-                </Button>
-              );
-            })}
           </Wrapper>
 
           <Wrapper width="50%" dr="row" ju="flex-end">
@@ -418,22 +384,6 @@ const Faq = ({}) => {
             </Form.Item>
 
             <Form.Item
-              label="유형"
-              name="FaqTypeId"
-              rules={[
-                { required: true, message: "유형은 필수 선택사항 입니다." },
-              ]}
-            >
-              <Select size="small">
-                {faqTypes.list.map((data) => {
-                  return (
-                    <Select.Option value={data.id}>{data.value}</Select.Option>
-                  );
-                })}
-              </Select>
-            </Form.Item>
-
-            <Form.Item
               label="답변"
               name="answer"
               rules={[
@@ -505,22 +455,6 @@ const Faq = ({}) => {
             </Form.Item>
 
             <Form.Item
-              label="유형"
-              name="FaqTypeId"
-              rules={[
-                { required: true, message: "유형은 필수 선택사항 입니다." },
-              ]}
-            >
-              <Select size="small">
-                {faqTypes.list.map((data) => {
-                  return (
-                    <Select.Option value={data.id}>{data.value}</Select.Option>
-                  );
-                })}
-              </Select>
-            </Form.Item>
-
-            <Form.Item
               label="답변"
               name="answer"
               rules={[
@@ -538,45 +472,6 @@ const Faq = ({}) => {
           </Form>
         </Wrapper>
       </Modal>
-
-      <Wrapper
-        margin={`10px 0px`}
-        ju="flex-start"
-        padding="5px 20px"
-        fontSize="22px"
-        dr="row"
-      >
-        <MenuUnfoldOutlined style={{ fontSize: "22px", marginRight: "5px" }} />
-        종합 통계 데이터
-      </Wrapper>
-      <Wrapper
-        shadow={`2px 2px 5px ${Theme.adminLightGrey_C}`}
-        padding="5px 20px"
-      >
-        {graph &&
-          graph.map((v) => {
-            return (
-              <Wrapper dr="row" ju="flex-start">
-                <Text
-                  width="200px"
-                  bgColor={Theme.lightGrey_C}
-                  color={Theme.white_C}
-                  padding="0px 7px"
-                  margin="0px 15px 0px 0px"
-                >
-                  {v.value}
-                </Text>
-                <Wrapper
-                  borderBottom={`1px solid ${Theme.adminLightGrey_C}`}
-                  width={`calc(100% - 220px)`}
-                  al="flex-start"
-                >
-                  {v.cnt}개
-                </Wrapper>
-              </Wrapper>
-            );
-          })}
-      </Wrapper>
     </AdminLayout>
   );
 };
@@ -597,21 +492,10 @@ export const getServerSideProps = wrapper.getServerSideProps(
     });
 
     context.store.dispatch({
-      type: FAQ_TYPE_LIST_REQUEST,
-      data: {
-        searchTab: 1,
-      },
-    });
-
-    context.store.dispatch({
       type: FAQ_ADMIN_LIST_REQUEST,
       data: {
         typeId: 0,
       },
-    });
-
-    context.store.dispatch({
-      type: FAQ_GRAPH_REQUEST,
     });
 
     // 구현부 종료
