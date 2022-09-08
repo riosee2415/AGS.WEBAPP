@@ -749,7 +749,7 @@ const Type = () => {
                       minWidth={`900px`}
                       dr={`row`}
                       ju={`space-between`}
-                      wrap={`nowrap`}
+                      wrap={width < 700 ? `nowrap` : ``}
                     >
                       {data.images.map((value, idx) => {
                         return (
@@ -757,7 +757,7 @@ const Type = () => {
                             src={value.image}
                             alt="img"
                             width={`calc(100% / 3.1)`}
-                            margin={`0 10px 0 0`}
+                            margin={width < 700 ? `0 10px 0 0` : `0 0 30px`}
                           />
                         );
                       })}
