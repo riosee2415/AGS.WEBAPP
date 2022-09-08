@@ -71,6 +71,7 @@ const MobileRow = styled(Wrapper)`
 
   .ant-drawer-content-wrapper {
     width: 90% !important;
+    background: ${(props) => props.theme.black2_C};
   }
 
   .ant-drawer-header-no-title .ant-drawer-close {
@@ -382,15 +383,16 @@ const AppHeader = () => {
             </Wrapper>
             <Wrapper
               al={`flex-start`}
-              padding={`0 0 450px 30px`}
+              padding={`30px 0 0 30px`}
               height={`100vh`}
+              ju={`flex-start`}
               bgColor={Theme.black2_C}
               // bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/meat88/assets/images/store-page/img_bg.png")`}
             >
               <Image
                 width={`80px`}
                 alt={`logo_img`}
-                margin={`0 0 50px`}
+                margin={`0 0 18px`}
                 src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_white.png`}
               />
               <CustomBtn

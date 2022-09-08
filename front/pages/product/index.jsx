@@ -95,35 +95,26 @@ const Index = () => {
                       color={Theme.basicTheme_C}
                       margin={`0 0 25px`}
                     >
-                      <SpanText color={Theme.white_C}>AVA</SpanText> EVOLUTION
-                      SERIES
+                      <SpanText color={Theme.white_C}>AVA </SpanText>
+                      고압세척기
                     </Text>
                     {width < 700 ? (
                       <Text>
-                        By choosing an AVA pressure washer, you choose to go
-                        against the current. You choose to be different, to
-                        think long term and to think smart. You choose a product
-                        that lasts longer, takes less time to use, and is down
-                        right more fun. You choose the new experience.
+                        AVA 고압세척기는 고객분들의 만족도를 위하여 최고의
+                        기술로 제작되었습니다. AVA 고압세척기는 고객분들의
+                        만족도를 위하여 최고의 기술로 제작되었습니다
                       </Text>
                     ) : (
                       <>
                         <Text>
-                          By choosing an AVA pressure washer, you choose to go
+                          AVA 고압세척기는 고객분들의 만족도를 위하여 최고의
                         </Text>
                         <Text>
-                          against the current. You choose to be different, to
-                          think
+                          기술로 제작되었습니다. AVA 고압세척기는 고객분들의
                         </Text>
                         <Text>
-                          long term and to think smart. You choose a product
-                          that
+                          만족도를 위하여 최고의 기술로 제작되었습니다
                         </Text>
-                        <Text>
-                          lasts longer, takes less time to use, and is down
-                          right more fun.
-                        </Text>
-                        <Text>You choose the new experience.</Text>
                       </>
                     )}
                   </Wrapper>

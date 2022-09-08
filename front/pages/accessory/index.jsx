@@ -64,7 +64,7 @@ const Index = () => {
         <WholeWrapper>
           <Wrapper>
             <Wrapper
-              height={`600px`}
+              height={width < 700 ? `400px` : `480px`}
               position={`relative`}
               bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-black.png")`}
             >
@@ -99,7 +99,9 @@ const Index = () => {
                       악세사리
                     </Text>
 
-                    <Text>악세사리의 설명이 들어갈 곳입니다.</Text>
+                    <Text width={width < 700 ? `70%` : `100%`}>
+                      AVA는 고압세척기의 다양한 액세서리를 제공하고 있습니다
+                    </Text>
                   </Wrapper>
                 </RsWrapper>
               </Wrapper>
