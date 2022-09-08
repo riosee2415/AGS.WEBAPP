@@ -64,7 +64,7 @@ const Index = () => {
         <WholeWrapper>
           <Wrapper>
             <Wrapper
-              height={width < 700 ? `400px` : `480px`}
+              height={width < 700 ? `400px` : `600px`}
               position={`relative`}
               bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-black.png")`}
             >
