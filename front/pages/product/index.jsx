@@ -17,6 +17,7 @@ import {
 import Theme from "../../components/Theme";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import styled from "styled-components";
+import Link from "next/link";
 
 const CustomBtn = styled(Wrapper)`
   cursor: pointer;
@@ -164,26 +165,30 @@ const Index = () => {
               >
                 EVOLUTION SERIES
               </Text>
-              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
-                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  Evolution series
-                </Text>
-                <Wrapper
-                  bgColor={Theme.basicTheme_C}
-                  width={width < 900 ? `26px` : `36px`}
-                  height={width < 900 ? `26px` : `36px`}
-                  radius={`50%`}
-                >
-                  <Text
-                    textAling={`right`}
-                    padding={`10px`}
-                    color={Theme.black2_C}
-                    fontSize={width < 900 ? `12px` : `16px`}
-                  >
-                    <ArrowRightOutlined />
-                  </Text>
-                </Wrapper>
-              </CustomBtn>
+              <Link href={`/product/evolution`}>
+                <a>
+                  <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                    <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                      Evolution series
+                    </Text>
+                    <Wrapper
+                      bgColor={Theme.basicTheme_C}
+                      width={width < 900 ? `26px` : `36px`}
+                      height={width < 900 ? `26px` : `36px`}
+                      radius={`50%`}
+                    >
+                      <Text
+                        textAling={`right`}
+                        padding={`10px`}
+                        color={Theme.black2_C}
+                        fontSize={width < 900 ? `12px` : `16px`}
+                      >
+                        <ArrowRightOutlined />
+                      </Text>
+                    </Wrapper>
+                  </CustomBtn>
+                </a>
+              </Link>
             </Wrapper>
             <Text
               fontSize={width < 800 ? `14px` : `22px`}
@@ -239,26 +244,30 @@ const Index = () => {
               >
                 MASTER SERIES
               </Text>
-              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
-                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  Master series
-                </Text>
-                <Wrapper
-                  bgColor={Theme.basicTheme_C}
-                  width={width < 900 ? `26px` : `36px`}
-                  height={width < 900 ? `26px` : `36px`}
-                  radius={`50%`}
-                >
-                  <Text
-                    textAling={`right`}
-                    padding={`10px`}
-                    color={Theme.black2_C}
-                    fontSize={width < 900 ? `12px` : `16px`}
-                  >
-                    <ArrowRightOutlined />
-                  </Text>
-                </Wrapper>
-              </CustomBtn>
+              <Link href={`/product/master`}>
+                <a>
+                  <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                    <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                      Master series
+                    </Text>
+                    <Wrapper
+                      bgColor={Theme.basicTheme_C}
+                      width={width < 900 ? `26px` : `36px`}
+                      height={width < 900 ? `26px` : `36px`}
+                      radius={`50%`}
+                    >
+                      <Text
+                        textAling={`right`}
+                        padding={`10px`}
+                        color={Theme.black2_C}
+                        fontSize={width < 900 ? `12px` : `16px`}
+                      >
+                        <ArrowRightOutlined />
+                      </Text>
+                    </Wrapper>
+                  </CustomBtn>
+                </a>
+              </Link>
             </Wrapper>
             <Text
               fontSize={width < 800 ? `14px` : `22px`}
@@ -314,26 +323,30 @@ const Index = () => {
               >
                 GO SERIES
               </Text>
-              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
-                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  Go series
-                </Text>
-                <Wrapper
-                  bgColor={Theme.basicTheme_C}
-                  width={width < 900 ? `26px` : `36px`}
-                  height={width < 900 ? `26px` : `36px`}
-                  radius={`50%`}
-                >
-                  <Text
-                    textAling={`right`}
-                    padding={`10px`}
-                    color={Theme.black2_C}
-                    fontSize={width < 900 ? `12px` : `16px`}
-                  >
-                    <ArrowRightOutlined />
-                  </Text>
-                </Wrapper>
-              </CustomBtn>
+              <Link href={`/product/go`}>
+                <a>
+                  <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                    <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                      Go series
+                    </Text>
+                    <Wrapper
+                      bgColor={Theme.basicTheme_C}
+                      width={width < 900 ? `26px` : `36px`}
+                      height={width < 900 ? `26px` : `36px`}
+                      radius={`50%`}
+                    >
+                      <Text
+                        textAling={`right`}
+                        padding={`10px`}
+                        color={Theme.black2_C}
+                        fontSize={width < 900 ? `12px` : `16px`}
+                      >
+                        <ArrowRightOutlined />
+                      </Text>
+                    </Wrapper>
+                  </CustomBtn>
+                </a>
+              </Link>
             </Wrapper>
             <Text
               fontSize={width < 800 ? `14px` : `22px`}
@@ -389,26 +402,30 @@ const Index = () => {
               >
                 SMART SERIES
               </Text>
-              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
-                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  Smart series
-                </Text>
-                <Wrapper
-                  bgColor={Theme.basicTheme_C}
-                  width={width < 900 ? `26px` : `36px`}
-                  height={width < 900 ? `26px` : `36px`}
-                  radius={`50%`}
-                >
-                  <Text
-                    textAling={`right`}
-                    padding={`10px`}
-                    color={Theme.black2_C}
-                    fontSize={width < 900 ? `12px` : `16px`}
-                  >
-                    <ArrowRightOutlined />
-                  </Text>
-                </Wrapper>
-              </CustomBtn>
+              <Link href={`/product/smart`}>
+                <a>
+                  <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                    <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                      Smart series
+                    </Text>
+                    <Wrapper
+                      bgColor={Theme.basicTheme_C}
+                      width={width < 900 ? `26px` : `36px`}
+                      height={width < 900 ? `26px` : `36px`}
+                      radius={`50%`}
+                    >
+                      <Text
+                        textAling={`right`}
+                        padding={`10px`}
+                        color={Theme.black2_C}
+                        fontSize={width < 900 ? `12px` : `16px`}
+                      >
+                        <ArrowRightOutlined />
+                      </Text>
+                    </Wrapper>
+                  </CustomBtn>
+                </a>
+              </Link>
             </Wrapper>
             <Text
               fontSize={width < 800 ? `14px` : `22px`}
@@ -465,26 +482,30 @@ const Index = () => {
               >
                 V6 SERIES
               </Text>
-              <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
-                <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                  V6 series
-                </Text>
-                <Wrapper
-                  bgColor={Theme.basicTheme_C}
-                  width={width < 900 ? `26px` : `36px`}
-                  height={width < 900 ? `26px` : `36px`}
-                  radius={`50%`}
-                >
-                  <Text
-                    textAling={`right`}
-                    padding={`10px`}
-                    color={Theme.black2_C}
-                    fontSize={width < 900 ? `12px` : `16px`}
-                  >
-                    <ArrowRightOutlined />
-                  </Text>
-                </Wrapper>
-              </CustomBtn>
+              <Link href={`/product/v6`}>
+                <a>
+                  <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
+                    <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
+                      V6 series
+                    </Text>
+                    <Wrapper
+                      bgColor={Theme.basicTheme_C}
+                      width={width < 900 ? `26px` : `36px`}
+                      height={width < 900 ? `26px` : `36px`}
+                      radius={`50%`}
+                    >
+                      <Text
+                        textAling={`right`}
+                        padding={`10px`}
+                        color={Theme.black2_C}
+                        fontSize={width < 900 ? `12px` : `16px`}
+                      >
+                        <ArrowRightOutlined />
+                      </Text>
+                    </Wrapper>
+                  </CustomBtn>
+                </a>
+              </Link>
             </Wrapper>
             <Text
               fontSize={width < 800 ? `14px` : `22px`}

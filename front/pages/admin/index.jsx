@@ -81,8 +81,8 @@ const AdminHome = () => {
           <Wrapper height={`100%`} padding={`30px`}>
             <Image
               alt="logo"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/4LEAFSOFTWARE/assets/images/LOGO/logo1.png`}
-              width={`300px`}
+              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_black.png`}
+              width={`100px`}
             />
             <Wrapper width={`80%`}>
               <Wrapper margin={`20px 0`}>

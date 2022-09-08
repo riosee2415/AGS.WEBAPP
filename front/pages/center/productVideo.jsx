@@ -95,7 +95,7 @@ const ProductVideo = () => {
               <SpanText color={Theme.basicTheme_C}>{` 관련영상`}</SpanText>
             </Title>
             <Wrapper dr={!mainProducts ? `column` : `row`} ju={`space-between`}>
-              {mainProducts ? (
+              {mainProducts && mainProducts.length !== 0 ? (
                 mainProducts.map((data) => (
                   <Wrapper
                     width={width < 700 ? `100%` : `48.6%`}
@@ -125,7 +125,7 @@ const ProductVideo = () => {
                 ))
               ) : (
                 <Empty
-                  style={{ margin: "100px" }}
+                  style={{ width: "100%", margin: "100px" }}
                   description={`제품 관련영상이 없습니다.`}
                 />
               )}

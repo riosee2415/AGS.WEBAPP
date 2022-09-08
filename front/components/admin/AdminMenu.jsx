@@ -99,7 +99,7 @@ const AdminMenu = () => {
             <MenuName>접속자 통계</MenuName>
           </Menu.Item>
         </SubMenu>
-        <SubMenu
+        {/* <SubMenu
           key="sub2"
           icon={<InfoCircleOutlined />}
           title="기초 관리"
@@ -112,11 +112,7 @@ const AdminMenu = () => {
             <MenuName>팝업 관리</MenuName>
           </Menu.Item>
 
-          {/* <SubMenu key="sub3" title="Submenu">
-            <Menu.Item key="7">Option 7</Menu.Item>
-            <Menu.Item key="8">Option 8</Menu.Item>
-          </SubMenu> */}
-        </SubMenu>
+        </SubMenu> 
         <SubMenu
           key="sub3"
           icon={<BookOutlined />}
@@ -130,7 +126,7 @@ const AdminMenu = () => {
             <MenuName>갤러리 관리</MenuName>
           </Menu.Item>
         </SubMenu>
-        <SubMenu
+         <SubMenu
           key="su43"
           icon={<SettingOutlined />}
           title="베너 관리"
@@ -149,18 +145,18 @@ const AdminMenu = () => {
           <Menu.Item key="/admin/user/userList">
             <MenuName>회원 리스트</MenuName>
           </Menu.Item>
-        </SubMenu>
+        </SubMenu> */}
         <SubMenu
           key="sub6"
           icon={<PhoneOutlined />}
-          title="문의 관리"
+          title="FAQ 관리"
           onTitleClick={titleClickHandler("sub6")}
         >
-          <Menu.Item key="/admin/faq/types">
+          {/* <Menu.Item key="/admin/faq/types">
             <MenuName>자주묻는 유형 리스트</MenuName>
-          </Menu.Item>
+          </Menu.Item> */}
           <Menu.Item key="/admin/faq">
-            <MenuName>자주묻는 질문 리스트</MenuName>
+            <MenuName>FAQ 리스트</MenuName>
           </Menu.Item>
         </SubMenu>
         <SubMenu
