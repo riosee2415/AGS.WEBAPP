@@ -770,7 +770,7 @@ const Type = () => {
                       key={idx}
                       bgColor={Theme.black3_C}
                       position={`relative`}
-                      padding={`100px 0`}
+                      padding={width < 700 ? `30px 0` : `100px 0`}
                       zIndex={`2`}
                       minHeight={width < 700 ? `auto` : `419px`}
                     >
