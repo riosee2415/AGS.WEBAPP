@@ -392,7 +392,7 @@ const AppHeader = () => {
               // bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/meat88/assets/images/store-page/img_bg.png")`}
             >
               <Image
-                width={`80px`}
+                width={`74px`}
                 alt={`logo_img`}
                 margin={`0 0 50px`}
                 src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_white.png`}
