@@ -69,7 +69,7 @@ const AbsoluteInfoWrapper = styled(Wrapper)`
     width: 700px;
   }
   @media (max-width: 700px) {
-    width: 100%;
+    width: 94%;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -424,7 +424,7 @@ const Home = ({}) => {
                 <HoverImageWrapper
                   width={`48%`}
                   position={`relative`}
-                  onClick={proMenuToggle}
+                  onClick={() => moveLinkHandler(`/product`)}
                 >
                   <Image
                     width={`100%`}
@@ -450,7 +450,7 @@ const Home = ({}) => {
                 <HoverImageWrapper
                   width={`48%`}
                   position={`relative`}
-                  onClick={accMenuToggle}
+                  onClick={() => moveLinkHandler(`/accessory`)}
                 >
                   <Image
                     width={`100%`}
