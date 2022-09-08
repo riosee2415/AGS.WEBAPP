@@ -41,7 +41,11 @@ const ClientLayout = ({ children, width }) => {
       */}
 
       {/* content */}
-      <WholeWrapper margin={router.pathname === "/" ? `0` : `80px 0 0`}>
+      <WholeWrapper
+        margin={
+          router.pathname === "/" ? `0` : width < 800 ? `59px 0 0` : `80px 0 0`
+        }
+      >
         <ATag href={`http://pf.kakao.com/_xoSCcK/chat`} target={`_blank`}>
           <SnsBox
             height={width < 700 ? `50px` : `75px`}

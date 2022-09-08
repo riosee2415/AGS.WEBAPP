@@ -144,7 +144,10 @@ const Smart = () => {
             </Text>
 
             {width < 700 ? (
-              <Text fontSize={width < 900 ? `16px` : `22px`}>
+              <Text
+                fontSize={width < 900 ? `16px` : `22px`}
+                textAlign={`center`}
+              >
                 SMART 시리즈는 상위버전인 MASTER 시리즈의 몇 가지 기능을
                 사용합니다. 제품의 오랜 수명을 위하여 금속 펌프, 팁 방지 설계 및
                 강철로 강화된 호스를 갖추고 있습니다. 일반적으로 고가의 기계에서

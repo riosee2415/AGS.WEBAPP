@@ -116,15 +116,15 @@ const Evolution = () => {
             >
               EVOLUTION SERIES
             </Text>
-            <Text fontSize={width < 900 ? `16px` : `22px`}>
+            <Text textAlign={`center`} fontSize={width < 900 ? `16px` : `22px`}>
               AVA 팀의 철저한 경험과 함께 수년간의 고객 피드백이 고압세척기
               시장에 변화를 가져왔습니다.
             </Text>
-            <Text fontSize={width < 900 ? `16px` : `22px`}>
+            <Text textAlign={`center`} fontSize={width < 900 ? `16px` : `22px`}>
               EVOLUTION 시리즈는 AVA V4 및 V6 올 메탈 펌프를 함께 사용할 수
               있으며, 호스릴은 최대 20M까지 보관할 수 있습니다.
             </Text>
-            <Text fontSize={width < 900 ? `16px` : `22px`}>
+            <Text textAlign={`center`} fontSize={width < 900 ? `16px` : `22px`}>
               사용시 주의 사항은 전원 케이블을 끝까지 뺀 상태에서 사용해주세요.
             </Text>
             <Wrapper
