@@ -76,7 +76,7 @@ const Faq = () => {
                     faqs.map((data, idx) => {
                       return (
                         <Wrapper
-                          height={data.id === tab ? `140px` : `70px`}
+                          height={data.id === tab ? `auto` : `70px`}
                           bgColor={Theme.black3_C}
                           radius={`10px`}
                           margin={`0 0 25px`}
