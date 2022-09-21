@@ -552,7 +552,7 @@ const AppHeader = () => {
                     menuLinkHandler(`/accessory/type?type=foamcannon`)
                   }
                 >
-                  플랙스 랜스
+                  플렉스 랜스
                 </SubTextStyle>
                 <SubTextStyle
                   onClick={() =>

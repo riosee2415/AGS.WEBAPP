@@ -40,7 +40,7 @@ const Type = () => {
     {
       gradient: false,
       type: "foamcannon",
-      title: "폼 캐논",
+      title: "폼캐논(폼랜스)",
       description: [
         {
           description:
@@ -134,7 +134,7 @@ const Type = () => {
           type: "2",
           prodImg:
             "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_lance-flex.png",
-          prodTitle: "플랙스 랜스",
+          prodTitle: "플렉스 랜스",
           prodDescription:
             "유니크한 제품으로 자동차 루프, 하부 그리고 바퀴 안쪽까지 세척이 가능할 정도로 여러가지 방법으로 사용할 수 있습니다. 메인 손잡이를 돌려 상하 방향을 조절해주고 측면의 손잡이로 각도 조절과 고정 기능까지 있어 손쉽게 사용할 수 있습니다. 측면 손잡이는 탈부착이 가능하여 작업하기 편한쪽에 결합하여 사용할 수 있습니다.",
         },
@@ -621,7 +621,7 @@ const Type = () => {
               ? router.query.type === `hose`
                 ? "호스&브러시"
                 : "노즐&파티오클리너"
-              : "폼캐논&랜스"
+              : "폼캐논(폼랜스)&랜스"
             : "고압건&어댑터&수납함"}
         </title>
       </Head>

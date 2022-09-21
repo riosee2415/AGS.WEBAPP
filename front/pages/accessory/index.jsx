@@ -122,7 +122,7 @@ const Index = () => {
             </Wrapper>
           </Wrapper>
 
-          {/* 폼 캐논*/}
+          {/* 폼캐논(폼랜스)*/}
           <Wrapper
             padding={width < 800 ? `50px 10px 0` : `100px 50px 0`}
             al={`flex-start`}
@@ -139,13 +139,13 @@ const Index = () => {
                 lineHeight={`1`}
                 margin={`0 36px 0 0`}
               >
-                폼 캐논
+                폼캐논(폼랜스)
               </Text>
               <Link href={`/accessory/type?type=foamcannon`}>
                 <a>
                   <CustomBtn margin={width < 900 ? `10px 0 0` : `0`}>
                     <Text padding={width < 900 ? `0 20px 0 0` : `0 40px 0 0`}>
-                      폼캐논
+                      폼캐논(폼랜스)
                     </Text>
                     <Wrapper
                       bgColor={Theme.basicTheme_C}
@@ -171,7 +171,7 @@ const Index = () => {
               fontWeight={`bold`}
               margin={width < 800 ? `0 0 30px` : `0 0 68px`}
             >
-              AVA 폼 캐논은 모든 표면에 도포 및 지속이 가능한 두꺼운 폼을
+              AVA 폼캐논(폼랜스)은 모든 표면에 도포 및 지속이 가능한 두꺼운 폼을
               만들어냅니다. 고품질의 스테인리스 스틸 매쉬 필터를 사용하여 세제,
               물, 공기를 혼합합니다. 대부분의 1리터 병으로 결합이 가능합니다.
             </Text>
