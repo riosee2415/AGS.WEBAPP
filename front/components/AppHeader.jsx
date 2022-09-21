@@ -220,23 +220,30 @@ const AppHeader = () => {
   }, [hiddenProdMenu]);
 
   const menuLinkHandler = useCallback(
-    (link) => {
+    (link, scrollY) => {
       if (hiddenAcceMenu) {
         dispatch({
           type: HIDDEN_ACC_MENU,
           data: false,
         });
+        setDrawar(false);
       }
       if (hiddenProdMenu) {
         dispatch({
           type: HIDDEN_PRO_MENU,
           data: false,
         });
+        setDrawar(false);
       }
-      router.push(link);
+      if (scrollY) {
+        router.push(link + `&scroll=${scrollY}`);
+      } else {
+        router.push(link);
+      }
+
       window.scrollTo(0, 0);
     },
-    [hiddenAcceMenu, hiddenProdMenu]
+    [hiddenAcceMenu, hiddenProdMenu, drawar]
   );
 
   ////////////// - USE EFFECT- //////////////
@@ -506,16 +513,19 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() =>
-                  menuLinkHandler(`/accessory/type?type=foamcannon`)
-                }
                 beforeW={width < 700 ? `22%` : width < 1400 ? `20%` : ``}
                 beforeL={width < 700 ? `39%` : width < 1400 ? `40%` : ``}
               >
-                폼 캐논
-                <SubTextStyle
+                <Text
                   onClick={() =>
                     menuLinkHandler(`/accessory/type?type=foamcannon`)
+                  }
+                >
+                  폼 캐논
+                </Text>
+                <SubTextStyle
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`, 11)
                   }
                   marginT={`16px`}
                 >
@@ -524,7 +534,7 @@ const AppHeader = () => {
                 <SubTextStyle
                   marginB={width < 700 ? `25px` : `40px`}
                   onClick={() =>
-                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                    menuLinkHandler(`/accessory/type?type=foamcannon`, 12)
                   }
                 >
                   브라스 폼 캐논
@@ -532,16 +542,20 @@ const AppHeader = () => {
               </MainTextStyle>
 
               <MainTextStyle
-                onClick={() =>
-                  menuLinkHandler(`/accessory/type?type=foamcannon`)
-                }
                 beforeW={width < 700 ? `14%` : width < 1400 ? `12%` : `20%`}
                 beforeL={width < 700 ? `43%` : width < 1400 ? `44%` : `40%`}
               >
-                랜스
+                <Text
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=foamcannon`, 100)
+                  }
+                >
+                  랜스
+                </Text>
+
                 <SubTextStyle
                   onClick={() =>
-                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                    menuLinkHandler(`/accessory/type?type=foamcannon`, 1)
                   }
                   marginT={`16px`}
                 >
@@ -549,35 +563,35 @@ const AppHeader = () => {
                 </SubTextStyle>
                 <SubTextStyle
                   onClick={() =>
-                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                    menuLinkHandler(`/accessory/type?type=foamcannon`, 2)
                   }
                 >
                   플렉스 랜스
                 </SubTextStyle>
                 <SubTextStyle
                   onClick={() =>
-                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                    menuLinkHandler(`/accessory/type?type=foamcannon`, 3)
                   }
                 >
                   텔레스코픽 랜스
                 </SubTextStyle>
                 <SubTextStyle
                   onClick={() =>
-                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                    menuLinkHandler(`/accessory/type?type=foamcannon`, 4)
                   }
                 >
                   90˚ 앵글 랜스
                 </SubTextStyle>
                 <SubTextStyle
                   onClick={() =>
-                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                    menuLinkHandler(`/accessory/type?type=foamcannon`, 5)
                   }
                 >
                   135˚ 앵글 랜스
                 </SubTextStyle>
                 <SubTextStyle
                   onClick={() =>
-                    menuLinkHandler(`/accessory/type?type=foamcannon`)
+                    menuLinkHandler(`/accessory/type?type=foamcannon`, 6)
                   }
                   marginB={`0`}
                 >
@@ -604,64 +618,91 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 beforeW={width < 700 ? `14%` : width < 1400 ? `12%` : `20%`}
                 beforeL={width < 700 ? `43%` : width < 1400 ? `44%` : `40%`}
               >
-                노즐
-                <SubTextStyle
+                <Text
                   onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                >
+                  노즐
+                </Text>
+
+                <SubTextStyle
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=nozzle`, 21)
+                  }
                   marginT={`16px`}
                 >
                   가변 노즐
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=nozzle`, 22)
+                  }
                 >
                   터보 노즐
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=nozzle`, 23)
+                  }
                 >
                   0˚ 노즐
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=nozzle`, 24)
+                  }
                 >
                   15˚ 노즐
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=nozzle`, 25)
+                  }
                 >
                   25˚ 노즐
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=nozzle`, 26)
+                  }
                 >
                   40˚ 노즐
                 </SubTextStyle>
                 <SubTextStyle
                   marginB={width < 700 ? `25px` : `40px`}
-                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=nozzle`, 27)
+                  }
                 >
                   60˚ 노즐
                 </SubTextStyle>
               </MainTextStyle>
 
               <MainTextStyle
-                onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 beforeW={width < 700 ? `42%` : width < 1400 ? `40%` : `56%`}
                 beforeL={width < 700 ? `29%` : width < 1400 ? `30%` : `22%`}
               >
-                파티오 클리너
+                <Text
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=nozzle`, 101)
+                  }
+                >
+                  파티오 클리너
+                </Text>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=nozzle`, 31)
+                  }
                   marginT={`16px`}
                 >
                   베이직 파티오 클리너
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=nozzle`, 32)
+                  }
                   marginB={`0`}
                 >
                   프리미엄 파티오 클리너
@@ -687,54 +728,78 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                 beforeW={width < 700 ? `14%` : width < 1400 ? `12%` : `20%`}
                 beforeL={width < 700 ? `43%` : width < 1400 ? `44%` : `40%`}
               >
-                호스
-                <SubTextStyle
+                <Text
                   onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
+                >
+                  호스
+                </Text>
+
+                <SubTextStyle
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=hose`, 41)
+                  }
                   marginT={`16px`}
                 >
                   스틸 고압 호스
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=hose`, 42)
+                  }
                 >
                   고압연장 호스
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=hose`, 43)
+                  }
                 >
                   편사 호스
                 </SubTextStyle>
                 <SubTextStyle
                   marginB={width < 700 ? `25px` : `40px`}
-                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=hose`, 44)
+                  }
                 >
                   파이프 세척 호스
                 </SubTextStyle>
               </MainTextStyle>
 
               <MainTextStyle
-                onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
                 beforeW={width < 1400 ? `20%` : ``}
                 beforeL={width < 1400 ? `40%` : ``}
               >
-                브러시
+                <Text
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=hose`, 102)
+                  }
+                >
+                  브러시
+                </Text>
+
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=hose`, 51)
+                  }
                   marginT={`16px`}
                 >
                   사각 브러시
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=hose`, 52)
+                  }
                 >
                   가구 브러시
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=hose`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=hose`, 53)
+                  }
                   marginB={`0`}
                 >
                   극세사 브러시
@@ -760,14 +825,20 @@ const AppHeader = () => {
                 />
               </Wrapper>
               <MainTextStyle
-                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                 beforeW={width < 1400 ? `20%` : ``}
                 beforeL={width < 1400 ? `40%` : ``}
               >
-                고압건
+                <Text
+                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                >
+                  고압건
+                </Text>
+
                 <SubTextStyle
                   marginB={width < 700 ? `25px` : `40px`}
-                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=gun`, 61)
+                  }
                   marginT={`16px`}
                 >
                   제로포스 고압건
@@ -775,38 +846,58 @@ const AppHeader = () => {
               </MainTextStyle>
 
               <MainTextStyle
-                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                 beforeW={width < 1400 ? `20%` : ``}
                 beforeL={width < 1400 ? `40%` : ``}
               >
-                어댑터
+                <Text
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=gun`, 103)
+                  }
+                >
+                  어댑터
+                </Text>
+
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=gun`, 71)
+                  }
                   marginT={`16px`}
                 >
                   암/수 어댑터
                 </SubTextStyle>
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=gun`, 72)
+                  }
                 >
                   노즐 회전 어댑터
                 </SubTextStyle>
                 <SubTextStyle
                   marginB={width < 700 ? `25px` : `40px`}
-                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=gun`, 73)
+                  }
                 >
                   AVA to 카쳐 호스 어댑터
                 </SubTextStyle>
               </MainTextStyle>
 
               <MainTextStyle
-                onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
                 beforeW={width < 700 ? `26%` : width < 1400 ? `24%` : `38%`}
                 beforeL={width < 700 ? `37%` : width < 1400 ? `38%` : `31%`}
               >
-                수납도구
+                <Text
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=gun`, 104)
+                  }
+                >
+                  수납도구
+                </Text>
+
                 <SubTextStyle
-                  onClick={() => menuLinkHandler(`/accessory/type?type=gun`)}
+                  onClick={() =>
+                    menuLinkHandler(`/accessory/type?type=gun`, 81)
+                  }
                   marginT={`16px`}
                 >
                   수납함

@@ -22,18 +22,144 @@ import {
   Text,
 } from "../../components/commonComponents";
 import { useRouter } from "next/router";
+import { useRef } from "react";
 
 const Type = () => {
   ////// GLOBAL STATE //////
   const width = useWidth();
 
   ////// HOOKS //////
+  const formRef0 = useRef();
+  const formRef1 = useRef();
+  const formRef2 = useRef();
+  const formRef3 = useRef();
+  const formRef4 = useRef();
+  const formRef5 = useRef();
+  const formRef6 = useRef();
+  const formRef7 = useRef();
+  const formRef8 = useRef();
+  const formRef11 = useRef();
+  const formRef12 = useRef();
+  const formRef21 = useRef();
+  const formRef22 = useRef();
+  const formRef23 = useRef();
+  const formRef24 = useRef();
+  const formRef25 = useRef();
+  const formRef26 = useRef();
+  const formRef27 = useRef();
+  const formRef31 = useRef();
+  const formRef32 = useRef();
+  const formRef41 = useRef();
+  const formRef42 = useRef();
+  const formRef43 = useRef();
+  const formRef44 = useRef();
+  const formRef51 = useRef();
+  const formRef52 = useRef();
+  const formRef53 = useRef();
+  const formRef61 = useRef();
+  const formRef71 = useRef();
+  const formRef72 = useRef();
+  const formRef73 = useRef();
+  const formRef81 = useRef();
+  const formRef100 = useRef();
+  const formRef101 = useRef();
+  const formRef102 = useRef();
+  const formRef103 = useRef();
+  const formRef104 = useRef();
+
   ////// REDUX //////
   const router = useRouter();
   ////// USEEFFECT //////
   ////// TOGGLE //////
   ////// HANDLER //////
   ////// DATAVIEW //////
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  // useEffect(() => {
+  //   if (router.query.scroll) {
+  //     window.scrollTo(0, parseInt(router.query.scroll));
+  //   }
+  // }, [router.query]);
+
+  useEffect(() => {
+    if (parseInt(router.query.scroll) === 1) {
+      formRef0.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 2) {
+      formRef1.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 3) {
+      formRef2.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 4) {
+      formRef3.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 5) {
+      formRef4.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 6) {
+      formRef5.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 7) {
+      formRef6.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 8) {
+      formRef7.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 9) {
+      formRef8.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 11) {
+      formRef11.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 12) {
+      formRef12.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 21) {
+      formRef21.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 22) {
+      formRef22.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 23) {
+      formRef23.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 24) {
+      formRef24.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 25) {
+      formRef25.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 26) {
+      formRef26.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 27) {
+      formRef27.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 31) {
+      formRef31.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 32) {
+      formRef32.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 41) {
+      formRef41.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 42) {
+      formRef42.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 43) {
+      formRef43.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 44) {
+      formRef44.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 51) {
+      formRef51.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 52) {
+      formRef52.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 53) {
+      formRef53.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 61) {
+      formRef61.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 71) {
+      formRef71.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 72) {
+      formRef72.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 73) {
+      formRef73.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 81) {
+      formRef81.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 100) {
+      formRef100.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 101) {
+      formRef101.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 102) {
+      formRef102.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 103) {
+      formRef103.current?.scrollIntoView();
+    } else if (parseInt(router.query.scroll) === 104) {
+      formRef104.current?.scrollIntoView();
+    }
+  }, [router.query]);
 
   const accDataArr = [
     // 1
@@ -627,7 +753,7 @@ const Type = () => {
       </Head>
 
       <ClientLayout>
-        {accDataArr.map((data, idx) => {
+        {accDataArr.map((data, key) => {
           if (router.query.type === data.type) {
             return (
               <>
@@ -637,7 +763,7 @@ const Type = () => {
                     bgColor={`linear-gradient(rgb(26,26,26) , rgb(19,19,19))`}
                   ></Wrapper>
                 )}
-                <Wrapper position={`relative`} key={idx}>
+                <Wrapper position={`relative`} key={key}>
                   <Image
                     src={
                       "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-black.png"
@@ -666,6 +792,17 @@ const Type = () => {
                       ju={`flex-start`}
                       padding={width < 700 ? `80px 0 0` : `200px 0 0`}
                       position={`relative`}
+                      ref={
+                        key === 1
+                          ? formRef100
+                          : key === 3
+                          ? formRef101
+                          : key === 5
+                          ? formRef102
+                          : key === 7
+                          ? formRef103
+                          : formRef104
+                      }
                     >
                       <Wrapper
                         position={`absolute`}
@@ -773,6 +910,65 @@ const Type = () => {
                       padding={width < 700 ? `30px 0` : `100px 0`}
                       zIndex={`2`}
                       minHeight={width < 700 ? `auto` : `419px`}
+                      ref={
+                        key === 0
+                          ? idx === 0
+                            ? formRef11
+                            : formRef12
+                          : key === 1
+                          ? idx === 0
+                            ? formRef0
+                            : idx === 1
+                            ? formRef1
+                            : idx === 2
+                            ? formRef2
+                            : idx === 3
+                            ? formRef3
+                            : idx === 4
+                            ? formRef4
+                            : formRef5
+                          : key === 2
+                          ? idx === 0
+                            ? formRef21
+                            : idx === 1
+                            ? formRef22
+                            : idx === 2
+                            ? formRef23
+                            : idx === 3
+                            ? formRef24
+                            : idx === 4
+                            ? formRef25
+                            : idx === 5
+                            ? formRef26
+                            : formRef27
+                          : key === 3
+                          ? idx === 0
+                            ? formRef31
+                            : formRef32
+                          : key === 4
+                          ? idx === 0
+                            ? formRef41
+                            : idx === 1
+                            ? formRef42
+                            : idx === 2
+                            ? formRef43
+                            : formRef44
+                          : key === 5
+                          ? idx === 0
+                            ? formRef51
+                            : idx === 1
+                            ? formRef52
+                            : formRef53
+                          : key === 6
+                          ? formRef61
+                          : key === 7
+                          ? idx === 0
+                            ? formRef71
+                            : idx === 1
+                            ? formRef72
+                            : formRef73
+                          : formRef81
+                      }
                     >
                       <RsWrapper>
                         <Wrapper dr={`row`}>
