@@ -21,7 +21,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 import { Drawer } from "antd";
 import { HIDDEN_ACC_MENU, HIDDEN_PRO_MENU } from "../reducers/menu";
-import { FAQ_LIST_FAILURE } from "../reducers/faq";
 
 const CustomBtn = styled(Text)`
   width: 130px;
@@ -326,7 +325,12 @@ const AppHeader = () => {
           </Wrapper>
 
           <CommonButton width={`84px`} height={`35px`}>
-            SHOP
+            <ATag
+              href="https://smartstore.naver.com/ags09/category/f41afc51364f4d1bbf4c07f48e051ed7?cp=1"
+              target="_blank"
+            >
+              SHOP
+            </ATag>
           </CommonButton>
         </Wrapper>
       </WebRow>
@@ -432,7 +436,12 @@ const AppHeader = () => {
                 width={`84px`}
                 height={`35px`}
               >
-                SHOP
+                <ATag
+                  href="https://smartstore.naver.com/ags09/category/f41afc51364f4d1bbf4c07f48e051ed7?cp=1"
+                  target="_blank"
+                >
+                  SHOP
+                </ATag>
               </CommonButton>
             </Wrapper>
           </Drawer>

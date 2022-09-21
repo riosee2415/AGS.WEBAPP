@@ -352,7 +352,7 @@ const Master = () => {
                     fontSize={width < 900 ? `16px` : `22px`}
                     fontWeight={`bold`}
                   >
-                    터보노즐
+                    터보(회오리)노즐
                   </Text>
                 </Wrapper>
                 <Wrapper
