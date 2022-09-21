@@ -370,10 +370,11 @@ const Home = ({}) => {
                   width={width < 800 ? `100%` : `600px`}
                   fontSize={width < 1280 ? `16px` : `18px`}
                 >
-                  AVA 고압 세척기에 대한 설명이 들어갈 곳입니다. 설명이 길게
-                  들어가게 된다면, AVA고압 세척기에 대한 설명이 들어갈 곳입니다.
-                  설명이 길게 들어가게 된다면, AVA 고압 세척기에 대한 설명이
-                  들어갈 곳입니다. 설명이 길게 들어가게 된다면,
+                  AVA 고압세척기는 고객분들의 만족도를 위하여 최고의 기술로
+                  제작되었습니다. AVA는 모든 세척 작업을 쉽게 할 수 있도록
+                  친화적인 악세서리를 제공하며 AVA의 고압세척기는 최고의
+                  내구성으로 오랜 수명을 자랑합니다. AVA 제품을 선택해 주셔서
+                  감사합니다.
                 </Text>
 
                 <HoverButton onClick={proMenuToggle}>
@@ -579,7 +580,7 @@ const Home = ({}) => {
                         src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
                         alt={`iconHexagon`}
                       />
-                      <Text>세견되고 고급진 디자인 &amp; 릴호스</Text>
+                      <Text>세련되고 고급진 디자인 &amp; 릴호스</Text>
                     </Wrapper>
                   </Wrapper>
                 </Wrapper>
