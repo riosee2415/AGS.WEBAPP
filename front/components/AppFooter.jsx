@@ -185,7 +185,7 @@ const AppFooter = () => {
       </RsWrapper>
 
       <Wrapper dr={`row`} margin={` 40px 0 0`} zIndex={`1`}>
-        <SnsBox
+        {/* <SnsBox
           margin={`0 6px`}
           width={`40px`}
           height={`40px`}
@@ -202,8 +202,8 @@ const AppFooter = () => {
               src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_face-book.png`}
             />
           </ATag>
-        </SnsBox>
-        <SnsBox
+        </SnsBox> */}
+        {/* <SnsBox
           margin={`0 6px`}
           width={`40px`}
           height={`40px`}
@@ -220,7 +220,7 @@ const AppFooter = () => {
               src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_insta.png`}
             />
           </ATag>
-        </SnsBox>
+        </SnsBox> */}
         <SnsBox
           margin={`0 6px`}
           width={`40px`}
