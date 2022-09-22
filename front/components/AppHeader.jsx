@@ -512,7 +512,7 @@ const AppHeader = () => {
                 beforeW={width < 700 ? `22%` : width < 1400 ? `20%` : ``}
                 beforeL={width < 700 ? `39%` : width < 1400 ? `40%` : ``}
               >
-                폼 캐논
+                폼캐논(폼랜스)
                 <SubTextStyle
                   onClick={() =>
                     menuLinkHandler(`/accessory/type?type=foamcannon`)
@@ -618,7 +618,7 @@ const AppHeader = () => {
                 <SubTextStyle
                   onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
                 >
-                  터보 노즐
+                  터보(회오리)노즐
                 </SubTextStyle>
                 <SubTextStyle
                   onClick={() => menuLinkHandler(`/accessory/type?type=nozzle`)}
