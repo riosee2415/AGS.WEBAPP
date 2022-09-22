@@ -1,0 +1,22 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+<channel>
+<title>
+<![CDATA[ AVA ]]>
+</title>
+<description>
+<![CDATA[ 고객의 만족을 위한 최상의 퀄리티 AVA 고압세척기 ]]>
+</description>
+<link>https://avakorea.kr/</link>
+<image>
+<url>https://avakorea.kr/favicon.ico</url>
+<title>AVA</title>
+<link>https://avakorea.kr/</link>
+</image>
+<generator>https://rss.app</generator>
+<lastBuildDate>Thu, 22 Sep 2022 04:28:46 GMT</lastBuildDate>
+<atom:link href="https://rss.app/feeds/lUnYVx1c4C6PrmMG.xml" rel="self" type="application/rss+xml"/>
+<language>
+<![CDATA[ en ]]>
+</language>
+</channel>
+</rss>
