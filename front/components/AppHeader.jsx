@@ -521,7 +521,7 @@ const AppHeader = () => {
                     menuLinkHandler(`/accessory/type?type=foamcannon`)
                   }
                 >
-                  폼 캐논
+                  폼캐논(폼랜스)
                 </Text>
                 <SubTextStyle
                   onClick={() =>
@@ -640,7 +640,7 @@ const AppHeader = () => {
                     menuLinkHandler(`/accessory/type?type=nozzle`, 22)
                   }
                 >
-                  터보 노즐
+                  터보(회오리)노즐
                 </SubTextStyle>
                 <SubTextStyle
                   onClick={() =>
