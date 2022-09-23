@@ -15,6 +15,7 @@ import { message } from "antd";
 import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { InstagramFilled } from "@ant-design/icons";
 
 const SnsBox = styled(Wrapper)`
   &:hover {
@@ -229,14 +230,15 @@ const AppFooter = () => {
           border={`1px solid ${Theme.black2_C}`}
         >
           <ATag
-            href={`https://www.linkedin.com/company/ava-of-norway-as/`}
+            href={`https://instagram.com/ags_tool?igshid=YmMyMTA2M2Y=`}
             target={`_blank`}
           >
-            <Image
+            {/* <Image
               width={`14px`}
               alt={`in`}
               src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_in.png`}
-            />
+            /> */}
+            <InstagramFilled />
           </ATag>
         </SnsBox>
         <SnsBox
@@ -247,7 +249,7 @@ const AppFooter = () => {
           border={`1px solid ${Theme.black2_C}`}
         >
           <ATag
-            href={`https://www.youtube.com/channel/UCVuGcx-zlpcpNmybUFzCzyg`}
+            href={`https://www.youtube.com/channel/UCqS6nxonSftycRBUgFsT6VA`}
             target={`_blank`}
           >
             <Image
