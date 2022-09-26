@@ -770,7 +770,14 @@ const Type = () => {
                     }
                     alt="bgImg"
                     width={`100%`}
-                    height={`600px`}
+                    height={
+                      width < 700 &&
+                      (data.title === "폼캐논(폼랜스)" ||
+                        data.title === "노즐" ||
+                        data.title === "호스")
+                        ? `430px`
+                        : `600px`
+                    }
                   />
                   <Image
                     src={
