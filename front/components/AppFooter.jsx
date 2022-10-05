@@ -178,8 +178,8 @@ const AppFooter = () => {
           fontSize={width < 700 ? `12px` : `16px`}
         >
           <HoverT>
-            <ATag href={"mailto:support@avaofnorway.com"}>
-              support@avaofnorway.com
+            <ATag href={"mailto:avakorea@agskorea.com "}>
+              avakorea@agskorea.com
             </ATag>
           </HoverT>
         </Wrapper>
