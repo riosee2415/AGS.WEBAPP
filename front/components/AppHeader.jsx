@@ -333,7 +333,7 @@ const AppHeader = () => {
 
           <CommonButton width={`84px`} height={`35px`}>
             <ATag
-              href="https://smartstore.naver.com/ags09/category/f41afc51364f4d1bbf4c07f48e051ed7?cp=1"
+              href="https://smartstore.naver.com/ags09/category/107b076b93d74536bd83a906291110b1?cp=1"
               target="_blank"
             >
               SHOP
@@ -444,7 +444,7 @@ const AppHeader = () => {
                 height={`35px`}
               >
                 <ATag
-                  href="https://smartstore.naver.com/ags09/category/f41afc51364f4d1bbf4c07f48e051ed7?cp=1"
+                  href="https://smartstore.naver.com/ags09/category/107b076b93d74536bd83a906291110b1?cp=1"
                   target="_blank"
                 >
                   SHOP
