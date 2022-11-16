@@ -441,9 +441,9 @@ const AgencyGuide = () => {
             rules={[{ required: true, message: "전화번호를 입력해주세요." }]}
           >
             <Input
-              type={`number`}
+              type={`text`}
               size="small"
-              placeholder="전화번호는 -를 빼고 입력해주세요."
+              placeholder="전화번호를 입력해주세요."
             />
           </Form.Item>
         </Form>

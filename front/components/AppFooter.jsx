@@ -6,6 +6,7 @@ import {
   WholeWrapper,
   RsWrapper,
   ATag,
+  SpanText,
 } from "./commonComponents";
 import Theme from "./Theme";
 import useWidth from "../hooks/useWidth";
@@ -177,8 +178,41 @@ const AppFooter = () => {
           ju={`flex-start`}
           fontSize={width < 700 ? `12px` : `16px`}
         >
+          <Text>AGS(에이지에스)</Text>
+        </Wrapper>
+        <Wrapper
+          dr={`row`}
+          ju={`flex-start`}
+          fontSize={width < 700 ? `12px` : `16px`}
+          margin={`5px 0`}
+        >
+          <Text>대표자명 : 오승훈</Text>
+          <SpanText margin={`0 10px`} fontSize={`12px`}>
+            |
+          </SpanText>
+          <Text>주소: 경기도 하남시 미사강변서로 25 테스타타워 FB247호</Text>
+        </Wrapper>
+        <Wrapper
+          dr={`row`}
+          ju={`flex-start`}
+          fontSize={width < 700 ? `12px` : `16px`}
+          margin={`5px 0`}
+        >
           <HoverT>
-            <ATag href={"mailto:avakorea@agskorea.com "}>
+            <ATag href={"tel:024754558"}>전화번호: 02-475-4558</ATag>
+          </HoverT>
+          <SpanText margin={`0 10px`} fontSize={`12px`}>
+            |
+          </SpanText>
+          <Text>사업자번호: 212-25-46219</Text>
+        </Wrapper>
+        <Wrapper
+          dr={`row`}
+          ju={`flex-start`}
+          fontSize={width < 700 ? `12px` : `16px`}
+        >
+          <HoverT>
+            <ATag href={"mailto:avakorea@agskorea.com"}>
               avakorea@agskorea.com
             </ATag>
           </HoverT>
