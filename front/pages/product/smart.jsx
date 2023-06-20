@@ -174,7 +174,7 @@ const Smart = () => {
                 width={`100%`}
                 height={`100%`}
                 frameborder="0"
-                src={`https://www.youtube.com/embed/Ht7ywGUgzP0`}
+                src={`https://www.youtube.com/embed/uhQ-fkT58eE`}
               />
             </Wrapper>
           </RsWrapper>
