@@ -78,14 +78,14 @@ const AppFooter = () => {
         top={`20%`}
         width={width < 700 ? `50%` : `30%`}
         alt={`img`}
-        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_footer-pattern.png`}
+        src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_footer-pattern.png`}
       />
       <RsWrapper al={`flex-start`}>
         <Image
           width={`160px`}
           margin={`0 0 50px`}
           alt={`img`}
-          src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_footer-txt.png`}
+          src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_footer-txt.png`}
         />
         <Wrapper
           al={`flex-start`}
@@ -234,7 +234,7 @@ const AppFooter = () => {
             <Image
               width={`14px`}
               alt={`facebook`}
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_face-book.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_face-book.png`}
             />
           </ATag>
         </SnsBox> */}
@@ -252,7 +252,7 @@ const AppFooter = () => {
             <Image
               width={`14px`}
               alt={`instar`}
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_insta.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_insta.png`}
             />
           </ATag>
         </SnsBox> */}
@@ -270,7 +270,7 @@ const AppFooter = () => {
             {/* <Image
               width={`14px`}
               alt={`in`}
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_in.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_in.png`}
             /> */}
             <InstagramFilled />
           </ATag>
@@ -289,7 +289,7 @@ const AppFooter = () => {
             <Image
               width={`14px`}
               alt={`yoptodu`}
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_youtube.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_youtube.png`}
             />
           </ATag>
         </SnsBox>

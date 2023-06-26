@@ -66,7 +66,7 @@ const Index = () => {
             <Wrapper
               height={width < 700 ? `400px` : `600px`}
               position={`relative`}
-              bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-black.png")`}
+              bgImg={`url("https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-black.png")`}
             >
               <Wrapper
                 height={`100%`}
@@ -108,12 +108,12 @@ const Index = () => {
             </Wrapper>
             <Wrapper
               height={width < 700 ? `130px` : `230px`}
-              bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-green.png")`}
+              bgImg={`url("https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-green.png")`}
             >
               <RsWrapper al={`flex-end`} ju={`flex-end`} position={`relative`}>
                 <Image
                   alt="evolution"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_acc-main.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_acc-main.png`}
                   width={
                     width < 1000 ? (width < 700 ? `100%` : `700px`) : `850px`
                   }
@@ -185,17 +185,17 @@ const Index = () => {
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-1.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-1.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-2.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-2.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-3.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_foam-3.png`}
                 />
               </Wrapper>
             </Wrapper>
@@ -263,17 +263,17 @@ const Index = () => {
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_lance-1.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_lance-1.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_lance-2.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_lance-2.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_lance-3.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-foam-lance/img_lance-3.png`}
                 />
               </Wrapper>
             </Wrapper>
@@ -343,17 +343,17 @@ const Index = () => {
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_nozzle-4.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_nozzle-4.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_nozzle-5.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_nozzle-5.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_nozzle-6.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_nozzle-6.png`}
                 />
               </Wrapper>
             </Wrapper>
@@ -421,17 +421,17 @@ const Index = () => {
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_patio-1.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_patio-1.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_patio-2.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_patio-2.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_patio-3.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-nozzle-patio/img_patio-3.png`}
                 />
               </Wrapper>
             </Wrapper>
@@ -500,17 +500,17 @@ const Index = () => {
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-hose-brush/img_hose-1.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-hose-brush/img_hose-1.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-hose-brush/img_hose-2.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-hose-brush/img_hose-2.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-hose-brush/img_hose-3.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-hose-brush/img_hose-3.png`}
                 />
               </Wrapper>
             </Wrapper>
@@ -579,17 +579,17 @@ const Index = () => {
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-hose-brush/img_brush-1.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-hose-brush/img_brush-1.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-hose-brush/img_brush-2.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-hose-brush/img_brush-2.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-hose-brush/img_brush-3.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-hose-brush/img_brush-3.png`}
                 />
               </Wrapper>
             </Wrapper>
@@ -659,17 +659,17 @@ const Index = () => {
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-gun-adapter-org/img_gun-1.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-gun-adapter-org/img_gun-1.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-gun-adapter-org/img_gun-2.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-gun-adapter-org/img_gun-2.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-gun-adapter-org/img_gun-3.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-gun-adapter-org/img_gun-3.png`}
                 />
               </Wrapper>
             </Wrapper>
@@ -736,17 +736,17 @@ const Index = () => {
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-gun-adapter-org/img_adapter-1.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-gun-adapter-org/img_adapter-1.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-gun-adapter-org/img_adapter-2.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-gun-adapter-org/img_adapter-2.png`}
                 />
                 <Image
                   width={`32%`}
                   alt={`product_img`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-gun-adapter-org/img_adapter-3.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/acc-gun-adapter-org/img_adapter-3.png`}
                 />
               </Wrapper>
             </Wrapper>

@@ -36,7 +36,7 @@ const Go = () => {
             <Wrapper
               height={width < 700 ? `460px` : `600px`}
               position={`relative`}
-              bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-black.png")`}
+              bgImg={`url("https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-black.png")`}
             >
               <Wrapper
                 height={`100%`}
@@ -93,12 +93,12 @@ const Go = () => {
             </Wrapper>
             <Wrapper
               height={width < 700 ? `130px` : `230px`}
-              bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-green.png")`}
+              bgImg={`url("https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_bg-green.png")`}
             >
               <RsWrapper al={`flex-end`} ju={`flex-end`} position={`relative`}>
                 <Image
                   alt="go"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_prod-go.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/banner/img_prod-go.png`}
                   width={
                     width < 1000 ? (width < 700 ? `340px` : `500px`) : `600px`
                   }
@@ -116,20 +116,20 @@ const Go = () => {
           >
             <Image
               alt="go image1"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_1.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_1.png`}
               width={`calc(100% / 3.1)`}
               minWidth={`300px`}
             />
             <Image
               alt="go image2"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_2.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_2.png`}
               width={`calc(100% / 3.1)`}
               minWidth={`300px`}
               margin={width < 800 && `0 15px`}
             />
             <Image
               alt="go image3"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_3.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_3.png`}
               width={`calc(100% / 3.1)`}
               minWidth={`300px`}
             />
@@ -174,20 +174,20 @@ const Go = () => {
           >
             <Image
               alt="go image1"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_4.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_4.png`}
               width={`calc(100% / 3.1)`}
               minWidth={`300px`}
             />
             <Image
               alt="go image2"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_5.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_5.png`}
               width={`calc(100% / 3.1)`}
               minWidth={`300px`}
               margin={width < 800 && `0 15px`}
             />
             <Image
               alt="go image3"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_6.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_6.png`}
               width={`calc(100% / 3.1)`}
               minWidth={`300px`}
             />
@@ -195,7 +195,7 @@ const Go = () => {
 
           <Wrapper
             height={`100vh`}
-            bgImg={`url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_bg.png")`}
+            bgImg={`url("https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_bg.png")`}
           >
             <RsWrapper al={`flex-end`}>
               <Wrapper
@@ -207,7 +207,7 @@ const Go = () => {
               >
                 <Image
                   alt="gragh"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_pressure-3.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_pressure-3.png`}
                   width={`175px`}
                 />
                 <Text
@@ -224,7 +224,7 @@ const Go = () => {
                 </Text>
                 <Image
                   alt="gragh"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_water-3.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_water-3.png`}
                   width={`175px`}
                   margin={`90px 0 0`}
                 />
@@ -261,12 +261,12 @@ const Go = () => {
               <Wrapper dr={`row`}>
                 <Image
                   alt="go model"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_model-eq.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_model-eq.png`}
                   width={`275px`}
                 />
                 <Image
                   alt="go table"
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_graph.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-go/img_graph.png`}
                   width={width < 800 ? `100%` : `610px`}
                   margin={width < 800 ? `15px 0` : `0 0 0 40px`}
                 />
@@ -286,7 +286,7 @@ const Go = () => {
                 >
                   <Image
                     alt="구성품"
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_foam.png`}
+                    src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_foam.png`}
                     width={`70%`}
                     margin={`42px 0 32px`}
                   />
@@ -302,7 +302,7 @@ const Go = () => {
                 >
                   <Image
                     alt="구성품"
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_variable-nozzle.png`}
+                    src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_variable-nozzle.png`}
                     width={`70%`}
                     margin={`42px 0 32px`}
                   />
@@ -318,7 +318,7 @@ const Go = () => {
                 >
                   <Image
                     alt="구성품"
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_turbo-nozzle.png`}
+                    src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_turbo-nozzle.png`}
                     width={`70%`}
                     margin={`42px 0 32px`}
                   />
@@ -334,7 +334,7 @@ const Go = () => {
                 >
                   <Image
                     alt="구성품"
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_high+pressure-hose.png`}
+                    src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_high+pressure-hose.png`}
                     width={`70%`}
                     margin={`42px 0 32px`}
                   />
@@ -350,7 +350,7 @@ const Go = () => {
                 >
                   <Image
                     alt="구성품"
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_gun.png`}
+                    src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_gun.png`}
                     width={`70%`}
                     margin={`42px 0 32px`}
                   />
@@ -366,7 +366,7 @@ const Go = () => {
                 >
                   <Image
                     alt="구성품"
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_nozzle-connect.png`}
+                    src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_nozzle-connect.png`}
                     width={`70%`}
                     margin={`42px 0 32px`}
                   />
@@ -382,7 +382,7 @@ const Go = () => {
                 >
                   <Image
                     alt="구성품"
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_suction-filter.png`}
+                    src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_suction-filter.png`}
                     width={`70%`}
                     margin={`42px 0 32px`}
                   />
@@ -409,7 +409,7 @@ const Go = () => {
             </RsWrapper>
             <Image
               alt="right pattern"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_right-pattern.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_right-pattern.png`}
               width={width < 900 ? `250px` : `600px`}
               position={`absolute`}
               right={`0`}
@@ -417,7 +417,7 @@ const Go = () => {
             />
             <Image
               alt="left pattern"
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_leaf-pattern.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_leaf-pattern.png`}
               width={width < 900 ? `250px` : `600px`}
               position={`absolute`}
               left={`0`}

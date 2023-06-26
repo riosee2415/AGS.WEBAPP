@@ -226,7 +226,7 @@ const Home = ({}) => {
   const productTypeArr = [
     {
       thumbnail:
-        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_evolution-eq.png",
+        "https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_evolution-eq.png",
       name: "EVOLUTION",
       content: `EVOLUTION 시리즈 제품은 내구성과 성능을 위해 오래 지속 가능한 4&6기통 실린더 금속펌프로 제작되었습니다.`,
       buttonContent: `EVOLUTION 시리즈 자세히 보러가기`,
@@ -234,7 +234,7 @@ const Home = ({}) => {
     },
     {
       thumbnail:
-        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_master-eq.png",
+        "https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_master-eq.png",
       name: "MASTER",
       content: `MASTER 시리즈는 내구성과 성능을 위해 오래 지속되는 4기통 금속 펌프가 내장되어 있습니다.`,
       buttonContent: `MASTER 시리즈 자세히 보러가기`,
@@ -242,7 +242,7 @@ const Home = ({}) => {
     },
     {
       thumbnail:
-        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_smart-eq.png",
+        "https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_smart-eq.png",
       name: "SMART",
       content: `SMART 시리즈는 상위버전인 MASTER 시리즈의 몇 가지 기능을 사용하며 일반적으로 고가의 기계에서 볼 수 있는 모든 기능을 갖춘 시리즈입니다.`,
       buttonContent: `SMART 시리즈 자세히 보러가기`,
@@ -250,7 +250,7 @@ const Home = ({}) => {
     },
     {
       thumbnail:
-        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_go-eq.png",
+        "https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_go-eq.png",
       name: "GO",
       content: `GO 시리즈는 작은 기계를 최대한으로 활용하기 위해 설계되었습니다.`,
       buttonContent: `GO 시리즈 자세히 보러가기`,
@@ -258,7 +258,7 @@ const Home = ({}) => {
     },
     {
       thumbnail:
-        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_v6-eq.png",
+        "https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_v6-eq.png",
       name: "V6",
       content: `V6 시리즈는 고유량 6기통 금속 펌프로 소음과 진동이 적고 벽에 고정하여 사용가능합니다.`,
       buttonContent: `V6 시리즈 자세히 보러가기`,
@@ -269,22 +269,22 @@ const Home = ({}) => {
   const useInfoArr = [
     {
       thumbnail:
-        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_1.png",
+        "https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_1.png",
       content: `가변노즐과 고압건은 옥외 가구에\n손상없이 사용 가능합니다.\n여름을 대비해 준비해보세요!`,
     },
     {
       thumbnail:
-        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_2.png",
+        "https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_2.png",
       content: `파이프 호스는 손쉽게 배수관 및 파이프를\n청소할 수 있도록 해줍니다.\n배관 역류를 방지하기 위해\n이 제품으로 손쉽게 배관 청소를 해보세요!`,
     },
     {
       thumbnail:
-        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_3.png",
+        "https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_3.png",
       content: `25˚ 노즐은 녹조, 흙, 먼지 등을 깔끔하게\n청소하면서 표면을 부드럽게 해줍니다.\n노즐을 사용하여 먼지를 제거해보세요!`,
     },
     {
       thumbnail:
-        "https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_4.png",
+        "https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_4.png",
       content: `극세사 브러시는 흙과 먼지를\n제거하는 동시에 부드럽게 브러시를\n이동시켜줍니다. 이 제품은 스크래치 발생을\n줄여주며 파손 위험이 있는 유리 또는\n차에 사용해보세요!`,
     },
   ];
@@ -355,7 +355,7 @@ const Home = ({}) => {
               <Wrapper width={width < 800 ? `100%` : `50%`} al={`flex-start`}>
                 <Image
                   width={width < 1280 ? `280px` : `380px`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_innovation.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_innovation.png`}
                 />
                 <Text
                   fontSize={width < 800 ? `22px` : `42px`}
@@ -389,7 +389,7 @@ const Home = ({}) => {
                   <HoverArrowButton className="arrowBtn">
                     <Image
                       width={width < 1100 ? `20px` : `24px`}
-                      src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_arrow.png`}
+                      src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_arrow.png`}
                       alt={`arrow`}
                     />
                   </HoverArrowButton>
@@ -398,7 +398,7 @@ const Home = ({}) => {
               <Wrapper width={width < 800 ? `100%` : `50%`} al={`flex-end`}>
                 <Image
                   width={width < 1280 ? `100%` : `580px`}
-                  src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_pressure-washers.png`}
+                  src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_pressure-washers.png`}
                 />
               </Wrapper>
             </RsWrapper>
@@ -429,7 +429,7 @@ const Home = ({}) => {
                 >
                   <Image
                     width={`100%`}
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_prod-pressure-washers.png`}
+                    src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_prod-pressure-washers.png`}
                     alt={`productImage1`}
                   />
                   <Wrapper
@@ -455,7 +455,7 @@ const Home = ({}) => {
                 >
                   <Image
                     width={`100%`}
-                    src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_prod-acc.png`}
+                    src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_prod-acc.png`}
                     alt={`productImage2`}
                   />
                   <Wrapper
@@ -504,7 +504,7 @@ const Home = ({}) => {
                       <Image
                         width={`15px`}
                         margin={width < 700 ? `0 5px 0 0` : `0 15px 0 0`}
-                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
+                        src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
                         alt={`iconHexagon`}
                       />
                       <Text>높은 분사력</Text>
@@ -515,7 +515,7 @@ const Home = ({}) => {
                         margin={
                           width < 700 ? `10px 5px 10px 0` : `10px 15px 10px 0`
                         }
-                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
+                        src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
                         alt={`iconHexagon`}
                       />
                       <Text>뛰어난 토출량</Text>
@@ -524,7 +524,7 @@ const Home = ({}) => {
                       <Image
                         width={`15px`}
                         margin={width < 700 ? `0 5px 0 0` : `0 15px 0 0`}
-                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
+                        src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
                         alt={`iconHexagon`}
                       />
                       <Text>압도적인 사용시간</Text>
@@ -557,7 +557,7 @@ const Home = ({}) => {
                       <Image
                         width={`15px`}
                         margin={width < 700 ? `0 5px 0 0` : `0 15px 0 0`}
-                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
+                        src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
                         alt={`iconHexagon`}
                       />
                       <Text>Zero-Force 방아쇠로 피로감 감소</Text>
@@ -568,7 +568,7 @@ const Home = ({}) => {
                         margin={
                           width < 700 ? `10px 5px 10px 0` : `10px 15px 10px 0`
                         }
-                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
+                        src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
                         alt={`iconHexagon`}
                       />
                       <Text>직관적인 체결 부위</Text>
@@ -577,7 +577,7 @@ const Home = ({}) => {
                       <Image
                         width={`15px`}
                         margin={width < 700 ? `0 5px 0 0` : `0 15px 0 0`}
-                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
+                        src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
                         alt={`iconHexagon`}
                       />
                       <Text>세련되고 고급진 디자인 &amp; 릴호스</Text>
@@ -609,7 +609,7 @@ const Home = ({}) => {
                       <Image
                         width={`15px`}
                         margin={width < 700 ? `0 5px 0 0` : `0 15px 0 0`}
-                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
+                        src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
                         alt={`iconHexagon`}
                       />
                       <Text>오래 사용 가능한 4실린더 금속 펌프</Text>
@@ -620,7 +620,7 @@ const Home = ({}) => {
                         margin={
                           width < 700 ? `10px 5px 10px 0` : `10px 15px 10px 0`
                         }
-                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
+                        src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/icon_hexagon.png`}
                         alt={`iconHexagon`}
                       />
                       <Text>플렉시블 스틸 고압 호스</Text>
@@ -717,7 +717,7 @@ const Home = ({}) => {
                   <HoverArrowButton className="arrowBtn">
                     <Image
                       width={width < 1100 ? `20px` : `24px`}
-                      src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_arrow.png`}
+                      src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/icon_arrow.png`}
                       alt={`arrow`}
                     />
                   </HoverArrowButton>
@@ -739,7 +739,7 @@ const Home = ({}) => {
               right={`0`}
               width={`31%`}
               position={`absolute`}
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_right-pattern.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/common/img_right-pattern.png`}
               alt={`backPattern`}
             />
 
@@ -748,7 +748,7 @@ const Home = ({}) => {
               right={`0`}
               width={`100%`}
               position={`absolute`}
-              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_water-drop.png`}
+              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/main/img_water-drop.png`}
               alt={`backWater`}
             />
           </Wrapper>

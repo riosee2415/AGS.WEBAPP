@@ -103,7 +103,7 @@ const Index = () => {
                     <Wrapper>
                       <Image
                         alt={`icon`}
-                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon-faq.png`}
+                        src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon-faq.png`}
                       />
                     </Wrapper>
                     <Text
@@ -124,7 +124,7 @@ const Index = () => {
                     <Wrapper>
                       <Image
                         alt={`icon`}
-                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon_brand.png`}
+                        src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon_brand.png`}
                       />
                     </Wrapper>
                     <Text
@@ -147,7 +147,7 @@ const Index = () => {
                     <Wrapper>
                       <Image
                         alt={`icon`}
-                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon_video.png`}
+                        src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon_video.png`}
                       />
                     </Wrapper>
                     <Text
@@ -168,7 +168,7 @@ const Index = () => {
                     <Wrapper>
                       <Image
                         alt={`icon`}
-                        src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon-store.png`}
+                        src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon-store.png`}
                       />
                     </Wrapper>
                     <Text

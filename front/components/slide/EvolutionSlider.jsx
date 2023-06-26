@@ -43,19 +43,19 @@ const EvolutionSlider = () => {
         <Wrapper padding={`0 15px`}>
           <Image
             alt="image"
-            src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_4.png`}
+            src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_4.png`}
           />
         </Wrapper>
         <Wrapper padding={`0 15px`}>
           <Image
             alt="image"
-            src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_5.png`}
+            src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_5.png`}
           />
         </Wrapper>
         <Wrapper padding={`0 15px`}>
           <Image
             alt="image"
-            src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_6.png`}
+            src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/prod-evolution/img_6.png`}
           />
         </Wrapper>
       </Carousel>

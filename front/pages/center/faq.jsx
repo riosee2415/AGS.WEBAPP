@@ -87,7 +87,7 @@ const Faq = () => {
                         >
                           <Wrapper dr={`row`}>
                             <Image
-                              src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon_faq-question.png`}
+                              src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/icon_faq-question.png`}
                               width={`24px`}
                               height={`24px`}
                             />

@@ -275,8 +275,8 @@ const AppHeader = () => {
                   width={width < 800 ? `70px` : `90px`}
                   src={
                     headerScroll === false && router.pathname === "/"
-                      ? `https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_white.png`
-                      : `https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_black.png`
+                      ? `https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_white.png`
+                      : `https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_black.png`
                   }
                   alt={`Logo`}
                 />
@@ -364,8 +364,8 @@ const AppHeader = () => {
               alt="logo"
               src={
                 headerScroll === false && router.pathname === "/"
-                  ? `https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_white.png`
-                  : `https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_black.png`
+                  ? `https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_white.png`
+                  : `https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_black.png`
               }
             />
           </ATag>
@@ -406,7 +406,7 @@ const AppHeader = () => {
                 width={`74px`}
                 alt={`logo_img`}
                 margin={`0 0 80px`}
-                src={`https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_white.png`}
+                src={`https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/logo/logo_white.png`}
               />
               <CustomBtn
                 color={Theme.white_C}
@@ -509,7 +509,7 @@ const AppHeader = () => {
                 <Image
                   width={`75%`}
                   alt="menu1-image"
-                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_foam%26lance.png"
+                  src="https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_foam%26lance.png"
                 />
               </Wrapper>
               <MainTextStyle
@@ -614,7 +614,7 @@ const AppHeader = () => {
                 <Image
                   width={`75%`}
                   alt="menu2-image"
-                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_nozzles-patio.png"
+                  src="https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_nozzles-patio.png"
                 />
               </Wrapper>
               <MainTextStyle
@@ -724,7 +724,7 @@ const AppHeader = () => {
                 <Image
                   width={`75%`}
                   alt="menu3-image"
-                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_hose-brush.png"
+                  src="https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_hose-brush.png"
                 />
               </Wrapper>
               <MainTextStyle
@@ -821,7 +821,7 @@ const AppHeader = () => {
                 <Image
                   width={`75%`}
                   alt="menu4-image"
-                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_gun-adapter-org.png"
+                  src="https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_gun-adapter-org.png"
                 />
               </Wrapper>
               <MainTextStyle
@@ -963,7 +963,7 @@ const AppHeader = () => {
                   width={`78%`}
                   height={`78%`}
                   alt="menu1-image"
-                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_evolution.png"
+                  src="https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_evolution.png"
                 />
               </Wrapper>
               <MainTextStyle
@@ -1014,7 +1014,7 @@ const AppHeader = () => {
                   width={`78%`}
                   height={`78%`}
                   alt="menu2-image"
-                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_master.png"
+                  src="https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_master.png"
                 />
               </Wrapper>
               <MainTextStyle
@@ -1059,7 +1059,7 @@ const AppHeader = () => {
                   width={`78%`}
                   height={`78%`}
                   alt="menu3-image"
-                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_go.png"
+                  src="https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_go.png"
                 />
               </Wrapper>
               <MainTextStyle
@@ -1100,7 +1100,7 @@ const AppHeader = () => {
                   width={`78%`}
                   height={`78%`}
                   alt="menu4-image"
-                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_smart.png"
+                  src="https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_smart.png"
                 />
               </Wrapper>
               <MainTextStyle
@@ -1144,7 +1144,7 @@ const AppHeader = () => {
                   width={`78%`}
                   height={`78%`}
                   alt="menu4-image"
-                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_v6.png"
+                  src="https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/menu/img_v6.png"
                 />
               </Wrapper>
               <MainTextStyle

@@ -47,7 +47,7 @@ const Brand = () => {
               <Title>브랜드 소개</Title>
 
               <Image
-                src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/img_brand-1.png"
+                src="https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/img_brand-1.png"
                 alt="img"
                 margin={`60px 0 30px`}
               />
@@ -173,12 +173,12 @@ const Brand = () => {
 
               <Wrapper dr={`row`} ju={`space-between`}>
                 <Image
-                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/img_brand-2.png"
+                  src="https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/img_brand-2.png"
                   alt="img"
                   width={`48%`}
                 />
                 <Image
-                  src="https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/img_brand-3.png"
+                  src="https://ags-s3.s3.ap-northeast-2.amazonaws.com/ags/assets/images/customer-support/img_brand-3.png"
                   alt="img"
                   width={`48%`}
                 />
